@@ -16,7 +16,8 @@ namespace ShootingRange
     public partial class Form1 : Form
     {
 
-        String ConnString = "Server = localhost; User ID = root; Password = gouvoop; Database = testdb";
+        // String ConnString = "Server = localhost; User ID = root; Password = gouvoop; Database = testdb";
+        String ConnString = "Server = 10.1.11.28; User ID = ngouvousis; Password=Nek@niro_{Gou22}; Database = lawdb;";
         public Form1()
         {
             InitializeComponent();
@@ -24,6 +25,13 @@ namespace ShootingRange
             comboBox1.Items.Add("Καταχώρηση Βολής");
             comboBox1.Items.Add("Αναφορές");
             comboBox1.SelectedIndex = 0;
+
+
+            dataGridView1.ReadOnly = true;
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.AllowUserToResizeColumns = true;
+            dataGridView1.AllowUserToResizeRows = false;
             //Console.OutputEncoding = "chcp 1253");
 
             //Console.OutputEncoding = System.Text.Encoding.GetEncoding("unicode");
@@ -36,17 +44,16 @@ namespace ShootingRange
             {
                 MySqlConnection conn = new MySqlConnection(ConnString);
                 conn.Open();
-                string query = "SELECT * FROM courses";
+                string query = "SELECT * FROM lawdb.wcm_con where wcmcon_ID < 1000";
                 MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
                 DataSet ds = new DataSet();
                 da.Fill(ds, "courses");
                 DataTable dt = ds.Tables["courses"];
                 Console.WriteLine(dt);
 
-                dataGridView1.ReadOnly = true;
+                
                 dataGridView1.DataSource = ds.Tables[0];
-                dataGridView1.AllowUserToAddRows = false;
-                dataGridView1.RowHeadersVisible = false;
+                
                 conn.Close();
             }
             catch (Exception e)
@@ -64,20 +71,20 @@ namespace ShootingRange
                 MySqlConnection conn = new MySqlConnection(ConnString);
                 conn.Open();
                 
-                string query = "SELECT * FROM courses where title = ";
+                string query = "SELECT * FROM wcm_con where wcmcon_Alias like '%";
                 // byte[] tmp = textBox2.Text;
                 //tmp = Encoding.UTF8.GetString(tmp);
                 //byte z
-                string tmp = textBox2.Text;
+                string tmp = textBox2.Text + "%'";
                 query = query + tmp;
                 Console.WriteLine(query);
 
                 MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
                 DataSet ds = new DataSet();
                 if (ds != null)
-                    da.Fill(ds, "courses");
-                    DataTable dt = ds.Tables["courses"];
-                Console.WriteLine(dt);
+                    da.Fill(ds, "wcm_con");
+                    DataTable dt = ds.Tables["wcm_con"];
+                dataGridView1.DataSource = ds.Tables[0];
             }
             catch (Exception e1)
             {
@@ -91,7 +98,6 @@ namespace ShootingRange
             textBox1.Clear();
             textBox2.Clear();
             dataGridView1.ClearSelection();
-
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -149,5 +155,31 @@ namespace ShootingRange
         {
 
         }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
