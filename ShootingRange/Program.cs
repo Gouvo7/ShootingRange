@@ -16,8 +16,7 @@ namespace ShootingRange
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
-            System.Threading.Thread.Sleep(500);
+            //Application.Run(new LoginForm());
             Application.Run(new Form1());
         }
     }

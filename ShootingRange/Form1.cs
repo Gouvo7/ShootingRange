@@ -26,14 +26,12 @@ namespace ShootingRange
             comboBox1.Items.Add("Αναφορές");
             comboBox1.SelectedIndex = 0;
 
-
             dataGridView1.ReadOnly = true;
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.AllowUserToResizeColumns = true;
             dataGridView1.AllowUserToResizeRows = false;
             //Console.OutputEncoding = "chcp 1253");
-
             //Console.OutputEncoding = System.Text.Encoding.GetEncoding("unicode");
             String greek = "Λάκης";
             byte[] tmp1 = Encoding.Unicode.GetBytes(greek);
@@ -44,38 +42,59 @@ namespace ShootingRange
             {
                 MySqlConnection conn = new MySqlConnection(ConnString);
                 conn.Open();
-                string query = "SELECT * FROM lawdb.wcm_con where wcmcon_ID < 1000";
+                string query = "SELECT * FROM lawdb.wcm_ind where wcmcon_ID < 1000";
                 MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
                 DataSet ds = new DataSet();
                 da.Fill(ds, "courses");
                 DataTable dt = ds.Tables["courses"];
                 Console.WriteLine(dt);
-
-                
+                List<string> list = new List<string>();
+                foreach (DataRow row in dt.Rows)
+                {
+                    list.Add((string)row["wcmIND_LastName"]);
+                }
                 dataGridView1.DataSource = ds.Tables[0];
-                
+
+                foreach (String x in list)
+                {
+                    BoxSurname.Items.Add(x);
+                }
+
                 conn.Close();
             }
             catch (Exception e)
             {
                 Console.WriteLine("Error: {0}", e.ToString());
             }
+            
+        }
 
-
+        private void BoxSurname_LostFocus(object sender, EventArgs e)
+        {
+            //BoxSurname.SelectedIndex = BoxSurname;
+            Console.WriteLine("ta exusa");
+            MessageBox.Show("Error: Λάθος όνομα χρήστη ή κωδικός.", "Μήνυμα Λάθους", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         private void button1_Click(object sender, EventArgs e)
         {
+            if (BoxName.Text.Equals(""))
+            {
+                // μόνο με επώνυμο
+            }
+            if (BoxSurname.Text.Equals(""))
+            {
+                MessageBox.Show("Error: Δεν γαμιέσαι; Τι σκατά θα βρω;", "Μήνυμα Λάθους", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
             try
             {
-                Console.WriteLine(textBox1.Text);
+                Console.WriteLine(BoxSurname.Text);
                 MySqlConnection conn = new MySqlConnection(ConnString);
                 conn.Open();
                 
-                string query = "SELECT * FROM wcm_con where wcmcon_Alias like '%";
-                // byte[] tmp = textBox2.Text;
-                //tmp = Encoding.UTF8.GetString(tmp);
-                //byte z
-                string tmp = textBox2.Text + "%'";
+                string query = "SELECT * FROM wcm_ind where wcmIND_LastName like '%";
+
+                string tmp = BoxSurname.Text+ "%'";
                 query = query + tmp;
                 Console.WriteLine(query);
 
@@ -95,8 +114,8 @@ namespace ShootingRange
 
         private void button2_Click(object sender, EventArgs e)
         {
-            textBox1.Clear();
-            textBox2.Clear();
+            BoxName.Text = "";
+            BoxSurname.Text = "";
             dataGridView1.ClearSelection();
         }
 
@@ -161,11 +180,6 @@ namespace ShootingRange
 
         }
 
-        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void label3_Click(object sender, EventArgs e)
         {
 
@@ -178,8 +192,13 @@ namespace ShootingRange
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
+            MessageBox.Show("Error: Λάθος όνομα χρήστη ή κωδικός.", "Μήνυμα Λάθους", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Application.Run(new Shooting());
+        }
     }
 }

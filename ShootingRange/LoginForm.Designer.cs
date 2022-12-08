@@ -43,7 +43,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            this.CenterToScreen();
+            //this.CenterToScreen();
             // 
             // label1
             // 
