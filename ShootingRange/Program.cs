@@ -14,10 +14,17 @@ namespace ShootingRange
         [STAThread]
         static void Main()
         {
+            Application.Run(new Shooting());
+            Application.Exit();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new LoginForm());
             Application.Run(new Form1());
+        }
+
+        public static void Agonas()
+        {
+            Application.Run(new Shooting());
         }
     }
 }

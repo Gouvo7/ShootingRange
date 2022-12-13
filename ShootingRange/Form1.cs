@@ -16,8 +16,8 @@ namespace ShootingRange
     public partial class Form1 : Form
     {
 
-        // String ConnString = "Server = localhost; User ID = root; Password = gouvoop; Database = testdb";
-        String ConnString = "Server = 10.1.11.28; User ID = ngouvousis; Password=Nek@niro_{Gou22}; Database = lawdb;";
+         String ConnString = "Server = localhost; User ID = root; Password = gouvoop; Database = lawdb";
+        //String ConnString = "Server = 10.1.11.28; User ID = ngouvousis; Password=Nek@niro_{Gou22}; Database = lawdb;";
         public Form1()
         {
             InitializeComponent();
@@ -66,7 +66,6 @@ namespace ShootingRange
             {
                 Console.WriteLine("Error: {0}", e.ToString());
             }
-            
         }
 
         private void BoxSurname_LostFocus(object sender, EventArgs e)
@@ -198,7 +197,7 @@ namespace ShootingRange
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Application.Run(new Shooting());
+            ;
         }
     }
 }

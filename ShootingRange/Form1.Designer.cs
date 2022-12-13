@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BoxName = new System.Windows.Forms.ComboBox();
+            this.BoxSurname = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,9 +43,7 @@
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.BoxSurname = new System.Windows.Forms.ComboBox();
-            this.BoxName = new System.Windows.Forms.ComboBox();
-            this.shooting = new System.Windows.Forms.Button();
+            this.buttton3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -76,6 +76,26 @@
             this.panel1.TabIndex = 2;
             this.panel1.Click += new System.EventHandler(this.button2_Click);
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // BoxName
+            // 
+            this.BoxName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.BoxName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.BoxName.FormattingEnabled = true;
+            this.BoxName.Location = new System.Drawing.Point(174, 33);
+            this.BoxName.Name = "BoxName";
+            this.BoxName.Size = new System.Drawing.Size(121, 21);
+            this.BoxName.TabIndex = 12;
+            // 
+            // BoxSurname
+            // 
+            this.BoxSurname.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.BoxSurname.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.BoxSurname.FormattingEnabled = true;
+            this.BoxSurname.Location = new System.Drawing.Point(21, 33);
+            this.BoxSurname.Name = "BoxSurname";
+            this.BoxSurname.Size = new System.Drawing.Size(121, 21);
+            this.BoxSurname.TabIndex = 11;
             // 
             // button2
             // 
@@ -177,42 +197,22 @@
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged_1);
             // 
-            // BoxSurname
+            // buttton3
             // 
-            this.BoxSurname.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.BoxSurname.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.BoxSurname.FormattingEnabled = true;
-            this.BoxSurname.Location = new System.Drawing.Point(21, 33);
-            this.BoxSurname.Name = "BoxSurname";
-            this.BoxSurname.Size = new System.Drawing.Size(121, 21);
-            this.BoxSurname.TabIndex = 11;
-            // 
-            // BoxName
-            // 
-            this.BoxName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.BoxName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.BoxName.FormattingEnabled = true;
-            this.BoxName.Location = new System.Drawing.Point(174, 33);
-            this.BoxName.Name = "BoxName";
-            this.BoxName.Size = new System.Drawing.Size(121, 21);
-            this.BoxName.TabIndex = 12;
-            // 
-            // shooting
-            // 
-            this.shooting.Location = new System.Drawing.Point(160, 13);
-            this.shooting.Name = "shooting";
-            this.shooting.Size = new System.Drawing.Size(196, 23);
-            this.shooting.TabIndex = 4;
-            this.shooting.Text = "Καταχώρηση Αγώνα/Προπόνησης";
-            this.shooting.UseVisualStyleBackColor = true;
-            this.shooting.Click += new System.EventHandler(this.button3_Click);
+            this.buttton3.Location = new System.Drawing.Point(160, 13);
+            this.buttton3.Name = "buttton3";
+            this.buttton3.Size = new System.Drawing.Size(196, 23);
+            this.buttton3.TabIndex = 4;
+            this.buttton3.Text = "Καταχώρηση Αγώνα/Προπόνησης";
+            this.buttton3.UseVisualStyleBackColor = true;
+            this.buttton3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1395, 760);
-            this.Controls.Add(this.shooting);
+            this.Controls.Add(this.buttton3);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
@@ -243,7 +243,7 @@
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.ComboBox BoxSurname;
         private System.Windows.Forms.ComboBox BoxName;
-        private System.Windows.Forms.Button shooting;
+        private System.Windows.Forms.Button buttton3;
     }
 }
 
