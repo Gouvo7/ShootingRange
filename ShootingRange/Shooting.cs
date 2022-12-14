@@ -20,6 +20,7 @@ namespace ShootingRange
             comboBox1.Items.Add("ΜΔΑ");
             comboBox1.Items.Add("SPORTS");
             comboBox1.Items.Add("STANDARD");
+
         }
         public void Start1()
         {
@@ -28,7 +29,7 @@ namespace ShootingRange
         int A = 1;
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -52,6 +53,11 @@ namespace ShootingRange
             return txt;
         }
         public void label4_Click()
+        {
+
+        }
+
+        private void label17_Click(object sender, EventArgs e)
         {
 
         }
