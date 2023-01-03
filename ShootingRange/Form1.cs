@@ -250,5 +250,10 @@ namespace ShootingRange
         {
 
         }
+
+        private void yearBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
