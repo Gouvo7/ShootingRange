@@ -58,17 +58,17 @@ namespace ShootingRange
             this.comboBox8 = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.comboBox9 = new System.Windows.Forms.ComboBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.shoot1 = new System.Windows.Forms.TextBox();
+            this.shoot3 = new System.Windows.Forms.TextBox();
+            this.shoot2 = new System.Windows.Forms.TextBox();
+            this.shoot5 = new System.Windows.Forms.TextBox();
+            this.shoot7 = new System.Windows.Forms.TextBox();
+            this.shoot10Res = new System.Windows.Forms.TextBox();
+            this.shoot8 = new System.Windows.Forms.TextBox();
+            this.shoot10 = new System.Windows.Forms.TextBox();
+            this.shoot6 = new System.Windows.Forms.TextBox();
+            this.shoot4 = new System.Windows.Forms.TextBox();
+            this.shoot9 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -91,17 +91,17 @@ namespace ShootingRange
             this.label34 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.textBox24 = new System.Windows.Forms.TextBox();
-            this.textBox25 = new System.Windows.Forms.TextBox();
+            this.shoot19 = new System.Windows.Forms.TextBox();
+            this.shoot14 = new System.Windows.Forms.TextBox();
+            this.shoot16 = new System.Windows.Forms.TextBox();
+            this.shoot20 = new System.Windows.Forms.TextBox();
+            this.shoot18 = new System.Windows.Forms.TextBox();
+            this.shoot20Res = new System.Windows.Forms.TextBox();
+            this.shoot17 = new System.Windows.Forms.TextBox();
+            this.shoot15 = new System.Windows.Forms.TextBox();
+            this.shoot12 = new System.Windows.Forms.TextBox();
+            this.shoot13 = new System.Windows.Forms.TextBox();
+            this.shoot11 = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
@@ -113,17 +113,17 @@ namespace ShootingRange
             this.label45 = new System.Windows.Forms.Label();
             this.label46 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
-            this.textBox26 = new System.Windows.Forms.TextBox();
-            this.textBox27 = new System.Windows.Forms.TextBox();
-            this.textBox28 = new System.Windows.Forms.TextBox();
-            this.textBox29 = new System.Windows.Forms.TextBox();
-            this.textBox30 = new System.Windows.Forms.TextBox();
-            this.textBox31 = new System.Windows.Forms.TextBox();
-            this.textBox32 = new System.Windows.Forms.TextBox();
-            this.textBox33 = new System.Windows.Forms.TextBox();
-            this.textBox34 = new System.Windows.Forms.TextBox();
-            this.textBox35 = new System.Windows.Forms.TextBox();
-            this.textBox36 = new System.Windows.Forms.TextBox();
+            this.shoot29 = new System.Windows.Forms.TextBox();
+            this.shoot24 = new System.Windows.Forms.TextBox();
+            this.shoot26 = new System.Windows.Forms.TextBox();
+            this.shoot30 = new System.Windows.Forms.TextBox();
+            this.shoot28 = new System.Windows.Forms.TextBox();
+            this.shoot30Res = new System.Windows.Forms.TextBox();
+            this.shoot27 = new System.Windows.Forms.TextBox();
+            this.shoot25 = new System.Windows.Forms.TextBox();
+            this.shoot22 = new System.Windows.Forms.TextBox();
+            this.shoot23 = new System.Windows.Forms.TextBox();
+            this.shoot21 = new System.Windows.Forms.TextBox();
             this.label48 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
             this.label50 = new System.Windows.Forms.Label();
@@ -135,17 +135,17 @@ namespace ShootingRange
             this.label56 = new System.Windows.Forms.Label();
             this.label57 = new System.Windows.Forms.Label();
             this.label58 = new System.Windows.Forms.Label();
-            this.textBox37 = new System.Windows.Forms.TextBox();
-            this.textBox38 = new System.Windows.Forms.TextBox();
-            this.textBox39 = new System.Windows.Forms.TextBox();
-            this.textBox40 = new System.Windows.Forms.TextBox();
-            this.textBox41 = new System.Windows.Forms.TextBox();
-            this.textBox42 = new System.Windows.Forms.TextBox();
-            this.textBox43 = new System.Windows.Forms.TextBox();
-            this.textBox44 = new System.Windows.Forms.TextBox();
-            this.textBox45 = new System.Windows.Forms.TextBox();
-            this.textBox46 = new System.Windows.Forms.TextBox();
-            this.textBox47 = new System.Windows.Forms.TextBox();
+            this.shoot59 = new System.Windows.Forms.TextBox();
+            this.shoot54 = new System.Windows.Forms.TextBox();
+            this.shoot56 = new System.Windows.Forms.TextBox();
+            this.shoot60 = new System.Windows.Forms.TextBox();
+            this.shoot58 = new System.Windows.Forms.TextBox();
+            this.shoot60Res = new System.Windows.Forms.TextBox();
+            this.shoot57 = new System.Windows.Forms.TextBox();
+            this.shoot55 = new System.Windows.Forms.TextBox();
+            this.shoot52 = new System.Windows.Forms.TextBox();
+            this.shoot53 = new System.Windows.Forms.TextBox();
+            this.shoot51 = new System.Windows.Forms.TextBox();
             this.label59 = new System.Windows.Forms.Label();
             this.label60 = new System.Windows.Forms.Label();
             this.label61 = new System.Windows.Forms.Label();
@@ -157,17 +157,17 @@ namespace ShootingRange
             this.label67 = new System.Windows.Forms.Label();
             this.label68 = new System.Windows.Forms.Label();
             this.label69 = new System.Windows.Forms.Label();
-            this.textBox48 = new System.Windows.Forms.TextBox();
-            this.textBox49 = new System.Windows.Forms.TextBox();
-            this.textBox50 = new System.Windows.Forms.TextBox();
-            this.textBox51 = new System.Windows.Forms.TextBox();
-            this.textBox52 = new System.Windows.Forms.TextBox();
-            this.textBox53 = new System.Windows.Forms.TextBox();
-            this.textBox54 = new System.Windows.Forms.TextBox();
-            this.textBox55 = new System.Windows.Forms.TextBox();
-            this.textBox56 = new System.Windows.Forms.TextBox();
-            this.textBox57 = new System.Windows.Forms.TextBox();
-            this.textBox58 = new System.Windows.Forms.TextBox();
+            this.shoot49 = new System.Windows.Forms.TextBox();
+            this.shoot44 = new System.Windows.Forms.TextBox();
+            this.shoot46 = new System.Windows.Forms.TextBox();
+            this.shoot50 = new System.Windows.Forms.TextBox();
+            this.shoot48 = new System.Windows.Forms.TextBox();
+            this.shoot50Res = new System.Windows.Forms.TextBox();
+            this.shoot47 = new System.Windows.Forms.TextBox();
+            this.shoot45 = new System.Windows.Forms.TextBox();
+            this.shoot42 = new System.Windows.Forms.TextBox();
+            this.shoot43 = new System.Windows.Forms.TextBox();
+            this.shoot41 = new System.Windows.Forms.TextBox();
             this.label70 = new System.Windows.Forms.Label();
             this.label71 = new System.Windows.Forms.Label();
             this.label72 = new System.Windows.Forms.Label();
@@ -179,17 +179,17 @@ namespace ShootingRange
             this.label78 = new System.Windows.Forms.Label();
             this.label79 = new System.Windows.Forms.Label();
             this.label80 = new System.Windows.Forms.Label();
-            this.textBox59 = new System.Windows.Forms.TextBox();
-            this.textBox60 = new System.Windows.Forms.TextBox();
-            this.textBox61 = new System.Windows.Forms.TextBox();
-            this.textBox62 = new System.Windows.Forms.TextBox();
-            this.textBox63 = new System.Windows.Forms.TextBox();
-            this.textBox64 = new System.Windows.Forms.TextBox();
-            this.textBox65 = new System.Windows.Forms.TextBox();
-            this.textBox66 = new System.Windows.Forms.TextBox();
-            this.textBox67 = new System.Windows.Forms.TextBox();
-            this.textBox68 = new System.Windows.Forms.TextBox();
-            this.textBox69 = new System.Windows.Forms.TextBox();
+            this.shoot39 = new System.Windows.Forms.TextBox();
+            this.shoot34 = new System.Windows.Forms.TextBox();
+            this.shoot36 = new System.Windows.Forms.TextBox();
+            this.shoot40 = new System.Windows.Forms.TextBox();
+            this.shoot38 = new System.Windows.Forms.TextBox();
+            this.shoot40Res = new System.Windows.Forms.TextBox();
+            this.shoot37 = new System.Windows.Forms.TextBox();
+            this.shoot35 = new System.Windows.Forms.TextBox();
+            this.shoot32 = new System.Windows.Forms.TextBox();
+            this.shoot33 = new System.Windows.Forms.TextBox();
+            this.shoot31 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -457,94 +457,94 @@ namespace ShootingRange
             this.comboBox9.Size = new System.Drawing.Size(114, 21);
             this.comboBox9.TabIndex = 34;
             // 
-            // textBox4
+            // shoot1
             // 
-            this.textBox4.Location = new System.Drawing.Point(20, 151);
-            this.textBox4.MaxLength = 2;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(43, 20);
-            this.textBox4.TabIndex = 40;
+            this.shoot1.Location = new System.Drawing.Point(20, 151);
+            this.shoot1.MaxLength = 2;
+            this.shoot1.Name = "shoot1";
+            this.shoot1.Size = new System.Drawing.Size(43, 20);
+            this.shoot1.TabIndex = 40;
             // 
-            // textBox5
+            // shoot3
             // 
-            this.textBox5.Location = new System.Drawing.Point(120, 151);
-            this.textBox5.MaxLength = 2;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(43, 20);
-            this.textBox5.TabIndex = 41;
+            this.shoot3.Location = new System.Drawing.Point(120, 151);
+            this.shoot3.MaxLength = 2;
+            this.shoot3.Name = "shoot3";
+            this.shoot3.Size = new System.Drawing.Size(43, 20);
+            this.shoot3.TabIndex = 41;
             // 
-            // textBox6
+            // shoot2
             // 
-            this.textBox6.Location = new System.Drawing.Point(70, 151);
-            this.textBox6.MaxLength = 2;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(43, 20);
-            this.textBox6.TabIndex = 42;
+            this.shoot2.Location = new System.Drawing.Point(70, 151);
+            this.shoot2.MaxLength = 2;
+            this.shoot2.Name = "shoot2";
+            this.shoot2.Size = new System.Drawing.Size(43, 20);
+            this.shoot2.TabIndex = 42;
             // 
-            // textBox7
+            // shoot5
             // 
-            this.textBox7.Location = new System.Drawing.Point(220, 151);
-            this.textBox7.MaxLength = 2;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(43, 20);
-            this.textBox7.TabIndex = 43;
+            this.shoot5.Location = new System.Drawing.Point(220, 151);
+            this.shoot5.MaxLength = 2;
+            this.shoot5.Name = "shoot5";
+            this.shoot5.Size = new System.Drawing.Size(43, 20);
+            this.shoot5.TabIndex = 43;
             // 
-            // textBox8
+            // shoot7
             // 
-            this.textBox8.Location = new System.Drawing.Point(320, 151);
-            this.textBox8.MaxLength = 2;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(43, 20);
-            this.textBox8.TabIndex = 44;
+            this.shoot7.Location = new System.Drawing.Point(320, 151);
+            this.shoot7.MaxLength = 2;
+            this.shoot7.Name = "shoot7";
+            this.shoot7.Size = new System.Drawing.Size(43, 20);
+            this.shoot7.TabIndex = 44;
             // 
-            // textBox9
+            // shoot10Res
             // 
-            this.textBox9.Enabled = false;
-            this.textBox9.Location = new System.Drawing.Point(530, 151);
-            this.textBox9.MaxLength = 4;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(43, 20);
-            this.textBox9.TabIndex = 45;
+            this.shoot10Res.Enabled = false;
+            this.shoot10Res.Location = new System.Drawing.Point(530, 151);
+            this.shoot10Res.MaxLength = 4;
+            this.shoot10Res.Name = "shoot10Res";
+            this.shoot10Res.Size = new System.Drawing.Size(43, 20);
+            this.shoot10Res.TabIndex = 45;
             // 
-            // textBox10
+            // shoot8
             // 
-            this.textBox10.Location = new System.Drawing.Point(370, 151);
-            this.textBox10.MaxLength = 2;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(43, 20);
-            this.textBox10.TabIndex = 46;
+            this.shoot8.Location = new System.Drawing.Point(370, 151);
+            this.shoot8.MaxLength = 2;
+            this.shoot8.Name = "shoot8";
+            this.shoot8.Size = new System.Drawing.Size(43, 20);
+            this.shoot8.TabIndex = 46;
             // 
-            // textBox11
+            // shoot10
             // 
-            this.textBox11.Location = new System.Drawing.Point(470, 151);
-            this.textBox11.MaxLength = 2;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(43, 20);
-            this.textBox11.TabIndex = 47;
+            this.shoot10.Location = new System.Drawing.Point(470, 151);
+            this.shoot10.MaxLength = 2;
+            this.shoot10.Name = "shoot10";
+            this.shoot10.Size = new System.Drawing.Size(43, 20);
+            this.shoot10.TabIndex = 47;
             // 
-            // textBox12
+            // shoot6
             // 
-            this.textBox12.Location = new System.Drawing.Point(270, 151);
-            this.textBox12.MaxLength = 2;
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(43, 20);
-            this.textBox12.TabIndex = 48;
+            this.shoot6.Location = new System.Drawing.Point(270, 151);
+            this.shoot6.MaxLength = 2;
+            this.shoot6.Name = "shoot6";
+            this.shoot6.Size = new System.Drawing.Size(43, 20);
+            this.shoot6.TabIndex = 48;
             // 
-            // textBox13
+            // shoot4
             // 
-            this.textBox13.Location = new System.Drawing.Point(170, 151);
-            this.textBox13.MaxLength = 2;
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(43, 20);
-            this.textBox13.TabIndex = 49;
+            this.shoot4.Location = new System.Drawing.Point(170, 151);
+            this.shoot4.MaxLength = 2;
+            this.shoot4.Name = "shoot4";
+            this.shoot4.Size = new System.Drawing.Size(43, 20);
+            this.shoot4.TabIndex = 49;
             // 
-            // textBox14
+            // shoot9
             // 
-            this.textBox14.Location = new System.Drawing.Point(420, 151);
-            this.textBox14.MaxLength = 2;
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(43, 20);
-            this.textBox14.TabIndex = 50;
+            this.shoot9.Location = new System.Drawing.Point(420, 151);
+            this.shoot9.MaxLength = 2;
+            this.shoot9.Name = "shoot9";
+            this.shoot9.Size = new System.Drawing.Size(43, 20);
+            this.shoot9.TabIndex = 50;
             // 
             // label15
             // 
@@ -745,94 +745,94 @@ namespace ShootingRange
             this.label36.TabIndex = 84;
             this.label36.Text = "11η";
             // 
-            // textBox15
+            // shoot19
             // 
-            this.textBox15.Location = new System.Drawing.Point(999, 151);
-            this.textBox15.MaxLength = 2;
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(43, 20);
-            this.textBox15.TabIndex = 83;
+            this.shoot19.Location = new System.Drawing.Point(999, 151);
+            this.shoot19.MaxLength = 2;
+            this.shoot19.Name = "shoot19";
+            this.shoot19.Size = new System.Drawing.Size(43, 20);
+            this.shoot19.TabIndex = 83;
             // 
-            // textBox16
+            // shoot14
             // 
-            this.textBox16.Location = new System.Drawing.Point(749, 151);
-            this.textBox16.MaxLength = 2;
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(43, 20);
-            this.textBox16.TabIndex = 82;
+            this.shoot14.Location = new System.Drawing.Point(749, 151);
+            this.shoot14.MaxLength = 2;
+            this.shoot14.Name = "shoot14";
+            this.shoot14.Size = new System.Drawing.Size(43, 20);
+            this.shoot14.TabIndex = 82;
             // 
-            // textBox17
+            // shoot16
             // 
-            this.textBox17.Location = new System.Drawing.Point(849, 151);
-            this.textBox17.MaxLength = 2;
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(43, 20);
-            this.textBox17.TabIndex = 81;
+            this.shoot16.Location = new System.Drawing.Point(849, 151);
+            this.shoot16.MaxLength = 2;
+            this.shoot16.Name = "shoot16";
+            this.shoot16.Size = new System.Drawing.Size(43, 20);
+            this.shoot16.TabIndex = 81;
             // 
-            // textBox18
+            // shoot20
             // 
-            this.textBox18.Location = new System.Drawing.Point(1049, 151);
-            this.textBox18.MaxLength = 2;
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(43, 20);
-            this.textBox18.TabIndex = 80;
+            this.shoot20.Location = new System.Drawing.Point(1049, 151);
+            this.shoot20.MaxLength = 2;
+            this.shoot20.Name = "shoot20";
+            this.shoot20.Size = new System.Drawing.Size(43, 20);
+            this.shoot20.TabIndex = 80;
             // 
-            // textBox19
+            // shoot18
             // 
-            this.textBox19.Location = new System.Drawing.Point(949, 151);
-            this.textBox19.MaxLength = 2;
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(43, 20);
-            this.textBox19.TabIndex = 79;
+            this.shoot18.Location = new System.Drawing.Point(949, 151);
+            this.shoot18.MaxLength = 2;
+            this.shoot18.Name = "shoot18";
+            this.shoot18.Size = new System.Drawing.Size(43, 20);
+            this.shoot18.TabIndex = 79;
             // 
-            // textBox20
+            // shoot20Res
             // 
-            this.textBox20.Enabled = false;
-            this.textBox20.Location = new System.Drawing.Point(1109, 151);
-            this.textBox20.MaxLength = 4;
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(43, 20);
-            this.textBox20.TabIndex = 78;
+            this.shoot20Res.Enabled = false;
+            this.shoot20Res.Location = new System.Drawing.Point(1109, 151);
+            this.shoot20Res.MaxLength = 4;
+            this.shoot20Res.Name = "shoot20Res";
+            this.shoot20Res.Size = new System.Drawing.Size(43, 20);
+            this.shoot20Res.TabIndex = 78;
             // 
-            // textBox21
+            // shoot17
             // 
-            this.textBox21.Location = new System.Drawing.Point(899, 151);
-            this.textBox21.MaxLength = 2;
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(43, 20);
-            this.textBox21.TabIndex = 77;
+            this.shoot17.Location = new System.Drawing.Point(899, 151);
+            this.shoot17.MaxLength = 2;
+            this.shoot17.Name = "shoot17";
+            this.shoot17.Size = new System.Drawing.Size(43, 20);
+            this.shoot17.TabIndex = 77;
             // 
-            // textBox22
+            // shoot15
             // 
-            this.textBox22.Location = new System.Drawing.Point(799, 151);
-            this.textBox22.MaxLength = 2;
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(43, 20);
-            this.textBox22.TabIndex = 76;
+            this.shoot15.Location = new System.Drawing.Point(799, 151);
+            this.shoot15.MaxLength = 2;
+            this.shoot15.Name = "shoot15";
+            this.shoot15.Size = new System.Drawing.Size(43, 20);
+            this.shoot15.TabIndex = 76;
             // 
-            // textBox23
+            // shoot12
             // 
-            this.textBox23.Location = new System.Drawing.Point(649, 151);
-            this.textBox23.MaxLength = 2;
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(43, 20);
-            this.textBox23.TabIndex = 75;
+            this.shoot12.Location = new System.Drawing.Point(649, 151);
+            this.shoot12.MaxLength = 2;
+            this.shoot12.Name = "shoot12";
+            this.shoot12.Size = new System.Drawing.Size(43, 20);
+            this.shoot12.TabIndex = 75;
             // 
-            // textBox24
+            // shoot13
             // 
-            this.textBox24.Location = new System.Drawing.Point(699, 151);
-            this.textBox24.MaxLength = 2;
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(43, 20);
-            this.textBox24.TabIndex = 74;
+            this.shoot13.Location = new System.Drawing.Point(699, 151);
+            this.shoot13.MaxLength = 2;
+            this.shoot13.Name = "shoot13";
+            this.shoot13.Size = new System.Drawing.Size(43, 20);
+            this.shoot13.TabIndex = 74;
             // 
-            // textBox25
+            // shoot11
             // 
-            this.textBox25.Location = new System.Drawing.Point(599, 151);
-            this.textBox25.MaxLength = 2;
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(43, 20);
-            this.textBox25.TabIndex = 73;
+            this.shoot11.Location = new System.Drawing.Point(599, 151);
+            this.shoot11.MaxLength = 2;
+            this.shoot11.Name = "shoot11";
+            this.shoot11.Size = new System.Drawing.Size(43, 20);
+            this.shoot11.TabIndex = 73;
             // 
             // label37
             // 
@@ -933,94 +933,94 @@ namespace ShootingRange
             this.label47.TabIndex = 106;
             this.label47.Text = "21η";
             // 
-            // textBox26
+            // shoot29
             // 
-            this.textBox26.Location = new System.Drawing.Point(1581, 151);
-            this.textBox26.MaxLength = 2;
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(43, 20);
-            this.textBox26.TabIndex = 105;
+            this.shoot29.Location = new System.Drawing.Point(1581, 151);
+            this.shoot29.MaxLength = 2;
+            this.shoot29.Name = "shoot29";
+            this.shoot29.Size = new System.Drawing.Size(43, 20);
+            this.shoot29.TabIndex = 105;
             // 
-            // textBox27
+            // shoot24
             // 
-            this.textBox27.Location = new System.Drawing.Point(1331, 151);
-            this.textBox27.MaxLength = 2;
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(43, 20);
-            this.textBox27.TabIndex = 104;
+            this.shoot24.Location = new System.Drawing.Point(1331, 151);
+            this.shoot24.MaxLength = 2;
+            this.shoot24.Name = "shoot24";
+            this.shoot24.Size = new System.Drawing.Size(43, 20);
+            this.shoot24.TabIndex = 104;
             // 
-            // textBox28
+            // shoot26
             // 
-            this.textBox28.Location = new System.Drawing.Point(1431, 151);
-            this.textBox28.MaxLength = 2;
-            this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(43, 20);
-            this.textBox28.TabIndex = 103;
+            this.shoot26.Location = new System.Drawing.Point(1431, 151);
+            this.shoot26.MaxLength = 2;
+            this.shoot26.Name = "shoot26";
+            this.shoot26.Size = new System.Drawing.Size(43, 20);
+            this.shoot26.TabIndex = 103;
             // 
-            // textBox29
+            // shoot30
             // 
-            this.textBox29.Location = new System.Drawing.Point(1631, 151);
-            this.textBox29.MaxLength = 2;
-            this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new System.Drawing.Size(43, 20);
-            this.textBox29.TabIndex = 102;
+            this.shoot30.Location = new System.Drawing.Point(1631, 151);
+            this.shoot30.MaxLength = 2;
+            this.shoot30.Name = "shoot30";
+            this.shoot30.Size = new System.Drawing.Size(43, 20);
+            this.shoot30.TabIndex = 102;
             // 
-            // textBox30
+            // shoot28
             // 
-            this.textBox30.Location = new System.Drawing.Point(1531, 151);
-            this.textBox30.MaxLength = 2;
-            this.textBox30.Name = "textBox30";
-            this.textBox30.Size = new System.Drawing.Size(43, 20);
-            this.textBox30.TabIndex = 101;
+            this.shoot28.Location = new System.Drawing.Point(1531, 151);
+            this.shoot28.MaxLength = 2;
+            this.shoot28.Name = "shoot28";
+            this.shoot28.Size = new System.Drawing.Size(43, 20);
+            this.shoot28.TabIndex = 101;
             // 
-            // textBox31
+            // shoot30Res
             // 
-            this.textBox31.Enabled = false;
-            this.textBox31.Location = new System.Drawing.Point(1691, 151);
-            this.textBox31.MaxLength = 4;
-            this.textBox31.Name = "textBox31";
-            this.textBox31.Size = new System.Drawing.Size(43, 20);
-            this.textBox31.TabIndex = 100;
+            this.shoot30Res.Enabled = false;
+            this.shoot30Res.Location = new System.Drawing.Point(1691, 151);
+            this.shoot30Res.MaxLength = 4;
+            this.shoot30Res.Name = "shoot30Res";
+            this.shoot30Res.Size = new System.Drawing.Size(43, 20);
+            this.shoot30Res.TabIndex = 100;
             // 
-            // textBox32
+            // shoot27
             // 
-            this.textBox32.Location = new System.Drawing.Point(1481, 151);
-            this.textBox32.MaxLength = 2;
-            this.textBox32.Name = "textBox32";
-            this.textBox32.Size = new System.Drawing.Size(43, 20);
-            this.textBox32.TabIndex = 99;
+            this.shoot27.Location = new System.Drawing.Point(1481, 151);
+            this.shoot27.MaxLength = 2;
+            this.shoot27.Name = "shoot27";
+            this.shoot27.Size = new System.Drawing.Size(43, 20);
+            this.shoot27.TabIndex = 99;
             // 
-            // textBox33
+            // shoot25
             // 
-            this.textBox33.Location = new System.Drawing.Point(1381, 151);
-            this.textBox33.MaxLength = 2;
-            this.textBox33.Name = "textBox33";
-            this.textBox33.Size = new System.Drawing.Size(43, 20);
-            this.textBox33.TabIndex = 98;
+            this.shoot25.Location = new System.Drawing.Point(1381, 151);
+            this.shoot25.MaxLength = 2;
+            this.shoot25.Name = "shoot25";
+            this.shoot25.Size = new System.Drawing.Size(43, 20);
+            this.shoot25.TabIndex = 98;
             // 
-            // textBox34
+            // shoot22
             // 
-            this.textBox34.Location = new System.Drawing.Point(1231, 151);
-            this.textBox34.MaxLength = 2;
-            this.textBox34.Name = "textBox34";
-            this.textBox34.Size = new System.Drawing.Size(43, 20);
-            this.textBox34.TabIndex = 97;
+            this.shoot22.Location = new System.Drawing.Point(1231, 151);
+            this.shoot22.MaxLength = 2;
+            this.shoot22.Name = "shoot22";
+            this.shoot22.Size = new System.Drawing.Size(43, 20);
+            this.shoot22.TabIndex = 97;
             // 
-            // textBox35
+            // shoot23
             // 
-            this.textBox35.Location = new System.Drawing.Point(1281, 151);
-            this.textBox35.MaxLength = 2;
-            this.textBox35.Name = "textBox35";
-            this.textBox35.Size = new System.Drawing.Size(43, 20);
-            this.textBox35.TabIndex = 96;
+            this.shoot23.Location = new System.Drawing.Point(1281, 151);
+            this.shoot23.MaxLength = 2;
+            this.shoot23.Name = "shoot23";
+            this.shoot23.Size = new System.Drawing.Size(43, 20);
+            this.shoot23.TabIndex = 96;
             // 
-            // textBox36
+            // shoot21
             // 
-            this.textBox36.Location = new System.Drawing.Point(1181, 151);
-            this.textBox36.MaxLength = 2;
-            this.textBox36.Name = "textBox36";
-            this.textBox36.Size = new System.Drawing.Size(43, 20);
-            this.textBox36.TabIndex = 95;
+            this.shoot21.Location = new System.Drawing.Point(1181, 151);
+            this.shoot21.MaxLength = 2;
+            this.shoot21.Name = "shoot21";
+            this.shoot21.Size = new System.Drawing.Size(43, 20);
+            this.shoot21.TabIndex = 95;
             // 
             // label48
             // 
@@ -1121,94 +1121,94 @@ namespace ShootingRange
             this.label58.TabIndex = 172;
             this.label58.Text = "51η";
             // 
-            // textBox37
+            // shoot59
             // 
-            this.textBox37.Location = new System.Drawing.Point(1581, 195);
-            this.textBox37.MaxLength = 2;
-            this.textBox37.Name = "textBox37";
-            this.textBox37.Size = new System.Drawing.Size(43, 20);
-            this.textBox37.TabIndex = 171;
+            this.shoot59.Location = new System.Drawing.Point(1581, 195);
+            this.shoot59.MaxLength = 2;
+            this.shoot59.Name = "shoot59";
+            this.shoot59.Size = new System.Drawing.Size(43, 20);
+            this.shoot59.TabIndex = 171;
             // 
-            // textBox38
+            // shoot54
             // 
-            this.textBox38.Location = new System.Drawing.Point(1331, 195);
-            this.textBox38.MaxLength = 2;
-            this.textBox38.Name = "textBox38";
-            this.textBox38.Size = new System.Drawing.Size(43, 20);
-            this.textBox38.TabIndex = 170;
+            this.shoot54.Location = new System.Drawing.Point(1331, 195);
+            this.shoot54.MaxLength = 2;
+            this.shoot54.Name = "shoot54";
+            this.shoot54.Size = new System.Drawing.Size(43, 20);
+            this.shoot54.TabIndex = 170;
             // 
-            // textBox39
+            // shoot56
             // 
-            this.textBox39.Location = new System.Drawing.Point(1431, 195);
-            this.textBox39.MaxLength = 2;
-            this.textBox39.Name = "textBox39";
-            this.textBox39.Size = new System.Drawing.Size(43, 20);
-            this.textBox39.TabIndex = 169;
+            this.shoot56.Location = new System.Drawing.Point(1431, 195);
+            this.shoot56.MaxLength = 2;
+            this.shoot56.Name = "shoot56";
+            this.shoot56.Size = new System.Drawing.Size(43, 20);
+            this.shoot56.TabIndex = 169;
             // 
-            // textBox40
+            // shoot60
             // 
-            this.textBox40.Location = new System.Drawing.Point(1631, 195);
-            this.textBox40.MaxLength = 2;
-            this.textBox40.Name = "textBox40";
-            this.textBox40.Size = new System.Drawing.Size(43, 20);
-            this.textBox40.TabIndex = 168;
+            this.shoot60.Location = new System.Drawing.Point(1631, 195);
+            this.shoot60.MaxLength = 2;
+            this.shoot60.Name = "shoot60";
+            this.shoot60.Size = new System.Drawing.Size(43, 20);
+            this.shoot60.TabIndex = 168;
             // 
-            // textBox41
+            // shoot58
             // 
-            this.textBox41.Location = new System.Drawing.Point(1531, 195);
-            this.textBox41.MaxLength = 2;
-            this.textBox41.Name = "textBox41";
-            this.textBox41.Size = new System.Drawing.Size(43, 20);
-            this.textBox41.TabIndex = 167;
+            this.shoot58.Location = new System.Drawing.Point(1531, 195);
+            this.shoot58.MaxLength = 2;
+            this.shoot58.Name = "shoot58";
+            this.shoot58.Size = new System.Drawing.Size(43, 20);
+            this.shoot58.TabIndex = 167;
             // 
-            // textBox42
+            // shoot60Res
             // 
-            this.textBox42.Enabled = false;
-            this.textBox42.Location = new System.Drawing.Point(1691, 195);
-            this.textBox42.MaxLength = 4;
-            this.textBox42.Name = "textBox42";
-            this.textBox42.Size = new System.Drawing.Size(43, 20);
-            this.textBox42.TabIndex = 166;
+            this.shoot60Res.Enabled = false;
+            this.shoot60Res.Location = new System.Drawing.Point(1691, 195);
+            this.shoot60Res.MaxLength = 4;
+            this.shoot60Res.Name = "shoot60Res";
+            this.shoot60Res.Size = new System.Drawing.Size(43, 20);
+            this.shoot60Res.TabIndex = 166;
             // 
-            // textBox43
+            // shoot57
             // 
-            this.textBox43.Location = new System.Drawing.Point(1481, 195);
-            this.textBox43.MaxLength = 2;
-            this.textBox43.Name = "textBox43";
-            this.textBox43.Size = new System.Drawing.Size(43, 20);
-            this.textBox43.TabIndex = 165;
+            this.shoot57.Location = new System.Drawing.Point(1481, 195);
+            this.shoot57.MaxLength = 2;
+            this.shoot57.Name = "shoot57";
+            this.shoot57.Size = new System.Drawing.Size(43, 20);
+            this.shoot57.TabIndex = 165;
             // 
-            // textBox44
+            // shoot55
             // 
-            this.textBox44.Location = new System.Drawing.Point(1381, 195);
-            this.textBox44.MaxLength = 2;
-            this.textBox44.Name = "textBox44";
-            this.textBox44.Size = new System.Drawing.Size(43, 20);
-            this.textBox44.TabIndex = 164;
+            this.shoot55.Location = new System.Drawing.Point(1381, 195);
+            this.shoot55.MaxLength = 2;
+            this.shoot55.Name = "shoot55";
+            this.shoot55.Size = new System.Drawing.Size(43, 20);
+            this.shoot55.TabIndex = 164;
             // 
-            // textBox45
+            // shoot52
             // 
-            this.textBox45.Location = new System.Drawing.Point(1231, 195);
-            this.textBox45.MaxLength = 2;
-            this.textBox45.Name = "textBox45";
-            this.textBox45.Size = new System.Drawing.Size(43, 20);
-            this.textBox45.TabIndex = 163;
+            this.shoot52.Location = new System.Drawing.Point(1231, 195);
+            this.shoot52.MaxLength = 2;
+            this.shoot52.Name = "shoot52";
+            this.shoot52.Size = new System.Drawing.Size(43, 20);
+            this.shoot52.TabIndex = 163;
             // 
-            // textBox46
+            // shoot53
             // 
-            this.textBox46.Location = new System.Drawing.Point(1281, 195);
-            this.textBox46.MaxLength = 2;
-            this.textBox46.Name = "textBox46";
-            this.textBox46.Size = new System.Drawing.Size(43, 20);
-            this.textBox46.TabIndex = 162;
+            this.shoot53.Location = new System.Drawing.Point(1281, 195);
+            this.shoot53.MaxLength = 2;
+            this.shoot53.Name = "shoot53";
+            this.shoot53.Size = new System.Drawing.Size(43, 20);
+            this.shoot53.TabIndex = 162;
             // 
-            // textBox47
+            // shoot51
             // 
-            this.textBox47.Location = new System.Drawing.Point(1181, 195);
-            this.textBox47.MaxLength = 2;
-            this.textBox47.Name = "textBox47";
-            this.textBox47.Size = new System.Drawing.Size(43, 20);
-            this.textBox47.TabIndex = 161;
+            this.shoot51.Location = new System.Drawing.Point(1181, 195);
+            this.shoot51.MaxLength = 2;
+            this.shoot51.Name = "shoot51";
+            this.shoot51.Size = new System.Drawing.Size(43, 20);
+            this.shoot51.TabIndex = 161;
             // 
             // label59
             // 
@@ -1309,94 +1309,94 @@ namespace ShootingRange
             this.label69.TabIndex = 150;
             this.label69.Text = "41η";
             // 
-            // textBox48
+            // shoot49
             // 
-            this.textBox48.Location = new System.Drawing.Point(999, 195);
-            this.textBox48.MaxLength = 2;
-            this.textBox48.Name = "textBox48";
-            this.textBox48.Size = new System.Drawing.Size(43, 20);
-            this.textBox48.TabIndex = 149;
+            this.shoot49.Location = new System.Drawing.Point(999, 195);
+            this.shoot49.MaxLength = 2;
+            this.shoot49.Name = "shoot49";
+            this.shoot49.Size = new System.Drawing.Size(43, 20);
+            this.shoot49.TabIndex = 149;
             // 
-            // textBox49
+            // shoot44
             // 
-            this.textBox49.Location = new System.Drawing.Point(749, 195);
-            this.textBox49.MaxLength = 2;
-            this.textBox49.Name = "textBox49";
-            this.textBox49.Size = new System.Drawing.Size(43, 20);
-            this.textBox49.TabIndex = 148;
+            this.shoot44.Location = new System.Drawing.Point(749, 195);
+            this.shoot44.MaxLength = 2;
+            this.shoot44.Name = "shoot44";
+            this.shoot44.Size = new System.Drawing.Size(43, 20);
+            this.shoot44.TabIndex = 148;
             // 
-            // textBox50
+            // shoot46
             // 
-            this.textBox50.Location = new System.Drawing.Point(849, 195);
-            this.textBox50.MaxLength = 2;
-            this.textBox50.Name = "textBox50";
-            this.textBox50.Size = new System.Drawing.Size(43, 20);
-            this.textBox50.TabIndex = 147;
+            this.shoot46.Location = new System.Drawing.Point(849, 195);
+            this.shoot46.MaxLength = 2;
+            this.shoot46.Name = "shoot46";
+            this.shoot46.Size = new System.Drawing.Size(43, 20);
+            this.shoot46.TabIndex = 147;
             // 
-            // textBox51
+            // shoot50
             // 
-            this.textBox51.Location = new System.Drawing.Point(1049, 195);
-            this.textBox51.MaxLength = 2;
-            this.textBox51.Name = "textBox51";
-            this.textBox51.Size = new System.Drawing.Size(43, 20);
-            this.textBox51.TabIndex = 146;
+            this.shoot50.Location = new System.Drawing.Point(1049, 195);
+            this.shoot50.MaxLength = 2;
+            this.shoot50.Name = "shoot50";
+            this.shoot50.Size = new System.Drawing.Size(43, 20);
+            this.shoot50.TabIndex = 146;
             // 
-            // textBox52
+            // shoot48
             // 
-            this.textBox52.Location = new System.Drawing.Point(949, 195);
-            this.textBox52.MaxLength = 2;
-            this.textBox52.Name = "textBox52";
-            this.textBox52.Size = new System.Drawing.Size(43, 20);
-            this.textBox52.TabIndex = 145;
+            this.shoot48.Location = new System.Drawing.Point(949, 195);
+            this.shoot48.MaxLength = 2;
+            this.shoot48.Name = "shoot48";
+            this.shoot48.Size = new System.Drawing.Size(43, 20);
+            this.shoot48.TabIndex = 145;
             // 
-            // textBox53
+            // shoot50Res
             // 
-            this.textBox53.Enabled = false;
-            this.textBox53.Location = new System.Drawing.Point(1109, 195);
-            this.textBox53.MaxLength = 4;
-            this.textBox53.Name = "textBox53";
-            this.textBox53.Size = new System.Drawing.Size(43, 20);
-            this.textBox53.TabIndex = 144;
+            this.shoot50Res.Enabled = false;
+            this.shoot50Res.Location = new System.Drawing.Point(1109, 195);
+            this.shoot50Res.MaxLength = 4;
+            this.shoot50Res.Name = "shoot50Res";
+            this.shoot50Res.Size = new System.Drawing.Size(43, 20);
+            this.shoot50Res.TabIndex = 144;
             // 
-            // textBox54
+            // shoot47
             // 
-            this.textBox54.Location = new System.Drawing.Point(899, 195);
-            this.textBox54.MaxLength = 2;
-            this.textBox54.Name = "textBox54";
-            this.textBox54.Size = new System.Drawing.Size(43, 20);
-            this.textBox54.TabIndex = 143;
+            this.shoot47.Location = new System.Drawing.Point(899, 195);
+            this.shoot47.MaxLength = 2;
+            this.shoot47.Name = "shoot47";
+            this.shoot47.Size = new System.Drawing.Size(43, 20);
+            this.shoot47.TabIndex = 143;
             // 
-            // textBox55
+            // shoot45
             // 
-            this.textBox55.Location = new System.Drawing.Point(799, 195);
-            this.textBox55.MaxLength = 2;
-            this.textBox55.Name = "textBox55";
-            this.textBox55.Size = new System.Drawing.Size(43, 20);
-            this.textBox55.TabIndex = 142;
+            this.shoot45.Location = new System.Drawing.Point(799, 195);
+            this.shoot45.MaxLength = 2;
+            this.shoot45.Name = "shoot45";
+            this.shoot45.Size = new System.Drawing.Size(43, 20);
+            this.shoot45.TabIndex = 142;
             // 
-            // textBox56
+            // shoot42
             // 
-            this.textBox56.Location = new System.Drawing.Point(649, 195);
-            this.textBox56.MaxLength = 2;
-            this.textBox56.Name = "textBox56";
-            this.textBox56.Size = new System.Drawing.Size(43, 20);
-            this.textBox56.TabIndex = 141;
+            this.shoot42.Location = new System.Drawing.Point(649, 195);
+            this.shoot42.MaxLength = 2;
+            this.shoot42.Name = "shoot42";
+            this.shoot42.Size = new System.Drawing.Size(43, 20);
+            this.shoot42.TabIndex = 141;
             // 
-            // textBox57
+            // shoot43
             // 
-            this.textBox57.Location = new System.Drawing.Point(699, 195);
-            this.textBox57.MaxLength = 2;
-            this.textBox57.Name = "textBox57";
-            this.textBox57.Size = new System.Drawing.Size(43, 20);
-            this.textBox57.TabIndex = 140;
+            this.shoot43.Location = new System.Drawing.Point(699, 195);
+            this.shoot43.MaxLength = 2;
+            this.shoot43.Name = "shoot43";
+            this.shoot43.Size = new System.Drawing.Size(43, 20);
+            this.shoot43.TabIndex = 140;
             // 
-            // textBox58
+            // shoot41
             // 
-            this.textBox58.Location = new System.Drawing.Point(599, 195);
-            this.textBox58.MaxLength = 2;
-            this.textBox58.Name = "textBox58";
-            this.textBox58.Size = new System.Drawing.Size(43, 20);
-            this.textBox58.TabIndex = 139;
+            this.shoot41.Location = new System.Drawing.Point(599, 195);
+            this.shoot41.MaxLength = 2;
+            this.shoot41.Name = "shoot41";
+            this.shoot41.Size = new System.Drawing.Size(43, 20);
+            this.shoot41.TabIndex = 139;
             // 
             // label70
             // 
@@ -1497,94 +1497,94 @@ namespace ShootingRange
             this.label80.TabIndex = 128;
             this.label80.Text = "31η";
             // 
-            // textBox59
+            // shoot39
             // 
-            this.textBox59.Location = new System.Drawing.Point(420, 195);
-            this.textBox59.MaxLength = 2;
-            this.textBox59.Name = "textBox59";
-            this.textBox59.Size = new System.Drawing.Size(43, 20);
-            this.textBox59.TabIndex = 127;
+            this.shoot39.Location = new System.Drawing.Point(420, 195);
+            this.shoot39.MaxLength = 2;
+            this.shoot39.Name = "shoot39";
+            this.shoot39.Size = new System.Drawing.Size(43, 20);
+            this.shoot39.TabIndex = 127;
             // 
-            // textBox60
+            // shoot34
             // 
-            this.textBox60.Location = new System.Drawing.Point(170, 195);
-            this.textBox60.MaxLength = 2;
-            this.textBox60.Name = "textBox60";
-            this.textBox60.Size = new System.Drawing.Size(43, 20);
-            this.textBox60.TabIndex = 126;
+            this.shoot34.Location = new System.Drawing.Point(170, 195);
+            this.shoot34.MaxLength = 2;
+            this.shoot34.Name = "shoot34";
+            this.shoot34.Size = new System.Drawing.Size(43, 20);
+            this.shoot34.TabIndex = 126;
             // 
-            // textBox61
+            // shoot36
             // 
-            this.textBox61.Location = new System.Drawing.Point(270, 195);
-            this.textBox61.MaxLength = 2;
-            this.textBox61.Name = "textBox61";
-            this.textBox61.Size = new System.Drawing.Size(43, 20);
-            this.textBox61.TabIndex = 125;
+            this.shoot36.Location = new System.Drawing.Point(270, 195);
+            this.shoot36.MaxLength = 2;
+            this.shoot36.Name = "shoot36";
+            this.shoot36.Size = new System.Drawing.Size(43, 20);
+            this.shoot36.TabIndex = 125;
             // 
-            // textBox62
+            // shoot40
             // 
-            this.textBox62.Location = new System.Drawing.Point(470, 195);
-            this.textBox62.MaxLength = 2;
-            this.textBox62.Name = "textBox62";
-            this.textBox62.Size = new System.Drawing.Size(43, 20);
-            this.textBox62.TabIndex = 124;
+            this.shoot40.Location = new System.Drawing.Point(470, 195);
+            this.shoot40.MaxLength = 2;
+            this.shoot40.Name = "shoot40";
+            this.shoot40.Size = new System.Drawing.Size(43, 20);
+            this.shoot40.TabIndex = 124;
             // 
-            // textBox63
+            // shoot38
             // 
-            this.textBox63.Location = new System.Drawing.Point(370, 195);
-            this.textBox63.MaxLength = 2;
-            this.textBox63.Name = "textBox63";
-            this.textBox63.Size = new System.Drawing.Size(43, 20);
-            this.textBox63.TabIndex = 123;
+            this.shoot38.Location = new System.Drawing.Point(370, 195);
+            this.shoot38.MaxLength = 2;
+            this.shoot38.Name = "shoot38";
+            this.shoot38.Size = new System.Drawing.Size(43, 20);
+            this.shoot38.TabIndex = 123;
             // 
-            // textBox64
+            // shoot40Res
             // 
-            this.textBox64.Enabled = false;
-            this.textBox64.Location = new System.Drawing.Point(530, 195);
-            this.textBox64.MaxLength = 4;
-            this.textBox64.Name = "textBox64";
-            this.textBox64.Size = new System.Drawing.Size(43, 20);
-            this.textBox64.TabIndex = 122;
+            this.shoot40Res.Enabled = false;
+            this.shoot40Res.Location = new System.Drawing.Point(530, 195);
+            this.shoot40Res.MaxLength = 4;
+            this.shoot40Res.Name = "shoot40Res";
+            this.shoot40Res.Size = new System.Drawing.Size(43, 20);
+            this.shoot40Res.TabIndex = 122;
             // 
-            // textBox65
+            // shoot37
             // 
-            this.textBox65.Location = new System.Drawing.Point(320, 195);
-            this.textBox65.MaxLength = 2;
-            this.textBox65.Name = "textBox65";
-            this.textBox65.Size = new System.Drawing.Size(43, 20);
-            this.textBox65.TabIndex = 121;
+            this.shoot37.Location = new System.Drawing.Point(320, 195);
+            this.shoot37.MaxLength = 2;
+            this.shoot37.Name = "shoot37";
+            this.shoot37.Size = new System.Drawing.Size(43, 20);
+            this.shoot37.TabIndex = 121;
             // 
-            // textBox66
+            // shoot35
             // 
-            this.textBox66.Location = new System.Drawing.Point(220, 195);
-            this.textBox66.MaxLength = 2;
-            this.textBox66.Name = "textBox66";
-            this.textBox66.Size = new System.Drawing.Size(43, 20);
-            this.textBox66.TabIndex = 120;
+            this.shoot35.Location = new System.Drawing.Point(220, 195);
+            this.shoot35.MaxLength = 2;
+            this.shoot35.Name = "shoot35";
+            this.shoot35.Size = new System.Drawing.Size(43, 20);
+            this.shoot35.TabIndex = 120;
             // 
-            // textBox67
+            // shoot32
             // 
-            this.textBox67.Location = new System.Drawing.Point(70, 195);
-            this.textBox67.MaxLength = 2;
-            this.textBox67.Name = "textBox67";
-            this.textBox67.Size = new System.Drawing.Size(43, 20);
-            this.textBox67.TabIndex = 119;
+            this.shoot32.Location = new System.Drawing.Point(70, 195);
+            this.shoot32.MaxLength = 2;
+            this.shoot32.Name = "shoot32";
+            this.shoot32.Size = new System.Drawing.Size(43, 20);
+            this.shoot32.TabIndex = 119;
             // 
-            // textBox68
+            // shoot33
             // 
-            this.textBox68.Location = new System.Drawing.Point(120, 195);
-            this.textBox68.MaxLength = 2;
-            this.textBox68.Name = "textBox68";
-            this.textBox68.Size = new System.Drawing.Size(43, 20);
-            this.textBox68.TabIndex = 118;
+            this.shoot33.Location = new System.Drawing.Point(120, 195);
+            this.shoot33.MaxLength = 2;
+            this.shoot33.Name = "shoot33";
+            this.shoot33.Size = new System.Drawing.Size(43, 20);
+            this.shoot33.TabIndex = 118;
             // 
-            // textBox69
+            // shoot31
             // 
-            this.textBox69.Location = new System.Drawing.Point(20, 195);
-            this.textBox69.MaxLength = 2;
-            this.textBox69.Name = "textBox69";
-            this.textBox69.Size = new System.Drawing.Size(43, 20);
-            this.textBox69.TabIndex = 117;
+            this.shoot31.Location = new System.Drawing.Point(20, 195);
+            this.shoot31.MaxLength = 2;
+            this.shoot31.Name = "shoot31";
+            this.shoot31.Size = new System.Drawing.Size(43, 20);
+            this.shoot31.TabIndex = 117;
             // 
             // Shooting
             // 
@@ -1603,17 +1603,17 @@ namespace ShootingRange
             this.Controls.Add(this.label56);
             this.Controls.Add(this.label57);
             this.Controls.Add(this.label58);
-            this.Controls.Add(this.textBox37);
-            this.Controls.Add(this.textBox38);
-            this.Controls.Add(this.textBox39);
-            this.Controls.Add(this.textBox40);
-            this.Controls.Add(this.textBox41);
-            this.Controls.Add(this.textBox42);
-            this.Controls.Add(this.textBox43);
-            this.Controls.Add(this.textBox44);
-            this.Controls.Add(this.textBox45);
-            this.Controls.Add(this.textBox46);
-            this.Controls.Add(this.textBox47);
+            this.Controls.Add(this.shoot59);
+            this.Controls.Add(this.shoot54);
+            this.Controls.Add(this.shoot56);
+            this.Controls.Add(this.shoot60);
+            this.Controls.Add(this.shoot58);
+            this.Controls.Add(this.shoot60Res);
+            this.Controls.Add(this.shoot57);
+            this.Controls.Add(this.shoot55);
+            this.Controls.Add(this.shoot52);
+            this.Controls.Add(this.shoot53);
+            this.Controls.Add(this.shoot51);
             this.Controls.Add(this.label59);
             this.Controls.Add(this.label60);
             this.Controls.Add(this.label61);
@@ -1625,17 +1625,17 @@ namespace ShootingRange
             this.Controls.Add(this.label67);
             this.Controls.Add(this.label68);
             this.Controls.Add(this.label69);
-            this.Controls.Add(this.textBox48);
-            this.Controls.Add(this.textBox49);
-            this.Controls.Add(this.textBox50);
-            this.Controls.Add(this.textBox51);
-            this.Controls.Add(this.textBox52);
-            this.Controls.Add(this.textBox53);
-            this.Controls.Add(this.textBox54);
-            this.Controls.Add(this.textBox55);
-            this.Controls.Add(this.textBox56);
-            this.Controls.Add(this.textBox57);
-            this.Controls.Add(this.textBox58);
+            this.Controls.Add(this.shoot49);
+            this.Controls.Add(this.shoot44);
+            this.Controls.Add(this.shoot46);
+            this.Controls.Add(this.shoot50);
+            this.Controls.Add(this.shoot48);
+            this.Controls.Add(this.shoot50Res);
+            this.Controls.Add(this.shoot47);
+            this.Controls.Add(this.shoot45);
+            this.Controls.Add(this.shoot42);
+            this.Controls.Add(this.shoot43);
+            this.Controls.Add(this.shoot41);
             this.Controls.Add(this.label70);
             this.Controls.Add(this.label71);
             this.Controls.Add(this.label72);
@@ -1647,17 +1647,17 @@ namespace ShootingRange
             this.Controls.Add(this.label78);
             this.Controls.Add(this.label79);
             this.Controls.Add(this.label80);
-            this.Controls.Add(this.textBox59);
-            this.Controls.Add(this.textBox60);
-            this.Controls.Add(this.textBox61);
-            this.Controls.Add(this.textBox62);
-            this.Controls.Add(this.textBox63);
-            this.Controls.Add(this.textBox64);
-            this.Controls.Add(this.textBox65);
-            this.Controls.Add(this.textBox66);
-            this.Controls.Add(this.textBox67);
-            this.Controls.Add(this.textBox68);
-            this.Controls.Add(this.textBox69);
+            this.Controls.Add(this.shoot39);
+            this.Controls.Add(this.shoot34);
+            this.Controls.Add(this.shoot36);
+            this.Controls.Add(this.shoot40);
+            this.Controls.Add(this.shoot38);
+            this.Controls.Add(this.shoot40Res);
+            this.Controls.Add(this.shoot37);
+            this.Controls.Add(this.shoot35);
+            this.Controls.Add(this.shoot32);
+            this.Controls.Add(this.shoot33);
+            this.Controls.Add(this.shoot31);
             this.Controls.Add(this.label37);
             this.Controls.Add(this.label38);
             this.Controls.Add(this.label39);
@@ -1669,17 +1669,17 @@ namespace ShootingRange
             this.Controls.Add(this.label45);
             this.Controls.Add(this.label46);
             this.Controls.Add(this.label47);
-            this.Controls.Add(this.textBox26);
-            this.Controls.Add(this.textBox27);
-            this.Controls.Add(this.textBox28);
-            this.Controls.Add(this.textBox29);
-            this.Controls.Add(this.textBox30);
-            this.Controls.Add(this.textBox31);
-            this.Controls.Add(this.textBox32);
-            this.Controls.Add(this.textBox33);
-            this.Controls.Add(this.textBox34);
-            this.Controls.Add(this.textBox35);
-            this.Controls.Add(this.textBox36);
+            this.Controls.Add(this.shoot29);
+            this.Controls.Add(this.shoot24);
+            this.Controls.Add(this.shoot26);
+            this.Controls.Add(this.shoot30);
+            this.Controls.Add(this.shoot28);
+            this.Controls.Add(this.shoot30Res);
+            this.Controls.Add(this.shoot27);
+            this.Controls.Add(this.shoot25);
+            this.Controls.Add(this.shoot22);
+            this.Controls.Add(this.shoot23);
+            this.Controls.Add(this.shoot21);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.label27);
             this.Controls.Add(this.label28);
@@ -1691,17 +1691,17 @@ namespace ShootingRange
             this.Controls.Add(this.label34);
             this.Controls.Add(this.label35);
             this.Controls.Add(this.label36);
-            this.Controls.Add(this.textBox15);
-            this.Controls.Add(this.textBox16);
-            this.Controls.Add(this.textBox17);
-            this.Controls.Add(this.textBox18);
-            this.Controls.Add(this.textBox19);
-            this.Controls.Add(this.textBox20);
-            this.Controls.Add(this.textBox21);
-            this.Controls.Add(this.textBox22);
-            this.Controls.Add(this.textBox23);
-            this.Controls.Add(this.textBox24);
-            this.Controls.Add(this.textBox25);
+            this.Controls.Add(this.shoot19);
+            this.Controls.Add(this.shoot14);
+            this.Controls.Add(this.shoot16);
+            this.Controls.Add(this.shoot20);
+            this.Controls.Add(this.shoot18);
+            this.Controls.Add(this.shoot20Res);
+            this.Controls.Add(this.shoot17);
+            this.Controls.Add(this.shoot15);
+            this.Controls.Add(this.shoot12);
+            this.Controls.Add(this.shoot13);
+            this.Controls.Add(this.shoot11);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.label23);
@@ -1713,17 +1713,17 @@ namespace ShootingRange
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.textBox14);
-            this.Controls.Add(this.textBox13);
-            this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.shoot9);
+            this.Controls.Add(this.shoot4);
+            this.Controls.Add(this.shoot6);
+            this.Controls.Add(this.shoot10);
+            this.Controls.Add(this.shoot8);
+            this.Controls.Add(this.shoot10Res);
+            this.Controls.Add(this.shoot7);
+            this.Controls.Add(this.shoot5);
+            this.Controls.Add(this.shoot2);
+            this.Controls.Add(this.shoot3);
+            this.Controls.Add(this.shoot1);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label13);
@@ -1790,17 +1790,17 @@ namespace ShootingRange
         private System.Windows.Forms.ComboBox comboBox8;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox comboBox9;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox shoot1;
+        private System.Windows.Forms.TextBox shoot3;
+        private System.Windows.Forms.TextBox shoot2;
+        private System.Windows.Forms.TextBox shoot5;
+        private System.Windows.Forms.TextBox shoot7;
+        private System.Windows.Forms.TextBox shoot10Res;
+        private System.Windows.Forms.TextBox shoot8;
+        private System.Windows.Forms.TextBox shoot10;
+        private System.Windows.Forms.TextBox shoot6;
+        private System.Windows.Forms.TextBox shoot4;
+        private System.Windows.Forms.TextBox shoot9;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
@@ -1823,17 +1823,17 @@ namespace ShootingRange
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.TextBox textBox23;
-        private System.Windows.Forms.TextBox textBox24;
-        private System.Windows.Forms.TextBox textBox25;
+        private System.Windows.Forms.TextBox shoot19;
+        private System.Windows.Forms.TextBox shoot14;
+        private System.Windows.Forms.TextBox shoot16;
+        private System.Windows.Forms.TextBox shoot20;
+        private System.Windows.Forms.TextBox shoot18;
+        private System.Windows.Forms.TextBox shoot20Res;
+        private System.Windows.Forms.TextBox shoot17;
+        private System.Windows.Forms.TextBox shoot15;
+        private System.Windows.Forms.TextBox shoot12;
+        private System.Windows.Forms.TextBox shoot13;
+        private System.Windows.Forms.TextBox shoot11;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label39;
@@ -1845,17 +1845,17 @@ namespace ShootingRange
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.TextBox textBox26;
-        private System.Windows.Forms.TextBox textBox27;
-        private System.Windows.Forms.TextBox textBox28;
-        private System.Windows.Forms.TextBox textBox29;
-        private System.Windows.Forms.TextBox textBox30;
-        private System.Windows.Forms.TextBox textBox31;
-        private System.Windows.Forms.TextBox textBox32;
-        private System.Windows.Forms.TextBox textBox33;
-        private System.Windows.Forms.TextBox textBox34;
-        private System.Windows.Forms.TextBox textBox35;
-        private System.Windows.Forms.TextBox textBox36;
+        private System.Windows.Forms.TextBox shoot29;
+        private System.Windows.Forms.TextBox shoot24;
+        private System.Windows.Forms.TextBox shoot26;
+        private System.Windows.Forms.TextBox shoot30;
+        private System.Windows.Forms.TextBox shoot28;
+        private System.Windows.Forms.TextBox shoot30Res;
+        private System.Windows.Forms.TextBox shoot27;
+        private System.Windows.Forms.TextBox shoot25;
+        private System.Windows.Forms.TextBox shoot22;
+        private System.Windows.Forms.TextBox shoot23;
+        private System.Windows.Forms.TextBox shoot21;
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.Label label50;
@@ -1867,17 +1867,17 @@ namespace ShootingRange
         private System.Windows.Forms.Label label56;
         private System.Windows.Forms.Label label57;
         private System.Windows.Forms.Label label58;
-        private System.Windows.Forms.TextBox textBox37;
-        private System.Windows.Forms.TextBox textBox38;
-        private System.Windows.Forms.TextBox textBox39;
-        private System.Windows.Forms.TextBox textBox40;
-        private System.Windows.Forms.TextBox textBox41;
-        private System.Windows.Forms.TextBox textBox42;
-        private System.Windows.Forms.TextBox textBox43;
-        private System.Windows.Forms.TextBox textBox44;
-        private System.Windows.Forms.TextBox textBox45;
-        private System.Windows.Forms.TextBox textBox46;
-        private System.Windows.Forms.TextBox textBox47;
+        private System.Windows.Forms.TextBox shoot59;
+        private System.Windows.Forms.TextBox shoot54;
+        private System.Windows.Forms.TextBox shoot56;
+        private System.Windows.Forms.TextBox shoot60;
+        private System.Windows.Forms.TextBox shoot58;
+        private System.Windows.Forms.TextBox shoot60Res;
+        private System.Windows.Forms.TextBox shoot57;
+        private System.Windows.Forms.TextBox shoot55;
+        private System.Windows.Forms.TextBox shoot52;
+        private System.Windows.Forms.TextBox shoot53;
+        private System.Windows.Forms.TextBox shoot51;
         private System.Windows.Forms.Label label59;
         private System.Windows.Forms.Label label60;
         private System.Windows.Forms.Label label61;
@@ -1889,17 +1889,17 @@ namespace ShootingRange
         private System.Windows.Forms.Label label67;
         private System.Windows.Forms.Label label68;
         private System.Windows.Forms.Label label69;
-        private System.Windows.Forms.TextBox textBox48;
-        private System.Windows.Forms.TextBox textBox49;
-        private System.Windows.Forms.TextBox textBox50;
-        private System.Windows.Forms.TextBox textBox51;
-        private System.Windows.Forms.TextBox textBox52;
-        private System.Windows.Forms.TextBox textBox53;
-        private System.Windows.Forms.TextBox textBox54;
-        private System.Windows.Forms.TextBox textBox55;
-        private System.Windows.Forms.TextBox textBox56;
-        private System.Windows.Forms.TextBox textBox57;
-        private System.Windows.Forms.TextBox textBox58;
+        private System.Windows.Forms.TextBox shoot49;
+        private System.Windows.Forms.TextBox shoot44;
+        private System.Windows.Forms.TextBox shoot46;
+        private System.Windows.Forms.TextBox shoot50;
+        private System.Windows.Forms.TextBox shoot48;
+        private System.Windows.Forms.TextBox shoot50Res;
+        private System.Windows.Forms.TextBox shoot47;
+        private System.Windows.Forms.TextBox shoot45;
+        private System.Windows.Forms.TextBox shoot42;
+        private System.Windows.Forms.TextBox shoot43;
+        private System.Windows.Forms.TextBox shoot41;
         private System.Windows.Forms.Label label70;
         private System.Windows.Forms.Label label71;
         private System.Windows.Forms.Label label72;
@@ -1911,16 +1911,16 @@ namespace ShootingRange
         private System.Windows.Forms.Label label78;
         private System.Windows.Forms.Label label79;
         private System.Windows.Forms.Label label80;
-        private System.Windows.Forms.TextBox textBox59;
-        private System.Windows.Forms.TextBox textBox60;
-        private System.Windows.Forms.TextBox textBox61;
-        private System.Windows.Forms.TextBox textBox62;
-        private System.Windows.Forms.TextBox textBox63;
-        private System.Windows.Forms.TextBox textBox64;
-        private System.Windows.Forms.TextBox textBox65;
-        private System.Windows.Forms.TextBox textBox66;
-        private System.Windows.Forms.TextBox textBox67;
-        private System.Windows.Forms.TextBox textBox68;
-        private System.Windows.Forms.TextBox textBox69;
+        private System.Windows.Forms.TextBox shoot39;
+        private System.Windows.Forms.TextBox shoot34;
+        private System.Windows.Forms.TextBox shoot36;
+        private System.Windows.Forms.TextBox shoot40;
+        private System.Windows.Forms.TextBox shoot38;
+        private System.Windows.Forms.TextBox shoot40Res;
+        private System.Windows.Forms.TextBox shoot37;
+        private System.Windows.Forms.TextBox shoot35;
+        private System.Windows.Forms.TextBox shoot32;
+        private System.Windows.Forms.TextBox shoot33;
+        private System.Windows.Forms.TextBox shoot31;
     }
 }

@@ -31,6 +31,55 @@ namespace ShootingRange
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.AllowUserToResizeColumns = true;
             dataGridView1.AllowUserToResizeRows = false;
+
+            dateBox.Items.Add("01");
+            dateBox.Items.Add("02");
+            dateBox.Items.Add("03");
+            dateBox.Items.Add("04");
+            dateBox.Items.Add("05");
+            dateBox.Items.Add("06");
+            dateBox.Items.Add("07");
+            dateBox.Items.Add("08");
+            dateBox.Items.Add("09");
+            dateBox.Items.Add("10");
+            dateBox.Items.Add("11");
+            dateBox.Items.Add("12");
+            dateBox.Items.Add("13");
+            dateBox.Items.Add("14");
+            dateBox.Items.Add("15");
+            dateBox.Items.Add("16");
+            dateBox.Items.Add("17");
+            dateBox.Items.Add("18");
+            dateBox.Items.Add("19");
+            dateBox.Items.Add("20");
+            dateBox.Items.Add("21");
+            dateBox.Items.Add("22");
+            dateBox.Items.Add("23");
+            dateBox.Items.Add("24");
+            dateBox.Items.Add("25");
+            dateBox.Items.Add("26");
+            dateBox.Items.Add("27");
+            dateBox.Items.Add("28");
+            dateBox.Items.Add("29");
+            dateBox.Items.Add("30");
+            dateBox.Items.Add("31");
+            monthBox.Items.Add("Ιανουάριος");
+            monthBox.Items.Add("Φεβρουάριος");
+            monthBox.Items.Add("Μάρτιος");
+            monthBox.Items.Add("Απρίλιος");
+            monthBox.Items.Add("Μάιος");
+            monthBox.Items.Add("Ιούνιος");
+            monthBox.Items.Add("Ιούλιος");
+            monthBox.Items.Add("Αύγουστος");
+            monthBox.Items.Add("Σεπτέμβριος");
+            monthBox.Items.Add("Οκτώβριος");
+            monthBox.Items.Add("Νοέμβριος");
+            monthBox.Items.Add("Δεκέμβριος");
+            yearBox.Items.Add("2022");
+            yearBox.Items.Add("2023");
+            yearBox.Items.Add("2024");
+            yearBox.Items.Add("2025");
+            yearBox.Items.Add("2026");
             //Console.OutputEncoding = "chcp 1253");
             //Console.OutputEncoding = System.Text.Encoding.GetEncoding("unicode");
             String greek = "Λάκης";
@@ -122,24 +171,24 @@ namespace ShootingRange
         {
             if (comboBox1.SelectedIndex == 0)
             {
-                panel1.Visible = true;
-                panel2.Visible = false;
-                panel3.Visible = false;
+                //panel1.Visible = true;
+                //panel2.Visible = false;
+                //panel3.Visible = false;
                 resetDefaults();
             }
             if (comboBox1.SelectedIndex == 1)
             {
-                panel1.Visible = false;
-                panel2.Visible = true;
-                panel3.Visible = false;
+                //panel1.Visible = false;
+                //panel2.Visible = true;
+                //panel3.Visible = false;
                 resetDefaults();
 
             }
             if (comboBox1.SelectedIndex == 2)
             {
-                panel1.Visible = false;
-                panel2.Visible = false;
-                panel3.Visible = true;
+                //panel1.Visible = false;
+                //panel2.Visible = false;
+                //panel3.Visible = true;
                 resetDefaults();
                 
             }
@@ -148,10 +197,7 @@ namespace ShootingRange
 
         private void resetDefaults()
         {
-            if (panel1.Visible)
-            {
 
-            }
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -170,11 +216,6 @@ namespace ShootingRange
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
         }
@@ -198,6 +239,16 @@ namespace ShootingRange
         private void button3_Click(object sender, EventArgs e)
         {
             ;
+        }
+
+        private void label3_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

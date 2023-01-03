@@ -20,6 +20,6 @@ namespace ShootingRange
         private string AmmoUsed;
         private string AmmoTakenFrom;
         private string ActivityType;
-        private string;
+        //private string;
     }
 }
