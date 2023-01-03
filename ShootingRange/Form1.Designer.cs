@@ -44,8 +44,12 @@
             this.yearBox = new System.Windows.Forms.ComboBox();
             this.monthBox = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -143,7 +147,7 @@
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(12, 471);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(1455, 316);
+            this.dataGridView2.Size = new System.Drawing.Size(705, 316);
             this.dataGridView2.TabIndex = 13;
             // 
             // label3
@@ -151,15 +155,15 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(9, 421);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(263, 13);
+            this.label3.Size = new System.Drawing.Size(323, 13);
             this.label3.TabIndex = 14;
-            this.label3.Text = "Καταχωρημένα στοιχεία μέχρι στιγμής για αγώνα:";
+            this.label3.Text = "Καταχωρημένα στοιχεία μέχρι στιγμής για αγώνα/προπόνηση:";
             this.label3.Click += new System.EventHandler(this.label3_Click_1);
             // 
             // dateBox
             // 
             this.dateBox.FormattingEnabled = true;
-            this.dateBox.Location = new System.Drawing.Point(297, 421);
+            this.dateBox.Location = new System.Drawing.Point(343, 418);
             this.dateBox.Name = "dateBox";
             this.dateBox.Size = new System.Drawing.Size(121, 21);
             this.dateBox.TabIndex = 15;
@@ -168,7 +172,7 @@
             // yearBox
             // 
             this.yearBox.FormattingEnabled = true;
-            this.yearBox.Location = new System.Drawing.Point(551, 421);
+            this.yearBox.Location = new System.Drawing.Point(597, 418);
             this.yearBox.Name = "yearBox";
             this.yearBox.Size = new System.Drawing.Size(121, 21);
             this.yearBox.TabIndex = 16;
@@ -177,7 +181,7 @@
             // monthBox
             // 
             this.monthBox.FormattingEnabled = true;
-            this.monthBox.Location = new System.Drawing.Point(424, 421);
+            this.monthBox.Location = new System.Drawing.Point(470, 418);
             this.monthBox.Name = "monthBox";
             this.monthBox.Size = new System.Drawing.Size(121, 21);
             this.monthBox.TabIndex = 17;
@@ -191,11 +195,40 @@
             this.button3.Text = "Καταχώρηση Αγώνα/Προπόνησης";
             this.button3.UseVisualStyleBackColor = true;
             // 
+            // dataGridView3
+            // 
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(762, 471);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.Size = new System.Drawing.Size(705, 316);
+            this.dataGridView3.TabIndex = 19;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(14, 452);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(50, 13);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "Αγώνας:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(759, 452);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(66, 13);
+            this.label5.TabIndex = 21;
+            this.label5.Text = "Προπόνηση:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1480, 851);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.monthBox);
             this.Controls.Add(this.yearBox);
@@ -216,6 +249,7 @@
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,6 +271,9 @@
         private System.Windows.Forms.ComboBox yearBox;
         private System.Windows.Forms.ComboBox monthBox;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
 

@@ -118,6 +118,11 @@ namespace ShootingRange
         {
 
         }
+
+        private void Shooting_Load(object sender, EventArgs e)
+        {
+
+        }
     }
         
 }
