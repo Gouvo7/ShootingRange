@@ -285,5 +285,37 @@ namespace ShootingRange
             Console.WriteLine(d + m + y);
 
         }
+
+        private void SurnameLeave(object sender, EventArgs e)
+        {
+            try
+            {
+                MySqlConnection conn = new MySqlConnection(ConnString);
+                conn.Open();
+                string query = "SELECT wcmind_FirstName FROM lawdb.wcm_ind where wcmind_LastName like \'%" + BoxSurname.SelectedItem.ToString() +"%\'";
+                MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
+                DataSet ds = new DataSet();
+                da.Fill(ds, "courses");
+                DataTable dt = ds.Tables["courses"];
+                Console.WriteLine(dt);
+                List<string> list = new List<string>();
+                foreach (DataRow row in dt.Rows)
+                {
+                    list.Add((string)row["wcmIND_LastName"]);
+                }
+                dataGridView1.DataSource = ds.Tables[0];
+
+                foreach (String x in list)
+                {
+                    BoxSurname.Items.Add(x);
+                }
+
+                conn.Close();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error: {0}", e.ToString());
+            }
+        }
     }
 }

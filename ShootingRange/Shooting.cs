@@ -486,6 +486,20 @@ namespace ShootingRange
             shoot50Res.Text = "";
             shoot60Res.Text = "";
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            bool ok = false;
+            if (ok)
+            {
+                MessageBox.Show("Όλα καλά", "Επιτυχής Καταχώρηση", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                MessageBox.Show("Error: Λάθος βρε μαλάκα.", "Μήνυμα Λάθους", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            this.Dispose();
+        }
     }
         
 }

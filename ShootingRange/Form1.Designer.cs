@@ -83,6 +83,7 @@
             this.BoxSurname.Name = "BoxSurname";
             this.BoxSurname.Size = new System.Drawing.Size(121, 21);
             this.BoxSurname.TabIndex = 11;
+            this.BoxSurname.Leave += new System.EventHandler(this.SurnameLeave);
             // 
             // button2
             // 
