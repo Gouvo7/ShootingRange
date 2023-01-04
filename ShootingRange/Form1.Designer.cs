@@ -47,6 +47,7 @@
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -111,7 +112,6 @@
             this.label2.Size = new System.Drawing.Size(51, 13);
             this.label2.TabIndex = 7;
             this.label2.Text = "Επώνυμο";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -121,7 +121,6 @@
             this.label1.Size = new System.Drawing.Size(41, 13);
             this.label1.TabIndex = 5;
             this.label1.Text = "Όνομα";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // dataGridView1
             // 
@@ -130,7 +129,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1455, 281);
             this.dataGridView1.TabIndex = 9;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // buttton3
             // 
@@ -158,7 +156,6 @@
             this.label3.Size = new System.Drawing.Size(323, 13);
             this.label3.TabIndex = 14;
             this.label3.Text = "Καταχωρημένα στοιχεία μέχρι στιγμής για αγώνα/προπόνηση:";
-            this.label3.Click += new System.EventHandler(this.label3_Click_1);
             // 
             // dateBox
             // 
@@ -167,7 +164,6 @@
             this.dateBox.Name = "dateBox";
             this.dateBox.Size = new System.Drawing.Size(121, 21);
             this.dateBox.TabIndex = 15;
-            this.dateBox.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // yearBox
             // 
@@ -176,7 +172,6 @@
             this.yearBox.Name = "yearBox";
             this.yearBox.Size = new System.Drawing.Size(121, 21);
             this.yearBox.TabIndex = 16;
-            this.yearBox.SelectedIndexChanged += new System.EventHandler(this.yearBox_SelectedIndexChanged);
             // 
             // monthBox
             // 
@@ -192,8 +187,9 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(196, 23);
             this.button3.TabIndex = 18;
-            this.button3.Text = "Καταχώρηση Αγώνα/Προπόνησης";
+            this.button3.Text = "Καταχώρηση Προπόνησης";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_2);
             // 
             // dataGridView3
             // 
@@ -221,11 +217,22 @@
             this.label5.TabIndex = 21;
             this.label5.Text = "Προπόνηση:";
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(724, 416);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 22;
+            this.button4.Text = "Αναζήτηση";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1480, 851);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dataGridView3);
@@ -274,6 +281,7 @@
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button4;
     }
 }
 

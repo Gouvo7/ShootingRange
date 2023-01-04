@@ -200,36 +200,6 @@ namespace ShootingRange
 
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
             MessageBox.Show("Error: Λάθος όνομα χρήστη ή κωδικός.", "Μήνυμα Λάθους", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -238,46 +208,81 @@ namespace ShootingRange
 
         private void button3_Click(object sender, EventArgs e)
         {
-            ;
+            Shooting a = new Shooting();
+            a.Show();
         }
 
-        private void label3_Click_1(object sender, EventArgs e)
+        private void button3_Click_2(object sender, EventArgs e)
         {
 
         }
 
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void yearBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void comboBox2_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
+            string d = "";
+            string m = "";
+            string y = "";
+            if (dateBox.SelectedItem != null)
+            {
+                d = dateBox.SelectedItem.ToString();
+            }
+            if (monthBox.SelectedItem != null)
+            {
+                m = monthBox.SelectedItem.ToString();
+                if (m.Equals("Ιανουάριος"))
+                { 
+                    m = "01";
+                }
+                else if (m.Equals("Φεβρουάριος"))
+                {
+                    m = "02";
+                }
+                else if (m.Equals("Μάρτιος"))
+                {
+                    m = "03";
+                }
+                else if (m.Equals("Απρίλιος"))
+                {
+                    m = "04";
+                }
+                else if (m.Equals("Μάιος"))
+                {
+                    m = "05";
+                }
+                else if (m.Equals("Ιούνιος"))
+                {
+                    m = "06";
+                }
+                else if (m.Equals("Ιούλιος"))
+                {
+                    m = "07";
+                }
+                else if (m.Equals("Αύγουστος"))
+                {
+                    m = "08";
+                }
+                else if (m.Equals("Σεπτέμβριος"))
+                {
+                    m = "09";
+                }
+                else if (m.Equals("Οκτώβριος"))
+                {
+                    m = "10";
+                }
+                else if (m.Equals("Νοέμβριος"))
+                {
+                    m = "11";
+                }
+                else if (m.Equals("Δεκέμβριος"))
+                {
+                    m = "12";
+                }
+            }
+            if (yearBox.SelectedItem != null) 
+            { 
+                y = yearBox.SelectedItem.ToString();
+            }
+            Console.WriteLine(d + m + y);
 
         }
     }

@@ -190,12 +190,14 @@ namespace ShootingRange
             this.shoot32 = new System.Windows.Forms.TextBox();
             this.shoot33 = new System.Windows.Forms.TextBox();
             this.shoot31 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 9);
+            this.label1.Location = new System.Drawing.Point(22, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 13);
             this.label1.TabIndex = 1;
@@ -215,20 +217,20 @@ namespace ShootingRange
             this.BoxName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.BoxName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.BoxName.FormattingEnabled = true;
-            this.BoxName.Location = new System.Drawing.Point(160, 96);
+            this.BoxName.Location = new System.Drawing.Point(168, 95);
             this.BoxName.Name = "BoxName";
-            this.BoxName.Size = new System.Drawing.Size(121, 21);
-            this.BoxName.TabIndex = 16;
+            this.BoxName.Size = new System.Drawing.Size(124, 21);
+            this.BoxName.TabIndex = 2;
             // 
             // BoxSurname
             // 
             this.BoxSurname.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.BoxSurname.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.BoxSurname.FormattingEnabled = true;
-            this.BoxSurname.Location = new System.Drawing.Point(20, 96);
+            this.BoxSurname.Location = new System.Drawing.Point(20, 95);
             this.BoxSurname.Name = "BoxSurname";
-            this.BoxSurname.Size = new System.Drawing.Size(121, 21);
-            this.BoxSurname.TabIndex = 15;
+            this.BoxSurname.Size = new System.Drawing.Size(115, 21);
+            this.BoxSurname.TabIndex = 1;
             // 
             // label2
             // 
@@ -236,13 +238,13 @@ namespace ShootingRange
             this.label2.Location = new System.Drawing.Point(20, 76);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 13);
-            this.label2.TabIndex = 14;
+            this.label2.TabIndex = 0;
             this.label2.Text = "Επώνυμο";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(160, 76);
+            this.label3.Location = new System.Drawing.Point(165, 76);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 13);
             this.label3.TabIndex = 13;
@@ -250,27 +252,28 @@ namespace ShootingRange
             // 
             // rngShots
             // 
-            this.rngShots.Location = new System.Drawing.Point(710, 16);
+            this.rngShots.Location = new System.Drawing.Point(734, 12);
             this.rngShots.Name = "rngShots";
             this.rngShots.Size = new System.Drawing.Size(150, 37);
-            this.rngShots.TabIndex = 17;
+            this.rngShots.TabIndex = 9999;
             this.rngShots.Text = "Δημιουργία Τυχαίων Αποτελεσμάτων";
             this.rngShots.UseVisualStyleBackColor = true;
+            this.rngShots.Click += new System.EventHandler(this.rngShots_Click);
             // 
             // comboBox2
             // 
             this.comboBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.comboBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(300, 96);
+            this.comboBox2.Location = new System.Drawing.Point(328, 96);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(82, 21);
-            this.comboBox2.TabIndex = 18;
+            this.comboBox2.TabIndex = 3;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(300, 76);
+            this.label4.Location = new System.Drawing.Point(322, 76);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 13);
             this.label4.TabIndex = 19;
@@ -279,7 +282,7 @@ namespace ShootingRange
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(666, 76);
+            this.label5.Location = new System.Drawing.Point(697, 76);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(79, 13);
             this.label5.TabIndex = 25;
@@ -290,35 +293,37 @@ namespace ShootingRange
             this.comboBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.comboBox3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(666, 96);
+            this.comboBox3.ItemHeight = 13;
+            this.comboBox3.Location = new System.Drawing.Point(700, 95);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(79, 21);
-            this.comboBox3.TabIndex = 24;
+            this.comboBox3.TabIndex = 6;
             // 
             // comboBox4
             // 
             this.comboBox4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.comboBox4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(547, 96);
+            this.comboBox4.ItemHeight = 13;
+            this.comboBox4.Location = new System.Drawing.Point(582, 95);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(95, 21);
-            this.comboBox4.TabIndex = 23;
+            this.comboBox4.TabIndex = 5;
             // 
             // comboBox5
             // 
             this.comboBox5.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.comboBox5.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(407, 96);
+            this.comboBox5.Location = new System.Drawing.Point(442, 95);
             this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(121, 21);
-            this.comboBox5.TabIndex = 22;
+            this.comboBox5.Size = new System.Drawing.Size(113, 21);
+            this.comboBox5.TabIndex = 4;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(407, 76);
+            this.label6.Location = new System.Drawing.Point(438, 76);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(54, 13);
             this.label6.TabIndex = 21;
@@ -327,7 +332,7 @@ namespace ShootingRange
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(547, 76);
+            this.label7.Location = new System.Drawing.Point(579, 76);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(69, 13);
             this.label7.TabIndex = 20;
@@ -335,15 +340,15 @@ namespace ShootingRange
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(773, 96);
+            this.textBox1.Location = new System.Drawing.Point(805, 97);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(69, 20);
-            this.textBox1.TabIndex = 26;
+            this.textBox1.TabIndex = 7;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(766, 76);
+            this.label8.Location = new System.Drawing.Point(799, 76);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(85, 13);
             this.label8.TabIndex = 27;
@@ -352,7 +357,7 @@ namespace ShootingRange
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(27, 130);
+            this.label9.Location = new System.Drawing.Point(19, 130);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(114, 13);
             this.label9.TabIndex = 29;
@@ -363,15 +368,16 @@ namespace ShootingRange
             this.comboBox6.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.comboBox6.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(27, 150);
+            this.comboBox6.ItemHeight = 13;
+            this.comboBox6.Location = new System.Drawing.Point(21, 150);
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(114, 21);
-            this.comboBox6.TabIndex = 28;
+            this.comboBox6.TabIndex = 8;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(147, 130);
+            this.label10.Location = new System.Drawing.Point(162, 130);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(130, 13);
             this.label10.TabIndex = 31;
@@ -382,15 +388,16 @@ namespace ShootingRange
             this.comboBox7.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.comboBox7.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(147, 150);
+            this.comboBox7.ItemHeight = 13;
+            this.comboBox7.Location = new System.Drawing.Point(168, 151);
             this.comboBox7.Name = "comboBox7";
             this.comboBox7.Size = new System.Drawing.Size(124, 21);
-            this.comboBox7.TabIndex = 30;
+            this.comboBox7.TabIndex = 9;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(291, 129);
+            this.label11.Location = new System.Drawing.Point(299, 130);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(146, 13);
             this.label11.TabIndex = 32;
@@ -398,17 +405,18 @@ namespace ShootingRange
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(291, 150);
+            this.textBox2.Location = new System.Drawing.Point(325, 150);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(123, 20);
-            this.textBox2.TabIndex = 33;
+            this.textBox2.Size = new System.Drawing.Size(90, 20);
+            this.textBox2.TabIndex = 10;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(731, 150);
+            this.textBox3.Location = new System.Drawing.Point(734, 149);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(123, 20);
-            this.textBox3.TabIndex = 39;
+            this.textBox3.TabIndex = 13;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label12
             // 
@@ -422,7 +430,7 @@ namespace ShootingRange
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(587, 130);
+            this.label13.Location = new System.Drawing.Point(590, 129);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(122, 13);
             this.label13.TabIndex = 37;
@@ -433,15 +441,16 @@ namespace ShootingRange
             this.comboBox8.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.comboBox8.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Location = new System.Drawing.Point(587, 150);
+            this.comboBox8.ItemHeight = 13;
+            this.comboBox8.Location = new System.Drawing.Point(591, 151);
             this.comboBox8.Name = "comboBox8";
             this.comboBox8.Size = new System.Drawing.Size(124, 21);
-            this.comboBox8.TabIndex = 36;
+            this.comboBox8.TabIndex = 12;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(447, 129);
+            this.label14.Location = new System.Drawing.Point(453, 129);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(125, 13);
             this.label14.TabIndex = 35;
@@ -452,10 +461,11 @@ namespace ShootingRange
             this.comboBox9.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.comboBox9.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Location = new System.Drawing.Point(447, 149);
+            this.comboBox9.ItemHeight = 13;
+            this.comboBox9.Location = new System.Drawing.Point(455, 149);
             this.comboBox9.Name = "comboBox9";
             this.comboBox9.Size = new System.Drawing.Size(114, 21);
-            this.comboBox9.TabIndex = 34;
+            this.comboBox9.TabIndex = 11;
             // 
             // shoot1
             // 
@@ -464,6 +474,7 @@ namespace ShootingRange
             this.shoot1.Name = "shoot1";
             this.shoot1.Size = new System.Drawing.Size(43, 20);
             this.shoot1.TabIndex = 40;
+            this.shoot1.Leave += new System.EventHandler(this.txt1_Leave);
             // 
             // shoot3
             // 
@@ -471,7 +482,8 @@ namespace ShootingRange
             this.shoot3.MaxLength = 2;
             this.shoot3.Name = "shoot3";
             this.shoot3.Size = new System.Drawing.Size(43, 20);
-            this.shoot3.TabIndex = 41;
+            this.shoot3.TabIndex = 42;
+            this.shoot3.Leave += new System.EventHandler(this.txt1_Leave);
             // 
             // shoot2
             // 
@@ -479,7 +491,8 @@ namespace ShootingRange
             this.shoot2.MaxLength = 2;
             this.shoot2.Name = "shoot2";
             this.shoot2.Size = new System.Drawing.Size(43, 20);
-            this.shoot2.TabIndex = 42;
+            this.shoot2.TabIndex = 41;
+            this.shoot2.Leave += new System.EventHandler(this.txt1_Leave);
             // 
             // shoot5
             // 
@@ -487,7 +500,8 @@ namespace ShootingRange
             this.shoot5.MaxLength = 2;
             this.shoot5.Name = "shoot5";
             this.shoot5.Size = new System.Drawing.Size(43, 20);
-            this.shoot5.TabIndex = 43;
+            this.shoot5.TabIndex = 44;
+            this.shoot5.Leave += new System.EventHandler(this.txt1_Leave);
             // 
             // shoot7
             // 
@@ -495,7 +509,8 @@ namespace ShootingRange
             this.shoot7.MaxLength = 2;
             this.shoot7.Name = "shoot7";
             this.shoot7.Size = new System.Drawing.Size(43, 20);
-            this.shoot7.TabIndex = 44;
+            this.shoot7.TabIndex = 46;
+            this.shoot7.Leave += new System.EventHandler(this.txt1_Leave);
             // 
             // shoot10Res
             // 
@@ -503,8 +518,9 @@ namespace ShootingRange
             this.shoot10Res.Location = new System.Drawing.Point(659, 211);
             this.shoot10Res.MaxLength = 4;
             this.shoot10Res.Name = "shoot10Res";
+            this.shoot10Res.ReadOnly = true;
             this.shoot10Res.Size = new System.Drawing.Size(43, 20);
-            this.shoot10Res.TabIndex = 45;
+            this.shoot10Res.TabIndex = 50;
             // 
             // shoot8
             // 
@@ -512,7 +528,8 @@ namespace ShootingRange
             this.shoot8.MaxLength = 2;
             this.shoot8.Name = "shoot8";
             this.shoot8.Size = new System.Drawing.Size(43, 20);
-            this.shoot8.TabIndex = 46;
+            this.shoot8.TabIndex = 47;
+            this.shoot8.Leave += new System.EventHandler(this.txt1_Leave);
             // 
             // shoot10
             // 
@@ -520,7 +537,8 @@ namespace ShootingRange
             this.shoot10.MaxLength = 2;
             this.shoot10.Name = "shoot10";
             this.shoot10.Size = new System.Drawing.Size(43, 20);
-            this.shoot10.TabIndex = 47;
+            this.shoot10.TabIndex = 49;
+            this.shoot10.Leave += new System.EventHandler(this.txt1_Leave);
             // 
             // shoot6
             // 
@@ -528,7 +546,8 @@ namespace ShootingRange
             this.shoot6.MaxLength = 2;
             this.shoot6.Name = "shoot6";
             this.shoot6.Size = new System.Drawing.Size(43, 20);
-            this.shoot6.TabIndex = 48;
+            this.shoot6.TabIndex = 45;
+            this.shoot6.Leave += new System.EventHandler(this.txt1_Leave);
             // 
             // shoot4
             // 
@@ -536,7 +555,8 @@ namespace ShootingRange
             this.shoot4.MaxLength = 2;
             this.shoot4.Name = "shoot4";
             this.shoot4.Size = new System.Drawing.Size(43, 20);
-            this.shoot4.TabIndex = 49;
+            this.shoot4.TabIndex = 43;
+            this.shoot4.Leave += new System.EventHandler(this.txt1_Leave);
             // 
             // shoot9
             // 
@@ -544,7 +564,8 @@ namespace ShootingRange
             this.shoot9.MaxLength = 2;
             this.shoot9.Name = "shoot9";
             this.shoot9.Size = new System.Drawing.Size(43, 20);
-            this.shoot9.TabIndex = 50;
+            this.shoot9.TabIndex = 48;
+            this.shoot9.Leave += new System.EventHandler(this.txt1_Leave);
             // 
             // label15
             // 
@@ -572,7 +593,6 @@ namespace ShootingRange
             this.label17.Size = new System.Drawing.Size(19, 13);
             this.label17.TabIndex = 64;
             this.label17.Text = "3η";
-            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // label18
             // 
@@ -751,7 +771,8 @@ namespace ShootingRange
             this.shoot19.MaxLength = 2;
             this.shoot19.Name = "shoot19";
             this.shoot19.Size = new System.Drawing.Size(43, 20);
-            this.shoot19.TabIndex = 83;
+            this.shoot19.TabIndex = 59;
+            this.shoot19.Leave += new System.EventHandler(this.txt2_Leave);
             // 
             // shoot14
             // 
@@ -759,7 +780,8 @@ namespace ShootingRange
             this.shoot14.MaxLength = 2;
             this.shoot14.Name = "shoot14";
             this.shoot14.Size = new System.Drawing.Size(43, 20);
-            this.shoot14.TabIndex = 82;
+            this.shoot14.TabIndex = 54;
+            this.shoot14.Leave += new System.EventHandler(this.txt2_Leave);
             // 
             // shoot16
             // 
@@ -767,7 +789,8 @@ namespace ShootingRange
             this.shoot16.MaxLength = 2;
             this.shoot16.Name = "shoot16";
             this.shoot16.Size = new System.Drawing.Size(43, 20);
-            this.shoot16.TabIndex = 81;
+            this.shoot16.TabIndex = 56;
+            this.shoot16.Leave += new System.EventHandler(this.txt2_Leave);
             // 
             // shoot20
             // 
@@ -775,7 +798,8 @@ namespace ShootingRange
             this.shoot20.MaxLength = 2;
             this.shoot20.Name = "shoot20";
             this.shoot20.Size = new System.Drawing.Size(43, 20);
-            this.shoot20.TabIndex = 80;
+            this.shoot20.TabIndex = 60;
+            this.shoot20.Leave += new System.EventHandler(this.txt2_Leave);
             // 
             // shoot18
             // 
@@ -783,7 +807,8 @@ namespace ShootingRange
             this.shoot18.MaxLength = 2;
             this.shoot18.Name = "shoot18";
             this.shoot18.Size = new System.Drawing.Size(43, 20);
-            this.shoot18.TabIndex = 79;
+            this.shoot18.TabIndex = 58;
+            this.shoot18.Leave += new System.EventHandler(this.txt2_Leave);
             // 
             // shoot20Res
             // 
@@ -792,7 +817,7 @@ namespace ShootingRange
             this.shoot20Res.MaxLength = 4;
             this.shoot20Res.Name = "shoot20Res";
             this.shoot20Res.Size = new System.Drawing.Size(43, 20);
-            this.shoot20Res.TabIndex = 78;
+            this.shoot20Res.TabIndex = 61;
             // 
             // shoot17
             // 
@@ -800,7 +825,8 @@ namespace ShootingRange
             this.shoot17.MaxLength = 2;
             this.shoot17.Name = "shoot17";
             this.shoot17.Size = new System.Drawing.Size(43, 20);
-            this.shoot17.TabIndex = 77;
+            this.shoot17.TabIndex = 57;
+            this.shoot17.Leave += new System.EventHandler(this.txt2_Leave);
             // 
             // shoot15
             // 
@@ -808,7 +834,8 @@ namespace ShootingRange
             this.shoot15.MaxLength = 2;
             this.shoot15.Name = "shoot15";
             this.shoot15.Size = new System.Drawing.Size(43, 20);
-            this.shoot15.TabIndex = 76;
+            this.shoot15.TabIndex = 55;
+            this.shoot15.Leave += new System.EventHandler(this.txt2_Leave);
             // 
             // shoot12
             // 
@@ -816,7 +843,8 @@ namespace ShootingRange
             this.shoot12.MaxLength = 2;
             this.shoot12.Name = "shoot12";
             this.shoot12.Size = new System.Drawing.Size(43, 20);
-            this.shoot12.TabIndex = 75;
+            this.shoot12.TabIndex = 52;
+            this.shoot12.Leave += new System.EventHandler(this.txt2_Leave);
             // 
             // shoot13
             // 
@@ -824,7 +852,8 @@ namespace ShootingRange
             this.shoot13.MaxLength = 2;
             this.shoot13.Name = "shoot13";
             this.shoot13.Size = new System.Drawing.Size(43, 20);
-            this.shoot13.TabIndex = 74;
+            this.shoot13.TabIndex = 53;
+            this.shoot13.Leave += new System.EventHandler(this.txt2_Leave);
             // 
             // shoot11
             // 
@@ -832,7 +861,8 @@ namespace ShootingRange
             this.shoot11.MaxLength = 2;
             this.shoot11.Name = "shoot11";
             this.shoot11.Size = new System.Drawing.Size(43, 20);
-            this.shoot11.TabIndex = 73;
+            this.shoot11.TabIndex = 51;
+            this.shoot11.Leave += new System.EventHandler(this.txt2_Leave);
             // 
             // label37
             // 
@@ -939,7 +969,8 @@ namespace ShootingRange
             this.shoot29.MaxLength = 2;
             this.shoot29.Name = "shoot29";
             this.shoot29.Size = new System.Drawing.Size(43, 20);
-            this.shoot29.TabIndex = 105;
+            this.shoot29.TabIndex = 70;
+            this.shoot29.Leave += new System.EventHandler(this.txt3_Leave);
             // 
             // shoot24
             // 
@@ -947,7 +978,8 @@ namespace ShootingRange
             this.shoot24.MaxLength = 2;
             this.shoot24.Name = "shoot24";
             this.shoot24.Size = new System.Drawing.Size(43, 20);
-            this.shoot24.TabIndex = 104;
+            this.shoot24.TabIndex = 65;
+            this.shoot24.Leave += new System.EventHandler(this.txt3_Leave);
             // 
             // shoot26
             // 
@@ -955,7 +987,8 @@ namespace ShootingRange
             this.shoot26.MaxLength = 2;
             this.shoot26.Name = "shoot26";
             this.shoot26.Size = new System.Drawing.Size(43, 20);
-            this.shoot26.TabIndex = 103;
+            this.shoot26.TabIndex = 67;
+            this.shoot26.Leave += new System.EventHandler(this.txt3_Leave);
             // 
             // shoot30
             // 
@@ -963,7 +996,8 @@ namespace ShootingRange
             this.shoot30.MaxLength = 2;
             this.shoot30.Name = "shoot30";
             this.shoot30.Size = new System.Drawing.Size(43, 20);
-            this.shoot30.TabIndex = 102;
+            this.shoot30.TabIndex = 71;
+            this.shoot30.Leave += new System.EventHandler(this.txt3_Leave);
             // 
             // shoot28
             // 
@@ -971,7 +1005,8 @@ namespace ShootingRange
             this.shoot28.MaxLength = 2;
             this.shoot28.Name = "shoot28";
             this.shoot28.Size = new System.Drawing.Size(43, 20);
-            this.shoot28.TabIndex = 101;
+            this.shoot28.TabIndex = 69;
+            this.shoot28.Leave += new System.EventHandler(this.txt3_Leave);
             // 
             // shoot30Res
             // 
@@ -980,7 +1015,7 @@ namespace ShootingRange
             this.shoot30Res.MaxLength = 4;
             this.shoot30Res.Name = "shoot30Res";
             this.shoot30Res.Size = new System.Drawing.Size(43, 20);
-            this.shoot30Res.TabIndex = 100;
+            this.shoot30Res.TabIndex = 72;
             // 
             // shoot27
             // 
@@ -988,7 +1023,8 @@ namespace ShootingRange
             this.shoot27.MaxLength = 2;
             this.shoot27.Name = "shoot27";
             this.shoot27.Size = new System.Drawing.Size(43, 20);
-            this.shoot27.TabIndex = 99;
+            this.shoot27.TabIndex = 68;
+            this.shoot27.Leave += new System.EventHandler(this.txt3_Leave);
             // 
             // shoot25
             // 
@@ -996,7 +1032,8 @@ namespace ShootingRange
             this.shoot25.MaxLength = 2;
             this.shoot25.Name = "shoot25";
             this.shoot25.Size = new System.Drawing.Size(43, 20);
-            this.shoot25.TabIndex = 98;
+            this.shoot25.TabIndex = 66;
+            this.shoot25.Leave += new System.EventHandler(this.txt3_Leave);
             // 
             // shoot22
             // 
@@ -1004,7 +1041,8 @@ namespace ShootingRange
             this.shoot22.MaxLength = 2;
             this.shoot22.Name = "shoot22";
             this.shoot22.Size = new System.Drawing.Size(43, 20);
-            this.shoot22.TabIndex = 97;
+            this.shoot22.TabIndex = 63;
+            this.shoot22.Leave += new System.EventHandler(this.txt3_Leave);
             // 
             // shoot23
             // 
@@ -1012,7 +1050,8 @@ namespace ShootingRange
             this.shoot23.MaxLength = 2;
             this.shoot23.Name = "shoot23";
             this.shoot23.Size = new System.Drawing.Size(43, 20);
-            this.shoot23.TabIndex = 96;
+            this.shoot23.TabIndex = 64;
+            this.shoot23.Leave += new System.EventHandler(this.txt3_Leave);
             // 
             // shoot21
             // 
@@ -1020,7 +1059,8 @@ namespace ShootingRange
             this.shoot21.MaxLength = 2;
             this.shoot21.Name = "shoot21";
             this.shoot21.Size = new System.Drawing.Size(43, 20);
-            this.shoot21.TabIndex = 95;
+            this.shoot21.TabIndex = 62;
+            this.shoot21.Leave += new System.EventHandler(this.txt3_Leave);
             // 
             // label48
             // 
@@ -1127,7 +1167,8 @@ namespace ShootingRange
             this.shoot59.MaxLength = 2;
             this.shoot59.Name = "shoot59";
             this.shoot59.Size = new System.Drawing.Size(43, 20);
-            this.shoot59.TabIndex = 171;
+            this.shoot59.TabIndex = 103;
+            this.shoot59.Leave += new System.EventHandler(this.txt6_Leave);
             // 
             // shoot54
             // 
@@ -1135,7 +1176,8 @@ namespace ShootingRange
             this.shoot54.MaxLength = 2;
             this.shoot54.Name = "shoot54";
             this.shoot54.Size = new System.Drawing.Size(43, 20);
-            this.shoot54.TabIndex = 170;
+            this.shoot54.TabIndex = 98;
+            this.shoot54.Leave += new System.EventHandler(this.txt6_Leave);
             // 
             // shoot56
             // 
@@ -1143,7 +1185,8 @@ namespace ShootingRange
             this.shoot56.MaxLength = 2;
             this.shoot56.Name = "shoot56";
             this.shoot56.Size = new System.Drawing.Size(43, 20);
-            this.shoot56.TabIndex = 169;
+            this.shoot56.TabIndex = 100;
+            this.shoot56.Leave += new System.EventHandler(this.txt6_Leave);
             // 
             // shoot60
             // 
@@ -1151,7 +1194,8 @@ namespace ShootingRange
             this.shoot60.MaxLength = 2;
             this.shoot60.Name = "shoot60";
             this.shoot60.Size = new System.Drawing.Size(43, 20);
-            this.shoot60.TabIndex = 168;
+            this.shoot60.TabIndex = 104;
+            this.shoot60.Leave += new System.EventHandler(this.txt6_Leave);
             // 
             // shoot58
             // 
@@ -1159,7 +1203,8 @@ namespace ShootingRange
             this.shoot58.MaxLength = 2;
             this.shoot58.Name = "shoot58";
             this.shoot58.Size = new System.Drawing.Size(43, 20);
-            this.shoot58.TabIndex = 167;
+            this.shoot58.TabIndex = 102;
+            this.shoot58.Leave += new System.EventHandler(this.txt6_Leave);
             // 
             // shoot60Res
             // 
@@ -1168,7 +1213,7 @@ namespace ShootingRange
             this.shoot60Res.MaxLength = 4;
             this.shoot60Res.Name = "shoot60Res";
             this.shoot60Res.Size = new System.Drawing.Size(43, 20);
-            this.shoot60Res.TabIndex = 166;
+            this.shoot60Res.TabIndex = 105;
             // 
             // shoot57
             // 
@@ -1176,7 +1221,8 @@ namespace ShootingRange
             this.shoot57.MaxLength = 2;
             this.shoot57.Name = "shoot57";
             this.shoot57.Size = new System.Drawing.Size(43, 20);
-            this.shoot57.TabIndex = 165;
+            this.shoot57.TabIndex = 101;
+            this.shoot57.Leave += new System.EventHandler(this.txt6_Leave);
             // 
             // shoot55
             // 
@@ -1184,7 +1230,8 @@ namespace ShootingRange
             this.shoot55.MaxLength = 2;
             this.shoot55.Name = "shoot55";
             this.shoot55.Size = new System.Drawing.Size(43, 20);
-            this.shoot55.TabIndex = 164;
+            this.shoot55.TabIndex = 99;
+            this.shoot55.Leave += new System.EventHandler(this.txt6_Leave);
             // 
             // shoot52
             // 
@@ -1192,7 +1239,8 @@ namespace ShootingRange
             this.shoot52.MaxLength = 2;
             this.shoot52.Name = "shoot52";
             this.shoot52.Size = new System.Drawing.Size(43, 20);
-            this.shoot52.TabIndex = 163;
+            this.shoot52.TabIndex = 96;
+            this.shoot52.Leave += new System.EventHandler(this.txt6_Leave);
             // 
             // shoot53
             // 
@@ -1200,7 +1248,8 @@ namespace ShootingRange
             this.shoot53.MaxLength = 2;
             this.shoot53.Name = "shoot53";
             this.shoot53.Size = new System.Drawing.Size(43, 20);
-            this.shoot53.TabIndex = 162;
+            this.shoot53.TabIndex = 97;
+            this.shoot53.Leave += new System.EventHandler(this.txt6_Leave);
             // 
             // shoot51
             // 
@@ -1208,7 +1257,8 @@ namespace ShootingRange
             this.shoot51.MaxLength = 2;
             this.shoot51.Name = "shoot51";
             this.shoot51.Size = new System.Drawing.Size(43, 20);
-            this.shoot51.TabIndex = 161;
+            this.shoot51.TabIndex = 95;
+            this.shoot51.Leave += new System.EventHandler(this.txt6_Leave);
             // 
             // label59
             // 
@@ -1315,7 +1365,8 @@ namespace ShootingRange
             this.shoot49.MaxLength = 2;
             this.shoot49.Name = "shoot49";
             this.shoot49.Size = new System.Drawing.Size(43, 20);
-            this.shoot49.TabIndex = 149;
+            this.shoot49.TabIndex = 92;
+            this.shoot49.Leave += new System.EventHandler(this.txt5_Leave);
             // 
             // shoot44
             // 
@@ -1323,7 +1374,8 @@ namespace ShootingRange
             this.shoot44.MaxLength = 2;
             this.shoot44.Name = "shoot44";
             this.shoot44.Size = new System.Drawing.Size(43, 20);
-            this.shoot44.TabIndex = 148;
+            this.shoot44.TabIndex = 87;
+            this.shoot44.Leave += new System.EventHandler(this.txt5_Leave);
             // 
             // shoot46
             // 
@@ -1331,7 +1383,8 @@ namespace ShootingRange
             this.shoot46.MaxLength = 2;
             this.shoot46.Name = "shoot46";
             this.shoot46.Size = new System.Drawing.Size(43, 20);
-            this.shoot46.TabIndex = 147;
+            this.shoot46.TabIndex = 89;
+            this.shoot46.Leave += new System.EventHandler(this.txt5_Leave);
             // 
             // shoot50
             // 
@@ -1339,7 +1392,8 @@ namespace ShootingRange
             this.shoot50.MaxLength = 2;
             this.shoot50.Name = "shoot50";
             this.shoot50.Size = new System.Drawing.Size(43, 20);
-            this.shoot50.TabIndex = 146;
+            this.shoot50.TabIndex = 93;
+            this.shoot50.Leave += new System.EventHandler(this.txt5_Leave);
             // 
             // shoot48
             // 
@@ -1347,7 +1401,8 @@ namespace ShootingRange
             this.shoot48.MaxLength = 2;
             this.shoot48.Name = "shoot48";
             this.shoot48.Size = new System.Drawing.Size(43, 20);
-            this.shoot48.TabIndex = 145;
+            this.shoot48.TabIndex = 91;
+            this.shoot48.Leave += new System.EventHandler(this.txt5_Leave);
             // 
             // shoot50Res
             // 
@@ -1356,7 +1411,7 @@ namespace ShootingRange
             this.shoot50Res.MaxLength = 4;
             this.shoot50Res.Name = "shoot50Res";
             this.shoot50Res.Size = new System.Drawing.Size(43, 20);
-            this.shoot50Res.TabIndex = 144;
+            this.shoot50Res.TabIndex = 94;
             // 
             // shoot47
             // 
@@ -1364,7 +1419,8 @@ namespace ShootingRange
             this.shoot47.MaxLength = 2;
             this.shoot47.Name = "shoot47";
             this.shoot47.Size = new System.Drawing.Size(43, 20);
-            this.shoot47.TabIndex = 143;
+            this.shoot47.TabIndex = 90;
+            this.shoot47.Leave += new System.EventHandler(this.txt5_Leave);
             // 
             // shoot45
             // 
@@ -1372,7 +1428,8 @@ namespace ShootingRange
             this.shoot45.MaxLength = 2;
             this.shoot45.Name = "shoot45";
             this.shoot45.Size = new System.Drawing.Size(43, 20);
-            this.shoot45.TabIndex = 142;
+            this.shoot45.TabIndex = 88;
+            this.shoot45.Leave += new System.EventHandler(this.txt5_Leave);
             // 
             // shoot42
             // 
@@ -1380,7 +1437,8 @@ namespace ShootingRange
             this.shoot42.MaxLength = 2;
             this.shoot42.Name = "shoot42";
             this.shoot42.Size = new System.Drawing.Size(43, 20);
-            this.shoot42.TabIndex = 141;
+            this.shoot42.TabIndex = 85;
+            this.shoot42.Leave += new System.EventHandler(this.txt5_Leave);
             // 
             // shoot43
             // 
@@ -1388,7 +1446,8 @@ namespace ShootingRange
             this.shoot43.MaxLength = 2;
             this.shoot43.Name = "shoot43";
             this.shoot43.Size = new System.Drawing.Size(43, 20);
-            this.shoot43.TabIndex = 140;
+            this.shoot43.TabIndex = 86;
+            this.shoot43.Leave += new System.EventHandler(this.txt5_Leave);
             // 
             // shoot41
             // 
@@ -1396,7 +1455,8 @@ namespace ShootingRange
             this.shoot41.MaxLength = 2;
             this.shoot41.Name = "shoot41";
             this.shoot41.Size = new System.Drawing.Size(43, 20);
-            this.shoot41.TabIndex = 139;
+            this.shoot41.TabIndex = 84;
+            this.shoot41.Leave += new System.EventHandler(this.txt5_Leave);
             // 
             // label70
             // 
@@ -1503,7 +1563,8 @@ namespace ShootingRange
             this.shoot39.MaxLength = 2;
             this.shoot39.Name = "shoot39";
             this.shoot39.Size = new System.Drawing.Size(43, 20);
-            this.shoot39.TabIndex = 127;
+            this.shoot39.TabIndex = 81;
+            this.shoot39.Leave += new System.EventHandler(this.txt4_Leave);
             // 
             // shoot34
             // 
@@ -1511,7 +1572,8 @@ namespace ShootingRange
             this.shoot34.MaxLength = 2;
             this.shoot34.Name = "shoot34";
             this.shoot34.Size = new System.Drawing.Size(43, 20);
-            this.shoot34.TabIndex = 126;
+            this.shoot34.TabIndex = 76;
+            this.shoot34.Leave += new System.EventHandler(this.txt4_Leave);
             // 
             // shoot36
             // 
@@ -1519,7 +1581,8 @@ namespace ShootingRange
             this.shoot36.MaxLength = 2;
             this.shoot36.Name = "shoot36";
             this.shoot36.Size = new System.Drawing.Size(43, 20);
-            this.shoot36.TabIndex = 125;
+            this.shoot36.TabIndex = 78;
+            this.shoot36.Leave += new System.EventHandler(this.txt4_Leave);
             // 
             // shoot40
             // 
@@ -1527,7 +1590,8 @@ namespace ShootingRange
             this.shoot40.MaxLength = 2;
             this.shoot40.Name = "shoot40";
             this.shoot40.Size = new System.Drawing.Size(43, 20);
-            this.shoot40.TabIndex = 124;
+            this.shoot40.TabIndex = 82;
+            this.shoot40.Leave += new System.EventHandler(this.txt4_Leave);
             // 
             // shoot38
             // 
@@ -1535,7 +1599,8 @@ namespace ShootingRange
             this.shoot38.MaxLength = 2;
             this.shoot38.Name = "shoot38";
             this.shoot38.Size = new System.Drawing.Size(43, 20);
-            this.shoot38.TabIndex = 123;
+            this.shoot38.TabIndex = 80;
+            this.shoot38.Leave += new System.EventHandler(this.txt4_Leave);
             // 
             // shoot40Res
             // 
@@ -1544,7 +1609,7 @@ namespace ShootingRange
             this.shoot40Res.MaxLength = 4;
             this.shoot40Res.Name = "shoot40Res";
             this.shoot40Res.Size = new System.Drawing.Size(43, 20);
-            this.shoot40Res.TabIndex = 122;
+            this.shoot40Res.TabIndex = 83;
             // 
             // shoot37
             // 
@@ -1552,7 +1617,8 @@ namespace ShootingRange
             this.shoot37.MaxLength = 2;
             this.shoot37.Name = "shoot37";
             this.shoot37.Size = new System.Drawing.Size(43, 20);
-            this.shoot37.TabIndex = 121;
+            this.shoot37.TabIndex = 79;
+            this.shoot37.Leave += new System.EventHandler(this.txt4_Leave);
             // 
             // shoot35
             // 
@@ -1560,7 +1626,8 @@ namespace ShootingRange
             this.shoot35.MaxLength = 2;
             this.shoot35.Name = "shoot35";
             this.shoot35.Size = new System.Drawing.Size(43, 20);
-            this.shoot35.TabIndex = 120;
+            this.shoot35.TabIndex = 77;
+            this.shoot35.Leave += new System.EventHandler(this.txt4_Leave);
             // 
             // shoot32
             // 
@@ -1568,7 +1635,8 @@ namespace ShootingRange
             this.shoot32.MaxLength = 2;
             this.shoot32.Name = "shoot32";
             this.shoot32.Size = new System.Drawing.Size(43, 20);
-            this.shoot32.TabIndex = 119;
+            this.shoot32.TabIndex = 74;
+            this.shoot32.Leave += new System.EventHandler(this.txt4_Leave);
             // 
             // shoot33
             // 
@@ -1576,7 +1644,8 @@ namespace ShootingRange
             this.shoot33.MaxLength = 2;
             this.shoot33.Name = "shoot33";
             this.shoot33.Size = new System.Drawing.Size(43, 20);
-            this.shoot33.TabIndex = 118;
+            this.shoot33.TabIndex = 75;
+            this.shoot33.Leave += new System.EventHandler(this.txt4_Leave);
             // 
             // shoot31
             // 
@@ -1584,7 +1653,27 @@ namespace ShootingRange
             this.shoot31.MaxLength = 2;
             this.shoot31.Name = "shoot31";
             this.shoot31.Size = new System.Drawing.Size(43, 20);
-            this.shoot31.TabIndex = 117;
+            this.shoot31.TabIndex = 73;
+            this.shoot31.Leave += new System.EventHandler(this.txt4_Leave);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(565, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(150, 37);
+            this.button1.TabIndex = 10000;
+            this.button1.Text = "Καθαρισμός όλων των πεδίων";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(724, 465);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(150, 37);
+            this.button2.TabIndex = 10001;
+            this.button2.Text = "Καταχώρηση Αποτελεσμάτων";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // Shooting
             // 
@@ -1592,6 +1681,8 @@ namespace ShootingRange
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(897, 532);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label48);
             this.Controls.Add(this.label49);
             this.Controls.Add(this.label50);
@@ -1923,5 +2014,7 @@ namespace ShootingRange
         private System.Windows.Forms.TextBox shoot32;
         private System.Windows.Forms.TextBox shoot33;
         private System.Windows.Forms.TextBox shoot31;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
