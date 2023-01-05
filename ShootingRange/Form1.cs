@@ -312,9 +312,9 @@ namespace ShootingRange
 
                 conn.Close();
             }
-            catch (Exception e)
+            catch (Exception e1)
             {
-                Console.WriteLine("Error: {0}", e.ToString());
+                Console.WriteLine("Error: {0}", e1.ToString());
             }
         }
     }
