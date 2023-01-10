@@ -15,13 +15,15 @@ namespace ShootingRange
         static void Main()
         {
             //Application.Run(new Shooting());
+
+            Application.Run(new LoginForm()); 
             Application.Exit();
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
+            //Application.EnableVisualStyles();
+            //Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new LoginForm());
             //while (true)
             //{
-                Application.Run(new Form1());
+            Application.Run(new ShootingApp());
             //}
             
         }

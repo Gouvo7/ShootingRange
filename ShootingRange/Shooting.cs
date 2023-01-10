@@ -16,6 +16,7 @@ namespace ShootingRange
         public Shooting()
         {
             InitializeComponent();
+            this.CenterToScreen();
             int num = 1;
             int A = 1;
             comboBox1.Items.Add("ΜΔΑ");

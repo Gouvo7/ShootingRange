@@ -1,6 +1,6 @@
 ﻿namespace ShootingRange
 {
-    partial class Form1
+    partial class ShootingApp
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShootingApp));
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.BoxName = new System.Windows.Forms.ComboBox();
             this.BoxSurname = new System.Windows.Forms.ComboBox();

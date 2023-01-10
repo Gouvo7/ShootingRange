@@ -13,14 +13,15 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ShootingRange
 {
-    public partial class Form1 : Form
+    public partial class ShootingApp : Form
     {
 
          String ConnString = "Server = localhost; User ID = root; Password = gouvoop; Database = lawdb";
         //String ConnString = "Server = 10.1.11.28; User ID = ngouvousis; Password=Nek@niro_{Gou22}; Database = lawdb;";
-        public Form1()
+        public ShootingApp()
         {
             InitializeComponent();
+            this.CenterToScreen();
             comboBox1.Items.Add("Αναζήτηση");
             comboBox1.Items.Add("Καταχώρηση Βολής");
             comboBox1.Items.Add("Αναφορές");
@@ -209,12 +210,15 @@ namespace ShootingRange
         private void button3_Click(object sender, EventArgs e)
         {
             Shooting a = new Shooting();
+            this.Hide();
             a.Show();
         }
 
         private void button3_Click_2(object sender, EventArgs e)
         {
-
+            Practice b = new Practice();
+            this.Hide();
+            b.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -301,7 +305,7 @@ namespace ShootingRange
                 List<string> list = new List<string>();
                 foreach (DataRow row in dt.Rows)
                 {
-                    list.Add((string)row["wcmIND_LastName"]);
+                    list.Add((string)row["wcmind_FirstName"]);
                 }
                 dataGridView1.DataSource = ds.Tables[0];
 
