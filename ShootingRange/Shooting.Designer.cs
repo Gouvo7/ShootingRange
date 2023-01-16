@@ -1849,7 +1849,9 @@ namespace ShootingRange
             this.Controls.Add(this.comboBox1);
             this.Name = "Shooting";
             this.Text = "Καταχώρηση Αγώνα/Προπόνησης";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Shooting_Closed);
             this.Load += new System.EventHandler(this.Shooting_Load);
+            this.Leave += new System.EventHandler(this.Shooting_Leave);
             this.ResumeLayout(false);
             this.PerformLayout();
 

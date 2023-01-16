@@ -16,8 +16,10 @@ namespace ShootingRange
 {
     public partial class LoginForm : Form
     {
+        String ConnString = "Server = localhost; User ID = root; Password = 12345678; Database = shoot";
         public LoginForm()
         {
+<<<<<<< HEAD
             String ConnString = "Server=dbshoot.cyzxisevetss.eu-west-3.rds.amazonaws.com; User ID = root; Password = 12345678; Database = dbshoot";
             InitializeComponent();
             this.FormClosed += new FormClosedEventHandler(Form1_FormClosed);
@@ -46,6 +48,10 @@ namespace ShootingRange
 
             conn.Close();
 
+=======
+            InitializeComponent();
+            this.FormClosed += new FormClosedEventHandler(Form1_FormClosed);
+>>>>>>> 58122aaeeb59a65e01e8b8c33fa503c6d69cba41
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
@@ -69,20 +75,34 @@ namespace ShootingRange
         {
             String user = textBox1.Text;
             String pass = textBox2.Text;
-
-            bool correct = false;
-            if (user.Equals("admin"))
+            bool attempt = false;
+            try
             {
-                if (pass.Equals("1234"))
+                MySqlConnection conn = new MySqlConnection(ConnString);
+                conn.Open();
+                
+                string query = $"SELECT * FROM user where user_username = '{user}' and user_pass = '{pass}';";
+                MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
+                DataSet ds = new DataSet();
+                da.Fill(ds, "user");
+                DataTable dt = ds.Tables["user"];
+                Console.WriteLine(query);
+                
+                if (dt.Rows.Count != 0)
                 {
-                    correct = true;
-                    
+                    this.Dispose();
                 }
+                else
+                {
+                    MessageBox.Show("Error: Λάθος όνομα χρήστη ή κωδικός.", "Μήνυμα Λάθους", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                conn.Close();
             }
-            if (correct)
-                this.Dispose();
-            else
-                MessageBox.Show("Error: Λάθος όνομα χρήστη ή κωδικός.","Μήνυμα Λάθους", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            catch (Exception y)
+            {
+                Console.WriteLine("Error: {0}", y.ToString());
+            }
+                
         }
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {

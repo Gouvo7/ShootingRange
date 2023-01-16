@@ -16,7 +16,7 @@ namespace ShootingRange
     public partial class ShootingApp : Form
     {
 
-         String ConnString = "Server = localhost; User ID = root; Password = gouvoop; Database = lawdb";
+         String ConnString = "Server = localhost; User ID = root; Password = 12345678; Database = shoot";
         //String ConnString = "Server = 10.1.11.28; User ID = ngouvousis; Password=Nek@niro_{Gou22}; Database = lawdb;";
         public ShootingApp()
         {
@@ -92,16 +92,15 @@ namespace ShootingRange
             {
                 MySqlConnection conn = new MySqlConnection(ConnString);
                 conn.Open();
-                string query = "SELECT * FROM lawdb.wcm_ind where wcmcon_ID < 1000";
+                string query = "SELECT * FROM athl where athl_ID < 1000";
                 MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
                 DataSet ds = new DataSet();
-                da.Fill(ds, "courses");
-                DataTable dt = ds.Tables["courses"];
-                Console.WriteLine(dt);
+                da.Fill(ds, "athl");
+                DataTable dt = ds.Tables["athl"];
                 List<string> list = new List<string>();
                 foreach (DataRow row in dt.Rows)
                 {
-                    list.Add((string)row["wcmIND_LastName"]);
+                    list.Add((string)row["athl_LName"]);
                 }
                 dataGridView1.DataSource = ds.Tables[0];
 
@@ -141,7 +140,7 @@ namespace ShootingRange
                 MySqlConnection conn = new MySqlConnection(ConnString);
                 conn.Open();
                 
-                string query = "SELECT * FROM wcm_ind where wcmIND_LastName like '%";
+                string query = "SELECT * FROM athl where athl_LName like '%";
 
                 string tmp = BoxSurname.Text+ "%'";
                 query = query + tmp;
@@ -150,8 +149,8 @@ namespace ShootingRange
                 MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
                 DataSet ds = new DataSet();
                 if (ds != null)
-                    da.Fill(ds, "wcm_con");
-                    DataTable dt = ds.Tables["wcm_con"];
+                    da.Fill(ds, "athl");
+                    DataTable dt = ds.Tables["athl"];
                 dataGridView1.DataSource = ds.Tables[0];
             }
             catch (Exception e1)
@@ -210,15 +209,20 @@ namespace ShootingRange
         private void button3_Click(object sender, EventArgs e)
         {
             Shooting a = new Shooting();
-            this.Hide();
-            a.Show();
+            this.Visible = false;
+            Console.WriteLine("Nice!");
         }
 
         private void button3_Click_2(object sender, EventArgs e)
         {
             Practice b = new Practice();
-            this.Hide();
-            b.Show();
+            this.Visible = false;
+            if (b.Visible==false)
+            {
+                this.Show();
+                this.Visible = true;
+            }
+            //this.Hide();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -292,33 +296,38 @@ namespace ShootingRange
 
         private void SurnameLeave(object sender, EventArgs e)
         {
-            try
+            Console.WriteLine(BoxSurname.SelectedItem);
+            if (BoxSurname.SelectedItem != null)
             {
-                MySqlConnection conn = new MySqlConnection(ConnString);
-                conn.Open();
-                string query = "SELECT wcmind_FirstName FROM lawdb.wcm_ind where wcmind_LastName like \'%" + BoxSurname.SelectedItem.ToString() +"%\'";
-                MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
-                DataSet ds = new DataSet();
-                da.Fill(ds, "courses");
-                DataTable dt = ds.Tables["courses"];
-                Console.WriteLine(dt);
-                List<string> list = new List<string>();
-                foreach (DataRow row in dt.Rows)
+                try
                 {
-                    list.Add((string)row["wcmind_FirstName"]);
-                }
-                dataGridView1.DataSource = ds.Tables[0];
+                    MySqlConnection conn = new MySqlConnection(ConnString);
+                    conn.Open();
+                    string query = "SELECT * FROM athl where athl_LName like \'%" + BoxSurname.SelectedItem.ToString() + "%\'";
+                    MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
+                    DataSet ds = new DataSet();
+                    da.Fill(ds, "athl");
+                    DataTable dt = ds.Tables["athl"];
+                    Console.WriteLine(dt);
+                    List<string> list = new List<string>();
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        list.Add((string)row["athl_LName"]);
+                    }
+                    dataGridView1.DataSource = ds.Tables[0];
 
-                foreach (String x in list)
+                    foreach (String x in list)
+                    {
+                        BoxSurname.Items.Add(x);
+                    }
+
+                    conn.Close();
+                }
+
+                catch (Exception e1)
                 {
-                    BoxSurname.Items.Add(x);
-                }
-
-                conn.Close();
-            }
-            catch (Exception e1)
-            {
-                Console.WriteLine("Error: {0}", e1.ToString());
+                    Console.WriteLine("Error: {0}", e1.ToString());
+                }   
             }
         }
     }

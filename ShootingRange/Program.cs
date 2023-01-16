@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace ShootingRange
 {
@@ -14,18 +15,8 @@ namespace ShootingRange
         [STAThread]
         static void Main()
         {
-            //Application.Run(new Shooting());
-
-            Application.Run(new LoginForm()); 
-            Application.Exit();
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new LoginForm());
-            //while (true)
-            //{
+            //Application.Run(new LoginForm()); 
             Application.Run(new ShootingApp());
-            //}
-            
         }
 
         public static void Agonas()
