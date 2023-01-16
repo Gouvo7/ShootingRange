@@ -15,19 +15,21 @@ namespace ShootingRange
 {
     public partial class LoginForm : Form
     {
+        String ConnString = "Server = localhost; User ID = root; Password = 12345678; Database = shoot";
         public LoginForm()
         {
-            String ConnString = "Server = dbshoot.cyzxisevetss.eu-west-3.rds.amazonaws.com; User ID = root; Password = 1234; Database = shoot";
+            
+            //String ConnString = "Server = dbshoot.cyzxisevetss.eu-west-3.rds.amazonaws.com; User ID = root; Password = 1234; Database = shoot";
             InitializeComponent();
             this.FormClosed += new FormClosedEventHandler(Form1_FormClosed);
             var appConfig = ConfigurationManager.AppSettings;
-            string dbname = appConfig["dbshoot"];
+            string dbname = appConfig["shoot"];
             string username = appConfig["root"];
             string password = appConfig["1234"];
             string hostname = appConfig["dbshoot.cyzxisevetss.eu-west-3.rds.amazonaws.com"];
             string port = appConfig["3306"];
             string str = "Data Source=" + hostname + ";Initial Catalog=" + dbname + ";User ID=" + username + ";Password=" + password + ";";
-            :base(str);
+            //:base(str);
 
         }
 
@@ -52,20 +54,35 @@ namespace ShootingRange
         {
             String user = textBox1.Text;
             String pass = textBox2.Text;
-
-            bool correct = false;
-            if (user.Equals("admin"))
+            bool attempt = false;
+            try
             {
-                if (pass.Equals("1234"))
+                MySqlConnection conn = new MySqlConnection(ConnString);
+                conn.Open();
+                
+                string query = $"SELECT * FROM user where user_username = '{user}' and user_pass = '{pass}';";
+                MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
+                DataSet ds = new DataSet();
+                da.Fill(ds, "user");
+                DataTable dt = ds.Tables["user"];
+                Console.WriteLine(query);
+                
+                if (dt.Rows.Count != 0)
                 {
-                    correct = true;
-                    
+                    Console.WriteLine("Correct!");
+                    this.Dispose();
                 }
+                else
+                {
+                    MessageBox.Show("Error: Λάθος όνομα χρήστη ή κωδικός.", "Μήνυμα Λάθους", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                conn.Close();
             }
-            if (correct)
-                this.Dispose();
-            else
-                MessageBox.Show("Error: Λάθος όνομα χρήστη ή κωδικός.","Μήνυμα Λάθους", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            catch (Exception y)
+            {
+                Console.WriteLine("Error: {0}", y.ToString());
+            }
+                
         }
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {

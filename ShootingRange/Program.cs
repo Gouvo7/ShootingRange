@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace ShootingRange
 {
@@ -23,7 +24,9 @@ namespace ShootingRange
             //Application.Run(new LoginForm());
             //while (true)
             //{
+            //Thread s = new Thread(new ShootingApp());
             Application.Run(new ShootingApp());
+            
             //}
             
         }
