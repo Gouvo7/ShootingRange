@@ -13,8 +13,10 @@ namespace ShootingRange
 {
     public partial class Shooting : Form
     {
+        int number = 0;
         public Shooting()
         {
+            
             InitializeComponent();
             this.CenterToScreen();
             int num = 1;
@@ -506,16 +508,17 @@ namespace ShootingRange
 
         private void Shooting_Leave(object sender, EventArgs e)
         {
+            base.Visible = true;
+            number = 1;
         }
 
         private void Shooting_Closed(object sender, FormClosedEventArgs e)
         {
             this.Visible = false;
         }
-
-        private void Shooting_Closing(object sender, FormClosingEventArgs e)
+        public int getNum()
         {
-            this.Visible = false;
+            return number;
         }
     }
         

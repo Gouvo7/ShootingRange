@@ -210,12 +210,7 @@ namespace ShootingRange
         {
             Shooting a = new Shooting();
             this.Visible = false;
-            if (a.Visible == false)
-            {
-                Console.WriteLine("Nice!");
-                this.Show();
-                this.Visible = true;
-            }
+            Console.WriteLine("Nice!");
         }
 
         private void button3_Click_2(object sender, EventArgs e)
@@ -334,10 +329,6 @@ namespace ShootingRange
                     Console.WriteLine("Error: {0}", e1.ToString());
                 }   
             }
-        }
-        public void Disp()
-        {
-            this.Show();
         }
     }
 }
