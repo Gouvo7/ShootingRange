@@ -18,19 +18,8 @@ namespace ShootingRange
         String ConnString = "Server = localhost; User ID = root; Password = 12345678; Database = shoot";
         public LoginForm()
         {
-            
-            //String ConnString = "Server = dbshoot.cyzxisevetss.eu-west-3.rds.amazonaws.com; User ID = root; Password = 1234; Database = shoot";
             InitializeComponent();
             this.FormClosed += new FormClosedEventHandler(Form1_FormClosed);
-            var appConfig = ConfigurationManager.AppSettings;
-            string dbname = appConfig["shoot"];
-            string username = appConfig["root"];
-            string password = appConfig["1234"];
-            string hostname = appConfig["dbshoot.cyzxisevetss.eu-west-3.rds.amazonaws.com"];
-            string port = appConfig["3306"];
-            string str = "Data Source=" + hostname + ";Initial Catalog=" + dbname + ";User ID=" + username + ";Password=" + password + ";";
-            //:base(str);
-
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
@@ -69,7 +58,6 @@ namespace ShootingRange
                 
                 if (dt.Rows.Count != 0)
                 {
-                    Console.WriteLine("Correct!");
                     this.Dispose();
                 }
                 else

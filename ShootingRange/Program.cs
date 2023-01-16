@@ -15,20 +15,8 @@ namespace ShootingRange
         [STAThread]
         static void Main()
         {
-            //Application.Run(new Shooting());
-
-            Application.Run(new LoginForm()); 
-            Application.Exit();
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new LoginForm());
-            //while (true)
-            //{
-            //Thread s = new Thread(new ShootingApp());
+            //Application.Run(new LoginForm()); 
             Application.Run(new ShootingApp());
-            
-            //}
-            
         }
 
         public static void Agonas()

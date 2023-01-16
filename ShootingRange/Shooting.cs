@@ -19,6 +19,7 @@ namespace ShootingRange
             this.CenterToScreen();
             int num = 1;
             int A = 1;
+            this.Visible = true;
             comboBox1.Items.Add("ΜΔΑ");
             comboBox1.Items.Add("SPORTS");
             comboBox1.Items.Add("STANDARD");
@@ -494,12 +495,27 @@ namespace ShootingRange
             if (ok)
             {
                 MessageBox.Show("Όλα καλά", "Επιτυχής Καταχώρηση", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Dispose();
             }
             else
             {
                 MessageBox.Show("Error: Λάθος βρε μαλάκα.", "Μήνυμα Λάθους", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            this.Dispose();
+            
+        }
+
+        private void Shooting_Leave(object sender, EventArgs e)
+        {
+        }
+
+        private void Shooting_Closed(object sender, FormClosedEventArgs e)
+        {
+            this.Visible = false;
+        }
+
+        private void Shooting_Closing(object sender, FormClosingEventArgs e)
+        {
+            this.Visible = false;
         }
     }
         
