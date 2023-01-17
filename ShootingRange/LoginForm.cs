@@ -17,41 +17,11 @@ namespace ShootingRange
     public partial class LoginForm : Form
     {
         String ConnString = "Server = localhost; User ID = root; Password = 12345678; Database = shoot";
+
         public LoginForm()
         {
-<<<<<<< HEAD
-            String ConnString = "Server=dbshoot.cyzxisevetss.eu-west-3.rds.amazonaws.com; User ID = root; Password = 12345678; Database = dbshoot";
             InitializeComponent();
             this.FormClosed += new FormClosedEventHandler(Form1_FormClosed);
-            //string str = "Data Source=" + hostname + ";Initial Catalog=" + dbname + ";User ID=" + username + ";Password=" + password + ";";
-            //:base(str);
-
-            MySqlConnection conn = new MySqlConnection(ConnString);
-            conn.Open();
-            string query = "SELECT * FROM lawdb.wcm_ind where wcmcon_ID < 1000";
-            MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
-            DataSet ds = new DataSet();
-            da.Fill(ds, "courses");
-            DataTable dt = ds.Tables["courses"];
-            Console.WriteLine(dt);
-            List<string> list = new List<string>();
-            foreach (DataRow row in dt.Rows)
-            {
-                list.Add((string)row["wcmIND_LastName"]);
-            }
-            //dataGridView1.DataSource = ds.Tables[0];
-
-            foreach (String x in list)
-            {
-                //BoxSurname.Items.Add(x);
-            }
-
-            conn.Close();
-
-=======
-            InitializeComponent();
-            this.FormClosed += new FormClosedEventHandler(Form1_FormClosed);
->>>>>>> 58122aaeeb59a65e01e8b8c33fa503c6d69cba41
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
