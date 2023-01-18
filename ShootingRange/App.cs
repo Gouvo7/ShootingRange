@@ -7,7 +7,7 @@ using System.Threading;
 
 namespace ShootingRange
 {
-    internal static class Program
+    internal static class App
     {
         /// <summary>
         /// The main entry point for the application.
@@ -17,11 +17,6 @@ namespace ShootingRange
         {
             //Application.Run(new LoginForm()); 
             Application.Run(new ShootingApp());
-        }
-
-        public static void Agonas()
-        {
-            Application.Run(new Shooting());
         }
     }
 }

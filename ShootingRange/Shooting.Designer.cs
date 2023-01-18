@@ -231,6 +231,7 @@ namespace ShootingRange
             this.BoxSurname.Name = "BoxSurname";
             this.BoxSurname.Size = new System.Drawing.Size(115, 21);
             this.BoxSurname.TabIndex = 1;
+            this.BoxSurname.SelectedIndexChanged += new System.EventHandler(this.BoxSurname_SelectedIndexChanged);
             // 
             // label2
             // 
