@@ -16,8 +16,8 @@ namespace ShootingRange
     public partial class ShootingApp : Form
     {
         public static ShootingApp instance;
-         String ConnString = "Server = localhost; User ID = root; Password = 12345678; Database = shoot";
-        //String ConnString = "Server = 10.1.11.28; User ID = ngouvousis; Password=Nek@niro_{Gou22}; Database = lawdb;";
+        //String ConnString = "Server = localhost; User ID = root; Password = 12345678; Database = shoot";
+        String ConnString = "Server = dbshoot.cyzxisevetss.eu-west-3.rds.amazonaws.com; User ID = root; Password=12345678; Database = shoot;";
         public ShootingApp()
         {
             InitializeComponent();
