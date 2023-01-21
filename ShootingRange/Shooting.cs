@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySqlConnector;
 
 
 namespace ShootingRange
@@ -14,9 +15,14 @@ namespace ShootingRange
     public partial class Shooting : Form
     {
         int number = 0;
-        public Shooting()
+        public static ShootingApp instance;
+        //String ConnString = "Server = localhost; User ID = root; Password = 12345678; Database = shoot";
+        String ConnString = "Server = dbshoot.cyzxisevetss.eu-west-3.rds.amazonaws.com; User ID = root; Password = 12345678; Database = shoot";
+        public Shooting(ShootingApp shootingApp)
         {
-            
+            instance = shootingApp;
+            shootingApp.Hide();
+
             InitializeComponent();
             this.CenterToScreen();
             int num = 1;
@@ -31,6 +37,31 @@ namespace ShootingRange
             shoot40Res.Enabled = false;
             shoot50Res.Enabled = false;
             shoot60Res.Enabled = false;
+            try
+            {
+                MySqlConnection conn = new MySqlConnection(ConnString);
+                conn.Open();
+                string query = "SELECT * FROM athl where athl_ID < 1000";
+                MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
+                DataSet ds = new DataSet();
+                da.Fill(ds, "athl");
+                DataTable dt = ds.Tables["athl"];
+                List<string> list = new List<string>();
+                foreach (DataRow row in dt.Rows)
+                {
+                    list.Add((string)row["athl_LName"]);
+                }
+                foreach (String x in list)
+                {
+                    BoxSurname.Items.Add(x);
+                }
+
+                conn.Close();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error: {0}", e.ToString());
+            }
         }
         public void Start1()
         {
@@ -508,17 +539,130 @@ namespace ShootingRange
 
         private void Shooting_Leave(object sender, EventArgs e)
         {
-            base.Visible = true;
-            number = 1;
         }
 
         private void Shooting_Closed(object sender, FormClosedEventArgs e)
         {
             this.Visible = false;
+            instance.Show();
         }
-        public int getNum()
+        private void SurnameLeave(object sender, EventArgs e)
         {
-            return number;
+            Console.WriteLine(BoxSurname.SelectedItem);
+            if (BoxSurname.SelectedItem != null)
+            {
+                try
+                {
+                    MySqlConnection conn = new MySqlConnection(ConnString);
+                    conn.Open();
+                    string query = "SELECT * FROM athl where athl_LName like \'%" + BoxSurname.SelectedItem.ToString() + "%\'";
+                    MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
+                    DataSet ds = new DataSet();
+                    da.Fill(ds, "athl");
+                    DataTable dt = ds.Tables["athl"];
+                    Console.WriteLine(dt);
+                    List<string> list = new List<string>();
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        list.Add((string)row["athl_FName"]);
+                    }
+
+                    foreach (String x in list)
+                    {
+                        BoxName.Items.Add(x);
+                    }
+
+                    conn.Close();
+                }
+
+                catch (Exception e1)
+                {
+                    Console.WriteLine("Error: {0}", e1.ToString());
+                }
+            }
+        }
+
+        private void BoxSurname_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            BoxName.Items.Clear();
+            BoxName.SelectedItem = "";
+            BoxMhtrwo.Items.Clear();
+            BoxMhtrwo.SelectedIndex = 0 ;
+            Console.WriteLine(BoxSurname.SelectedItem);
+            if (BoxSurname.SelectedItem != null)
+            {
+                try
+                {
+                    MySqlConnection conn = new MySqlConnection(ConnString);
+                    conn.Open();
+                    string query = "SELECT * FROM athl where athl_LName like \'%" + BoxSurname.SelectedItem.ToString() + "%\'";
+                    MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
+                    DataSet ds = new DataSet();
+                    da.Fill(ds, "athl");
+                    DataTable dt = ds.Tables["athl"];
+                    Console.WriteLine(dt);
+                    List<string> list = new List<string>();
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        list.Add((string)row["athl_FName"]);
+                    }
+
+                    foreach (String x in list)
+                    {
+                        BoxName.Items.Add(x);
+                    }
+
+                    conn.Close();
+                }
+
+                catch (Exception e1)
+                {
+                    Console.WriteLine("Error: {0}", e1.ToString());
+                }
+            }
+        }
+
+        private void BoxName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //BoxName.Items.Clear();
+            Console.WriteLine(BoxSurname.SelectedItem);
+            if (BoxSurname.SelectedItem != null)
+            {
+                try
+                {
+                    MySqlConnection conn = new MySqlConnection(ConnString);
+                    conn.Open();
+                    string query = "SELECT * FROM athl where athl_LName like \'%" + BoxSurname.SelectedItem.ToString() + "%\' and athl_FName like \'%" + BoxName.SelectedItem.ToString() + "%\';";
+                    MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
+                    DataSet ds = new DataSet();
+                    da.Fill(ds, "athl");
+                    DataTable dt = ds.Tables["athl"];
+                    Console.WriteLine(dt);
+                    List<string> list = new List<string>();
+                    List<string> list1 = new List<string>();
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        list.Add((string)row["athl_Mhtrwo"]);
+                        list1.Add((string)row["athl_Org"]);
+                    }
+
+                    foreach (String x in list)
+                    {
+                        BoxMhtrwo.Items.Add(x);
+                    }
+                    foreach (String y in list1)
+                    {
+                        BoxSullogos.Items.Add(y);
+                    }
+
+                    conn.Close();
+                }
+
+                catch (Exception e1)
+                {
+                    Console.WriteLine("Error: {0}", e1.ToString());
+                }
+            }
         }
     }
         

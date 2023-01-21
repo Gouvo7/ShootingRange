@@ -15,12 +15,13 @@ namespace ShootingRange
 {
     public partial class ShootingApp : Form
     {
-
-         String ConnString = "Server = localhost; User ID = root; Password = 12345678; Database = shoot";
-        //String ConnString = "Server = 10.1.11.28; User ID = ngouvousis; Password=Nek@niro_{Gou22}; Database = lawdb;";
+        public static ShootingApp instance;
+        //String ConnString = "Server = localhost; User ID = root; Password = 12345678; Database = shoot";
+        String ConnString = "Server = dbshoot.cyzxisevetss.eu-west-3.rds.amazonaws.com; User ID = root; Password=12345678; Database = shoot;";
         public ShootingApp()
         {
             InitializeComponent();
+            instance = this;
             this.CenterToScreen();
             comboBox1.Items.Add("Αναζήτηση");
             comboBox1.Items.Add("Καταχώρηση Βολής");
@@ -157,13 +158,13 @@ namespace ShootingRange
             {
                 Console.WriteLine("Error: {0}", e1.ToString());
             }
-
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             BoxName.Text = "";
             BoxSurname.Text = "";
+            BoxName.Items.Clear();
             dataGridView1.ClearSelection();
         }
 
@@ -208,21 +209,12 @@ namespace ShootingRange
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Shooting a = new Shooting();
-            this.Visible = false;
-            Console.WriteLine("Nice!");
+            Shooting a = new Shooting(this);
         }
 
         private void button3_Click_2(object sender, EventArgs e)
         {
-            Practice b = new Practice();
-            this.Visible = false;
-            if (b.Visible==false)
-            {
-                this.Show();
-                this.Visible = true;
-            }
-            //this.Hide();
+            Practice b = new Practice(this);
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -312,13 +304,13 @@ namespace ShootingRange
                     List<string> list = new List<string>();
                     foreach (DataRow row in dt.Rows)
                     {
-                        list.Add((string)row["athl_LName"]);
+                        list.Add((string)row["athl_FName"]);
                     }
                     dataGridView1.DataSource = ds.Tables[0];
 
                     foreach (String x in list)
                     {
-                        BoxSurname.Items.Add(x);
+                        BoxName.Items.Add(x);
                     }
 
                     conn.Close();
@@ -329,6 +321,11 @@ namespace ShootingRange
                     Console.WriteLine("Error: {0}", e1.ToString());
                 }   
             }
+        }
+
+        private void BoxSurname_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

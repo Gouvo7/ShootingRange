@@ -83,7 +83,7 @@
             this.BoxSurname.Name = "BoxSurname";
             this.BoxSurname.Size = new System.Drawing.Size(121, 21);
             this.BoxSurname.TabIndex = 11;
-            this.BoxSurname.Leave += new System.EventHandler(this.SurnameLeave);
+            this.BoxSurname.SelectedIndexChanged += new System.EventHandler(this.BoxSurname_SelectedIndexChanged);
             // 
             // button2
             // 
@@ -228,7 +228,7 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // Form1
+            // ShootingApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -253,8 +253,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "ShootingApp";
+            this.Text = "Σκοπευτικός Όμιλος";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
