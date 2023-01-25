@@ -587,7 +587,7 @@ namespace ShootingRange
             BoxName.Items.Clear();
             BoxName.SelectedItem = "";
             BoxMhtrwo.Items.Clear();
-            BoxMhtrwo.SelectedIndex = 0 ;
+            //BoxMhtrwo.SelectedIndex = 0 ;
             Console.WriteLine(BoxSurname.SelectedItem);
             if (BoxSurname.SelectedItem != null)
             {
