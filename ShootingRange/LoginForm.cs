@@ -15,8 +15,8 @@ namespace ShootingRange
 {
     public partial class LoginForm : Form
     {
-        //String ConnString = "Server = localhost; User ID = root; Password = 12345678; Database = shoot";
-        String ConnString = "Server = dbshoot.cyzxisevetss.eu-west-3.rds.amazonaws.com; User ID = root; Password = 12345678; Database = shoot";
+        String ConnString = "Server = localhost; User ID = root; Password = 1234; Database = shoot";
+        //String ConnString = "Server = dbshoot.cyzxisevetss.eu-west-3.rds.amazonaws.com; User ID = root; Password = 12345678; Database = shoot";
         public LoginForm()
         {
             InitializeComponent();

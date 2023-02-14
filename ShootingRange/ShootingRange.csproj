@@ -89,6 +89,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NewAthlete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewAthlete.Designer.cs">
+      <DependentUpon>NewAthlete.cs</DependentUpon>
+    </Compile>
     <Compile Include="Practice.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +121,9 @@
     </Compile>
     <Compile Include="App.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="NewAthlete.resx">
+      <DependentUpon>NewAthlete.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ShootingApp.resx">
       <DependentUpon>ShootingApp.cs</DependentUpon>
     </EmbeddedResource>

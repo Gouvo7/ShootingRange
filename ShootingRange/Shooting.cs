@@ -16,8 +16,8 @@ namespace ShootingRange
     {
         int number = 0;
         public static ShootingApp instance;
-        //String ConnString = "Server = localhost; User ID = root; Password = 12345678; Database = shoot";
-        String ConnString = "Server = dbshoot.cyzxisevetss.eu-west-3.rds.amazonaws.com; User ID = root; Password = 12345678; Database = shoot";
+        String ConnString = "Server = localhost; User ID = root; Password = 1234; Database = shoot";
+        //String ConnString = "Server = dbshoot.cyzxisevetss.eu-west-3.rds.amazonaws.com; User ID = root; Password = 123456789; Database = shoot";
         public Shooting(ShootingApp shootingApp)
         {
             instance = shootingApp;
@@ -37,30 +37,46 @@ namespace ShootingRange
             shoot40Res.Enabled = false;
             shoot50Res.Enabled = false;
             shoot60Res.Enabled = false;
-            try
+            if (ConnString != null)
             {
-                MySqlConnection conn = new MySqlConnection(ConnString);
-                conn.Open();
-                string query = "SELECT * FROM athl where athl_ID < 1000";
-                MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
-                DataSet ds = new DataSet();
-                da.Fill(ds, "athl");
-                DataTable dt = ds.Tables["athl"];
-                List<string> list = new List<string>();
-                foreach (DataRow row in dt.Rows)
+                try
                 {
-                    list.Add((string)row["athl_LName"]);
-                }
-                foreach (String x in list)
-                {
-                    BoxSurname.Items.Add(x);
-                }
+                    MySqlConnection conn = new MySqlConnection(ConnString);
+                    conn.Open();
+                    string query = "SELECT * FROM athl where athl_ID < 1000";
+                    MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
+                    DataSet ds = new DataSet();
+                    da.Fill(ds, "athl");
+                    DataTable dt = ds.Tables["athl"];
+                    List<string> list = new List<string>();
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        list.Add((string)row["athl_LName"]);
+                    }
+                    foreach (String x in list)
+                    {
+                        BoxSurname.Items.Add(x);
+                    }
 
-                conn.Close();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Error: {0}", e.ToString());
+                    query = "SELECT ammo_type from apothema;";
+                    MySqlDataAdapter db = new MySqlDataAdapter(query, conn);
+                    db.Fill(ds, "apothema");
+                    dt = ds.Tables["apothema"];
+                    List<string> list1 = new List<string>();
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        list1.Add((string)row["ammo_type"]);
+                    }
+                    foreach (String x in list1)
+                    {
+                        BoxAmmoMM.Items.Add(x);
+                    }
+                    conn.Close();
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Error: {0}", e.ToString());
+                }
             }
         }
         public void Start1()
@@ -177,93 +193,133 @@ namespace ShootingRange
         private void txt1_Leave(object sender, EventArgs e)
         {
             int res = 0;
-            if (shoot1.Text != null && shoot1.Text != "")
+            try
             {
-                res = res + Int32.Parse(shoot1.Text);
+                if (shoot1.Text != null && shoot1.Text != "")
+                {
+                    res = res + Int32.Parse(shoot1.Text);
+                }
+                if (shoot2.Text != null && shoot2.Text != "")
+                {
+                    res = res + Int32.Parse(shoot2.Text);
+                }
+                if (shoot3.Text != null && shoot3.Text != "")
+                {
+                    res = res + Int32.Parse(shoot3.Text);
+                }
+                if (shoot4.Text != null && shoot4.Text != "")
+                {
+                    res = res + Int32.Parse(shoot4.Text);
+                }
+                if (shoot5.Text != null && shoot5.Text != "")
+                {
+                    res = res + Int32.Parse(shoot5.Text);
+                }
+                if (shoot6.Text != null && shoot6.Text != "")
+                {
+                    res = res + Int32.Parse(shoot6.Text);
+                }
+                if (shoot7.Text != null && shoot7.Text != "")
+                {
+                    res = res + Int32.Parse(shoot7.Text);
+                }
+                if (shoot8.Text != null && shoot8.Text != "")
+                {
+                    res = res + Int32.Parse(shoot8.Text);
+                }
+                if (shoot9.Text != null && shoot9.Text != "")
+                {
+                    res = res + Int32.Parse(shoot9.Text);
+                }
+                if (shoot10.Text != null && shoot10.Text != "")
+                {
+                    res = res + Int32.Parse(shoot10.Text);
+                }
+                shoot10Res.Text = res.ToString();
             }
-            if (shoot2.Text != null && shoot2.Text != "")
+            catch (FormatException)
             {
-                res = res + Int32.Parse(shoot2.Text);
+                //Console.WriteLine("Το σκορ πρέπει να είναι ακέραια τιμή!");
+                MessageBox.Show("Error: Το σκορ πρέπει να είναι ακέραια τιμή!", "Μήνυμα Λάθους", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                shoot1.Text = "";
+                shoot2.Text = "";
+                shoot3.Text = "";
+                shoot4.Text = "";
+                shoot5.Text = "";
+                shoot6.Text = "";
+                shoot7.Text = "";
+                shoot8.Text = "";
+                shoot9.Text = "";
+                shoot10.Text = "";
+                shoot10Res.Text = "";
             }
-            if (shoot3.Text != null && shoot3.Text != "")
-            {
-                res = res + Int32.Parse(shoot3.Text);
-            }
-            if (shoot4.Text != null && shoot4.Text != "")
-            {
-                res = res + Int32.Parse(shoot4.Text);
-            }
-            if (shoot5.Text != null && shoot5.Text != "")
-            {
-                res = res + Int32.Parse(shoot5.Text);
-            }
-            if (shoot6.Text != null && shoot6.Text != "")
-            {
-                res = res + Int32.Parse(shoot6.Text);
-            }
-            if (shoot7.Text != null && shoot7.Text != "")
-            {
-                res = res + Int32.Parse(shoot7.Text);
-            }
-            if (shoot8.Text != null && shoot8.Text != "")
-            {
-                res = res + Int32.Parse(shoot8.Text);
-            }
-            if (shoot9.Text != null && shoot9.Text != "")
-            {
-                res = res + Int32.Parse(shoot9.Text);
-            }
-            if (shoot10.Text != null && shoot10.Text != "")
-            {
-                res = res + Int32.Parse(shoot10.Text);
-            }
-            shoot10Res.Text = res.ToString();
+
+            
         }
 
         private void txt2_Leave(object sender, EventArgs e)
         {
             int res = 0;
-            if (shoot11.Text != null && shoot11.Text != "")
+            try
             {
-                res = res + Int32.Parse(shoot11.Text);
+                if (shoot11.Text != null && shoot11.Text != "")
+                {
+                    res = res + Int32.Parse(shoot11.Text);
+                }
+                if (shoot12.Text != null && shoot12.Text != "")
+                {
+                    res = res + Int32.Parse(shoot12.Text);
+                }
+                if (shoot13.Text != null && shoot13.Text != "")
+                {
+                    res = res + Int32.Parse(shoot13.Text);
+                }
+                if (shoot14.Text != null && shoot14.Text != "")
+                {
+                    res = res + Int32.Parse(shoot14.Text);
+                }
+                if (shoot15.Text != null && shoot15.Text != "")
+                {
+                    res = res + Int32.Parse(shoot15.Text);
+                }
+                if (shoot16.Text != null && shoot16.Text != "")
+                {
+                    res = res + Int32.Parse(shoot16.Text);
+                }
+                if (shoot17.Text != null && shoot17.Text != "")
+                {
+                    res = res + Int32.Parse(shoot17.Text);
+                }
+                if (shoot18.Text != null && shoot18.Text != "")
+                {
+                    res = res + Int32.Parse(shoot18.Text);
+                }
+                if (shoot19.Text != null && shoot19.Text != "")
+                {
+                    res = res + Int32.Parse(shoot19.Text);
+                }
+                if (shoot20.Text != null && shoot20.Text != "")
+                {
+                    res = res + Int32.Parse(shoot20.Text);
+                }
+                shoot20Res.Text = res.ToString();
             }
-            if (shoot12.Text != null && shoot12.Text != "")
+            catch (FormatException)
             {
-                res = res + Int32.Parse(shoot12.Text);
+                //Console.WriteLine("Το σκορ πρέπει να είναι ακέραια τιμή!");
+                MessageBox.Show("Error: Το σκορ πρέπει να είναι ακέραια τιμή!", "Μήνυμα Λάθους", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                shoot11.Text = "";
+                shoot12.Text = "";
+                shoot13.Text = "";
+                shoot14.Text = "";
+                shoot15.Text = "";
+                shoot16.Text = "";
+                shoot17.Text = "";
+                shoot18.Text = "";
+                shoot19.Text = "";
+                shoot20.Text = "";
+                shoot20Res.Text = "";
             }
-            if (shoot13.Text != null && shoot13.Text != "")
-            {
-                res = res + Int32.Parse(shoot13.Text);
-            }
-            if (shoot14.Text != null && shoot14.Text != "")
-            {
-                res = res + Int32.Parse(shoot14.Text);
-            }
-            if (shoot15.Text != null && shoot15.Text != "")
-            {
-                res = res + Int32.Parse(shoot15.Text);
-            }
-            if (shoot16.Text != null && shoot16.Text != "")
-            {
-                res = res + Int32.Parse(shoot16.Text);
-            }
-            if (shoot17.Text != null && shoot17.Text != "")
-            {
-                res = res + Int32.Parse(shoot17.Text);
-            }
-            if (shoot18.Text != null && shoot18.Text != "")
-            {
-                res = res + Int32.Parse(shoot18.Text);
-            }
-            if (shoot19.Text != null && shoot19.Text != "")
-            {
-                res = res + Int32.Parse(shoot19.Text);
-            }
-            if (shoot20.Text != null && shoot20.Text != "")
-            {
-                res = res + Int32.Parse(shoot20.Text);
-            }
-            shoot20Res.Text = res.ToString();
         }
 
         private void txt3_Leave(object sender, EventArgs e)
@@ -522,20 +578,6 @@ namespace ShootingRange
             shoot60Res.Text = "";
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            bool ok = false;
-            if (ok)
-            {
-                MessageBox.Show("Όλα καλά", "Επιτυχής Καταχώρηση", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                this.Dispose();
-            }
-            else
-            {
-                MessageBox.Show("Error: Λάθος βρε μαλάκα.", "Μήνυμα Λάθους", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            
-        }
 
         private void Shooting_Leave(object sender, EventArgs e)
         {
@@ -546,47 +588,31 @@ namespace ShootingRange
             this.Visible = false;
             instance.Show();
         }
-        private void SurnameLeave(object sender, EventArgs e)
-        {
-            Console.WriteLine(BoxSurname.SelectedItem);
-            if (BoxSurname.SelectedItem != null)
-            {
-                try
-                {
-                    MySqlConnection conn = new MySqlConnection(ConnString);
-                    conn.Open();
-                    string query = "SELECT * FROM athl where athl_LName like \'%" + BoxSurname.SelectedItem.ToString() + "%\'";
-                    MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
-                    DataSet ds = new DataSet();
-                    da.Fill(ds, "athl");
-                    DataTable dt = ds.Tables["athl"];
-                    Console.WriteLine(dt);
-                    List<string> list = new List<string>();
-                    foreach (DataRow row in dt.Rows)
-                    {
-                        list.Add((string)row["athl_FName"]);
-                    }
-
-                    foreach (String x in list)
-                    {
-                        BoxName.Items.Add(x);
-                    }
-
-                    conn.Close();
-                }
-
-                catch (Exception e1)
-                {
-                    Console.WriteLine("Error: {0}", e1.ToString());
-                }
-            }
-        }
 
         private void BoxSurname_SelectedIndexChanged(object sender, EventArgs e)
         {
             BoxName.Items.Clear();
-            BoxName.SelectedItem = "";
+            BoxName.Text = "";
             BoxMhtrwo.Items.Clear();
+            BoxMhtrwo.Text = "";
+            BoxSullogos.Items.Clear();
+            BoxSullogos.Text = "";
+            BoxTupos.Items.Clear();
+            BoxTupos.Text = "";
+            BoxArOplou.Items.Clear();
+            BoxArOplou.Text = "";
+            //BoxArAdeia.Items.Clear();
+            //BoxArAdeia.SelectedItem = "";
+            BoxProvider.Items.Clear();
+            BoxProvider.Text = "";
+
+            //BoxAmmoConsum.Items.Clear();
+            //BoxAmmoConsum.SelectedItem = "";
+            BoxAmmoStr.Items.Clear();
+            BoxAmmoStr.Text = "";
+            BoxActivityType.Items.Clear();
+            BoxActivityType.Text = "";
+
             //BoxMhtrwo.SelectedIndex = 0 ;
             Console.WriteLine(BoxSurname.SelectedItem);
             if (BoxSurname.SelectedItem != null)
@@ -624,6 +650,25 @@ namespace ShootingRange
 
         private void BoxName_SelectedIndexChanged(object sender, EventArgs e)
         {
+            BoxMhtrwo.Items.Clear();
+            BoxMhtrwo.Text = "";
+            BoxSullogos.Items.Clear();
+            BoxSullogos.Text = "";
+            BoxTupos.Items.Clear();
+            BoxTupos.Text = "";
+            BoxArOplou.Items.Clear();
+            BoxArOplou.Text = "";
+            //BoxArAdeia.Items.Clear();
+            //BoxArAdeia.SelectedItem = "";
+            BoxProvider.Items.Clear();
+            BoxProvider.Text = "";
+
+            //BoxAmmoConsum.Items.Clear();
+            //BoxAmmoConsum.SelectedItem = "";
+            BoxAmmoStr.Items.Clear();
+            BoxAmmoStr.Text = "";
+            BoxActivityType.Items.Clear();
+            BoxActivityType.Text = "";
             //BoxName.Items.Clear();
             Console.WriteLine(BoxSurname.SelectedItem);
             if (BoxSurname.SelectedItem != null)
@@ -662,6 +707,77 @@ namespace ShootingRange
                 {
                     Console.WriteLine("Error: {0}", e1.ToString());
                 }
+            }
+        }
+        private void Submit(object sender, EventArgs e)
+        {
+            try
+            {
+                int x1 = Int32.Parse(shoot1.Text);
+                int x2 = Int32.Parse(shoot2.Text);
+                int x3 = Int32.Parse(shoot3.Text);
+                int x4 = Int32.Parse(shoot4.Text);
+                int x5 = Int32.Parse(shoot5.Text);
+                int x6 = Int32.Parse(shoot6.Text);
+                int x7 = Int32.Parse(shoot7.Text);
+                int x8 = Int32.Parse(shoot8.Text);
+                int x9 = Int32.Parse(shoot9.Text);
+                int x10 = Int32.Parse(shoot10.Text);
+                int x11 = Int32.Parse(shoot11.Text);
+                int x12 = Int32.Parse(shoot12.Text);
+                int x13 = Int32.Parse(shoot13.Text);
+                int x14 = Int32.Parse(shoot14.Text);
+                int x15 = Int32.Parse(shoot15.Text);
+                int x16 = Int32.Parse(shoot16.Text);
+                int x17 = Int32.Parse(shoot17.Text);
+                int x18 = Int32.Parse(shoot18.Text);
+                int x19 = Int32.Parse(shoot19.Text);
+                int x20 = Int32.Parse(shoot20.Text);
+                int x21 = Int32.Parse(shoot21.Text);
+                int x22 = Int32.Parse(shoot22.Text);
+                int x23 = Int32.Parse(shoot23.Text);
+                int x24 = Int32.Parse(shoot24.Text);
+                int x25 = Int32.Parse(shoot25.Text);
+                int x26 = Int32.Parse(shoot26.Text);
+                int x27 = Int32.Parse(shoot27.Text);
+                int x28 = Int32.Parse(shoot28.Text);
+                int x29 = Int32.Parse(shoot29.Text);
+                int x30 = Int32.Parse(shoot30.Text);
+                int x31 = Int32.Parse(shoot31.Text);
+                int x32 = Int32.Parse(shoot32.Text);
+                int x33 = Int32.Parse(shoot33.Text);
+                int x34 = Int32.Parse(shoot34.Text);
+                int x35 = Int32.Parse(shoot35.Text);
+                int x36 = Int32.Parse(shoot36.Text);
+                int x37 = Int32.Parse(shoot37.Text);
+                int x38 = Int32.Parse(shoot38.Text);
+                int x39 = Int32.Parse(shoot39.Text);
+                int x40 = Int32.Parse(shoot40.Text);
+                int x41 = Int32.Parse(shoot41.Text);
+                int x42 = Int32.Parse(shoot42.Text);
+                int x43 = Int32.Parse(shoot43.Text);
+                int x44 = Int32.Parse(shoot44.Text);
+                int x45 = Int32.Parse(shoot45.Text);
+                int x46 = Int32.Parse(shoot46.Text);
+                int x47 = Int32.Parse(shoot47.Text);
+                int x48 = Int32.Parse(shoot48.Text);
+                int x49 = Int32.Parse(shoot49.Text);
+                int x50 = Int32.Parse(shoot50.Text);
+                int x51 = Int32.Parse(shoot51.Text);
+                int x52 = Int32.Parse(shoot52.Text);
+                int x53 = Int32.Parse(shoot53.Text);
+                int x54 = Int32.Parse(shoot54.Text);
+                int x55 = Int32.Parse(shoot55.Text);
+                int x56 = Int32.Parse(shoot56.Text);
+                int x57 = Int32.Parse(shoot57.Text);
+                int x58 = Int32.Parse(shoot58.Text);
+                int x59 = Int32.Parse(shoot59.Text);
+                int x60 = Int32.Parse(shoot60.Text);
+                
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine($"Unable to parse ");
             }
         }
     }

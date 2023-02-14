@@ -47,17 +47,17 @@ namespace ShootingRange
             this.BoxArAdeia = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.BoxProvider = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.BoxAmmoMM = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.BoxAmmoConsum = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
+            this.BoxActivityType = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
+            this.BoxAmmoStr = new System.Windows.Forms.ComboBox();
             this.shoot1 = new System.Windows.Forms.TextBox();
             this.shoot3 = new System.Windows.Forms.TextBox();
             this.shoot2 = new System.Windows.Forms.TextBox();
@@ -365,16 +365,16 @@ namespace ShootingRange
             this.label9.TabIndex = 29;
             this.label9.Text = "Υπηρεσία χορήγησης";
             // 
-            // comboBox6
+            // BoxProvider
             // 
-            this.comboBox6.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBox6.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.ItemHeight = 13;
-            this.comboBox6.Location = new System.Drawing.Point(21, 127);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(114, 21);
-            this.comboBox6.TabIndex = 8;
+            this.BoxProvider.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.BoxProvider.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.BoxProvider.FormattingEnabled = true;
+            this.BoxProvider.ItemHeight = 13;
+            this.BoxProvider.Location = new System.Drawing.Point(21, 127);
+            this.BoxProvider.Name = "BoxProvider";
+            this.BoxProvider.Size = new System.Drawing.Size(114, 21);
+            this.BoxProvider.TabIndex = 8;
             // 
             // label10
             // 
@@ -385,16 +385,16 @@ namespace ShootingRange
             this.label10.TabIndex = 31;
             this.label10.Text = "Διαμέτρημα φυσσιγγιών";
             // 
-            // comboBox7
+            // BoxAmmoMM
             // 
-            this.comboBox7.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBox7.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.ItemHeight = 13;
-            this.comboBox7.Location = new System.Drawing.Point(152, 128);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(124, 21);
-            this.comboBox7.TabIndex = 9;
+            this.BoxAmmoMM.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.BoxAmmoMM.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.BoxAmmoMM.FormattingEnabled = true;
+            this.BoxAmmoMM.ItemHeight = 13;
+            this.BoxAmmoMM.Location = new System.Drawing.Point(152, 128);
+            this.BoxAmmoMM.Name = "BoxAmmoMM";
+            this.BoxAmmoMM.Size = new System.Drawing.Size(124, 21);
+            this.BoxAmmoMM.TabIndex = 9;
             // 
             // label11
             // 
@@ -406,13 +406,13 @@ namespace ShootingRange
             this.label11.Text = "Καταναλωθέντα φυσσίγγια";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox2
+            // BoxAmmoConsum
             // 
-            this.textBox2.Location = new System.Drawing.Point(315, 128);
-            this.textBox2.MaxLength = 3;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(90, 20);
-            this.textBox2.TabIndex = 10;
+            this.BoxAmmoConsum.Location = new System.Drawing.Point(315, 128);
+            this.BoxAmmoConsum.MaxLength = 3;
+            this.BoxAmmoConsum.Name = "BoxAmmoConsum";
+            this.BoxAmmoConsum.Size = new System.Drawing.Size(90, 20);
+            this.BoxAmmoConsum.TabIndex = 10;
             // 
             // textBox3
             // 
@@ -440,16 +440,16 @@ namespace ShootingRange
             this.label13.TabIndex = 37;
             this.label13.Text = "Είδος Δραστηριότητας";
             // 
-            // comboBox8
+            // BoxActivityType
             // 
-            this.comboBox8.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBox8.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.ItemHeight = 13;
-            this.comboBox8.Location = new System.Drawing.Point(591, 128);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(124, 21);
-            this.comboBox8.TabIndex = 12;
+            this.BoxActivityType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.BoxActivityType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.BoxActivityType.FormattingEnabled = true;
+            this.BoxActivityType.ItemHeight = 13;
+            this.BoxActivityType.Location = new System.Drawing.Point(591, 128);
+            this.BoxActivityType.Name = "BoxActivityType";
+            this.BoxActivityType.Size = new System.Drawing.Size(124, 21);
+            this.BoxActivityType.TabIndex = 12;
             // 
             // label14
             // 
@@ -460,16 +460,16 @@ namespace ShootingRange
             this.label14.TabIndex = 35;
             this.label14.Text = "Προέλευση φυσσιγγιών";
             // 
-            // comboBox9
+            // BoxAmmoStr
             // 
-            this.comboBox9.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBox9.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.ItemHeight = 13;
-            this.comboBox9.Location = new System.Drawing.Point(455, 126);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(114, 21);
-            this.comboBox9.TabIndex = 11;
+            this.BoxAmmoStr.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.BoxAmmoStr.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.BoxAmmoStr.FormattingEnabled = true;
+            this.BoxAmmoStr.ItemHeight = 13;
+            this.BoxAmmoStr.Location = new System.Drawing.Point(455, 126);
+            this.BoxAmmoStr.Name = "BoxAmmoStr";
+            this.BoxAmmoStr.Size = new System.Drawing.Size(114, 21);
+            this.BoxAmmoStr.TabIndex = 11;
             // 
             // shoot1
             // 
@@ -1678,7 +1678,7 @@ namespace ShootingRange
             this.button2.TabIndex = 10001;
             this.button2.Text = "Καταχώρηση Αποτελεσμάτων";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.Submit);
             // 
             // Shooting
             // 
@@ -1824,15 +1824,15 @@ namespace ShootingRange
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.comboBox8);
+            this.Controls.Add(this.BoxActivityType);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.comboBox9);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.BoxAmmoStr);
+            this.Controls.Add(this.BoxAmmoConsum);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.comboBox7);
+            this.Controls.Add(this.BoxAmmoMM);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.comboBox6);
+            this.Controls.Add(this.BoxProvider);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.BoxArAdeia);
             this.Controls.Add(this.label5);
@@ -1878,17 +1878,17 @@ namespace ShootingRange
         private System.Windows.Forms.TextBox BoxArAdeia;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.ComboBox BoxProvider;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.ComboBox BoxAmmoMM;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox BoxAmmoConsum;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox comboBox8;
+        private System.Windows.Forms.ComboBox BoxActivityType;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ComboBox comboBox9;
+        private System.Windows.Forms.ComboBox BoxAmmoStr;
         private System.Windows.Forms.TextBox shoot1;
         private System.Windows.Forms.TextBox shoot3;
         private System.Windows.Forms.TextBox shoot2;

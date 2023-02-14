@@ -16,8 +16,9 @@ namespace ShootingRange
     public partial class ShootingApp : Form
     {
         public static ShootingApp instance;
-        //String ConnString = "Server = localhost; User ID = root; Password = 12345678; Database = shoot";
-        String ConnString = "Server = dbshoot.cyzxisevetss.eu-west-3.rds.amazonaws.com; User ID = root; Password=12345678; Database = shoot;";
+        String ConnString = "Server = localhost; User ID = root; Password = 1234; Database = shoot";
+        //String ConnString = "Server =dbshoot.cyzxisevetss.eu-west-3.rds.amazonaws.com; User ID = root; Password=123456789; Database =shoot;";
+        string currTextSurName = "";
         public ShootingApp()
         {
             InitializeComponent();
@@ -89,33 +90,38 @@ namespace ShootingRange
             //byte c = 'á';
             Console.WriteLine(Encoding.GetEncoding("unicode").GetString(tmp1));
             Console.WriteLine(greek);
-            try
-            {
-                MySqlConnection conn = new MySqlConnection(ConnString);
-                conn.Open();
-                string query = "SELECT * FROM athl where athl_ID < 1000";
-                MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
-                DataSet ds = new DataSet();
-                da.Fill(ds, "athl");
-                DataTable dt = ds.Tables["athl"];
-                List<string> list = new List<string>();
-                foreach (DataRow row in dt.Rows)
+            if (ConnString != null)
+            { 
+                try
                 {
-                    list.Add((string)row["athl_LName"]);
-                }
-                dataGridView1.DataSource = ds.Tables[0];
+                    MySqlConnection conn = new MySqlConnection(ConnString);
+                    conn.Open();
+                    string query = "SELECT * FROM athl where athl_ID < 1000";
+                    MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
+                    DataSet ds = new DataSet();
+                    da.Fill(ds, "athl");
+                    DataTable dt = ds.Tables["athl"];
+                    List<string> list = new List<string>();
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        list.Add((string)row["athl_LName"]);
+                    }
+                    dataGridView1.DataSource = ds.Tables[0];
 
-                foreach (String x in list)
+                    foreach (String x in list)
+                    {
+                        BoxSurname.Items.Add(x);
+                    }
+
+                    conn.Close();
+                }
+                catch (Exception e)
                 {
-                    BoxSurname.Items.Add(x);
+                    Console.WriteLine("Error: {0}", e.ToString());
                 }
+            }
 
-                conn.Close();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Error: {0}", e.ToString());
-            }
+            
         }
 
         private void BoxSurname_LostFocus(object sender, EventArgs e)
@@ -142,9 +148,9 @@ namespace ShootingRange
                 conn.Open();
                 
                 string query = "SELECT * FROM athl where athl_LName like '%";
+                query = query + BoxSurname.Text+ "%'";
 
-                string tmp = BoxSurname.Text+ "%'";
-                query = query + tmp;
+                query = query + " and athl_FName like '%" + BoxName.Text + "%'";
                 Console.WriteLine(query);
 
                 MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
@@ -159,7 +165,14 @@ namespace ShootingRange
                 Console.WriteLine("Error: {0}", e1.ToString());
             }
         }
-
+        private void setSurnameText(string temp)
+        {
+            currTextSurName = temp;
+        }
+        private string getSurnameText()
+        {
+            return currTextSurName;
+        }
         private void button2_Click(object sender, EventArgs e)
         {
             BoxName.Text = "";
@@ -286,9 +299,13 @@ namespace ShootingRange
 
         }
 
-        private void SurnameLeave(object sender, EventArgs e)
+
+        private void BoxSurname_SelectedIndexChanged(object sender, EventArgs e)
         {
             Console.WriteLine(BoxSurname.SelectedItem);
+            BoxName.Items.Clear();
+            BoxName.Text = "";
+            //Console.WriteLine("yes");
             if (BoxSurname.SelectedItem != null)
             {
                 try
@@ -319,13 +336,14 @@ namespace ShootingRange
                 catch (Exception e1)
                 {
                     Console.WriteLine("Error: {0}", e1.ToString());
-                }   
+                }
             }
+            BoxName.SelectedItem = 0;
         }
 
-        private void BoxSurname_SelectedIndexChanged(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
-
+            NewAthlete b = new NewAthlete(this);
         }
     }
 }
