@@ -12,6 +12,8 @@ namespace ShootingRange
 {
     public partial class NewAthlete : Form
     {
+        public static TextBox t1;
+        public static TextBox t2;
         public static ShootingApp instance;
         public NewAthlete(ShootingApp shoot)
         {
@@ -20,6 +22,17 @@ namespace ShootingRange
             this.Show();
             InitializeComponent();
             this.CenterToScreen();
+            t1 = new TextBox();
+            t2 = new TextBox();
+            t1.AutoSize = true;
+            t2.AutoSize = true;
+            t1.Location = new Point(24,225);
+            t2.Location = new Point(144,225);
+            this.Controls.Add(t1);
+            this.Controls.Add(t2);
+            t1.Hide();
+            t2.Hide();
+
         }
 
         private void NewAthlete_FormClosing(object sender, FormClosingEventArgs e)
@@ -40,6 +53,25 @@ namespace ShootingRange
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void valueChanged(object sender, EventArgs e)
+        {
+            if (gunBox.Checked)
+            {
+                var height = this.Height;
+                this.Height = this.Height + 60;
+                button1.Location = new Point(280, 267);
+                t1.Show();
+                t2.Show();
+            }
+            else
+            {
+                this.Height = Height - 60;
+                button1.Location = new Point(280, 217);
+                t1.Hide();
+                t2.Hide();
+            }
         }
     }
 }

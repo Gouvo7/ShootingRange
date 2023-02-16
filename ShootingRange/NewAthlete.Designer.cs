@@ -63,7 +63,7 @@
             this.EmailBox = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.gunBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label3
@@ -352,22 +352,23 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // checkBox1
+            // gunBox
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(610, 173);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(126, 17);
-            this.checkBox1.TabIndex = 18;
-            this.checkBox1.Text = " Καταχώρηση όπλου";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.gunBox.AutoSize = true;
+            this.gunBox.Location = new System.Drawing.Point(610, 173);
+            this.gunBox.Name = "gunBox";
+            this.gunBox.Size = new System.Drawing.Size(126, 17);
+            this.gunBox.TabIndex = 18;
+            this.gunBox.Text = " Καταχώρηση όπλου";
+            this.gunBox.UseVisualStyleBackColor = true;
+            this.gunBox.CheckedChanged += new System.EventHandler(this.valueChanged);
             // 
             // NewAthlete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(748, 265);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.gunBox);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.EmailBox);
             this.Controls.Add(this.label17);
@@ -448,6 +449,6 @@
         private System.Windows.Forms.TextBox EmailBox;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox gunBox;
     }
 }
