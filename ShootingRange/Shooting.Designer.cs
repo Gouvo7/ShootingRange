@@ -51,7 +51,7 @@ namespace ShootingRange
             this.label10 = new System.Windows.Forms.Label();
             this.BoxAmmoMM = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.BoxAmmoConsum = new System.Windows.Forms.TextBox();
+            this.AmmoOrg = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -192,6 +192,8 @@ namespace ShootingRange
             this.shoot31 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.AmmoAth = new System.Windows.Forms.TextBox();
+            this.label81 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -217,7 +219,7 @@ namespace ShootingRange
             this.BoxName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.BoxName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.BoxName.FormattingEnabled = true;
-            this.BoxName.Location = new System.Drawing.Point(150, 72);
+            this.BoxName.Location = new System.Drawing.Point(145, 72);
             this.BoxName.Name = "BoxName";
             this.BoxName.Size = new System.Drawing.Size(124, 21);
             this.BoxName.TabIndex = 2;
@@ -228,7 +230,7 @@ namespace ShootingRange
             this.BoxSurname.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.BoxSurname.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.BoxSurname.FormattingEnabled = true;
-            this.BoxSurname.Location = new System.Drawing.Point(20, 72);
+            this.BoxSurname.Location = new System.Drawing.Point(15, 72);
             this.BoxSurname.Name = "BoxSurname";
             this.BoxSurname.Size = new System.Drawing.Size(115, 21);
             this.BoxSurname.TabIndex = 1;
@@ -237,7 +239,7 @@ namespace ShootingRange
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 53);
+            this.label2.Location = new System.Drawing.Point(14, 53);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 13);
             this.label2.TabIndex = 0;
@@ -246,7 +248,7 @@ namespace ShootingRange
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(149, 53);
+            this.label3.Location = new System.Drawing.Point(144, 53);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 13);
             this.label3.TabIndex = 13;
@@ -254,7 +256,7 @@ namespace ShootingRange
             // 
             // rngShots
             // 
-            this.rngShots.Location = new System.Drawing.Point(380, 465);
+            this.rngShots.Location = new System.Drawing.Point(223, 467);
             this.rngShots.Name = "rngShots";
             this.rngShots.Size = new System.Drawing.Size(150, 37);
             this.rngShots.TabIndex = 9999;
@@ -266,8 +268,9 @@ namespace ShootingRange
             // 
             this.BoxMhtrwo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.BoxMhtrwo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.BoxMhtrwo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.BoxMhtrwo.FormattingEnabled = true;
-            this.BoxMhtrwo.Location = new System.Drawing.Point(292, 72);
+            this.BoxMhtrwo.Location = new System.Drawing.Point(287, 72);
             this.BoxMhtrwo.Name = "BoxMhtrwo";
             this.BoxMhtrwo.Size = new System.Drawing.Size(82, 21);
             this.BoxMhtrwo.TabIndex = 3;
@@ -275,7 +278,7 @@ namespace ShootingRange
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(289, 53);
+            this.label4.Location = new System.Drawing.Point(284, 53);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 13);
             this.label4.TabIndex = 19;
@@ -284,7 +287,7 @@ namespace ShootingRange
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(637, 53);
+            this.label5.Location = new System.Drawing.Point(632, 53);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(79, 13);
             this.label5.TabIndex = 25;
@@ -296,7 +299,7 @@ namespace ShootingRange
             this.BoxArOplou.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.BoxArOplou.FormattingEnabled = true;
             this.BoxArOplou.ItemHeight = 13;
-            this.BoxArOplou.Location = new System.Drawing.Point(640, 72);
+            this.BoxArOplou.Location = new System.Drawing.Point(635, 72);
             this.BoxArOplou.Name = "BoxArOplou";
             this.BoxArOplou.Size = new System.Drawing.Size(79, 21);
             this.BoxArOplou.TabIndex = 6;
@@ -305,9 +308,10 @@ namespace ShootingRange
             // 
             this.BoxTupos.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.BoxTupos.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.BoxTupos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.BoxTupos.FormattingEnabled = true;
             this.BoxTupos.ItemHeight = 13;
-            this.BoxTupos.Location = new System.Drawing.Point(527, 72);
+            this.BoxTupos.Location = new System.Drawing.Point(522, 72);
             this.BoxTupos.Name = "BoxTupos";
             this.BoxTupos.Size = new System.Drawing.Size(95, 21);
             this.BoxTupos.TabIndex = 5;
@@ -316,8 +320,9 @@ namespace ShootingRange
             // 
             this.BoxSullogos.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.BoxSullogos.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.BoxSullogos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.BoxSullogos.FormattingEnabled = true;
-            this.BoxSullogos.Location = new System.Drawing.Point(393, 72);
+            this.BoxSullogos.Location = new System.Drawing.Point(388, 72);
             this.BoxSullogos.Name = "BoxSullogos";
             this.BoxSullogos.Size = new System.Drawing.Size(113, 21);
             this.BoxSullogos.TabIndex = 4;
@@ -325,7 +330,7 @@ namespace ShootingRange
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(391, 53);
+            this.label6.Location = new System.Drawing.Point(386, 53);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(54, 13);
             this.label6.TabIndex = 21;
@@ -334,7 +339,7 @@ namespace ShootingRange
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(524, 53);
+            this.label7.Location = new System.Drawing.Point(519, 53);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(69, 13);
             this.label7.TabIndex = 20;
@@ -342,7 +347,7 @@ namespace ShootingRange
             // 
             // BoxArAdeia
             // 
-            this.BoxArAdeia.Location = new System.Drawing.Point(737, 73);
+            this.BoxArAdeia.Location = new System.Drawing.Point(732, 73);
             this.BoxArAdeia.Name = "BoxArAdeia";
             this.BoxArAdeia.Size = new System.Drawing.Size(69, 20);
             this.BoxArAdeia.TabIndex = 7;
@@ -350,7 +355,7 @@ namespace ShootingRange
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(731, 52);
+            this.label8.Location = new System.Drawing.Point(726, 52);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(85, 13);
             this.label8.TabIndex = 27;
@@ -359,7 +364,7 @@ namespace ShootingRange
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(19, 107);
+            this.label9.Location = new System.Drawing.Point(822, 52);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(114, 13);
             this.label9.TabIndex = 29;
@@ -369,9 +374,10 @@ namespace ShootingRange
             // 
             this.BoxProvider.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.BoxProvider.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.BoxProvider.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.BoxProvider.FormattingEnabled = true;
             this.BoxProvider.ItemHeight = 13;
-            this.BoxProvider.Location = new System.Drawing.Point(21, 127);
+            this.BoxProvider.Location = new System.Drawing.Point(824, 72);
             this.BoxProvider.Name = "BoxProvider";
             this.BoxProvider.Size = new System.Drawing.Size(114, 21);
             this.BoxProvider.TabIndex = 8;
@@ -379,7 +385,7 @@ namespace ShootingRange
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(150, 107);
+            this.label10.Location = new System.Drawing.Point(15, 104);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(130, 13);
             this.label10.TabIndex = 31;
@@ -389,9 +395,10 @@ namespace ShootingRange
             // 
             this.BoxAmmoMM.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.BoxAmmoMM.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.BoxAmmoMM.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.BoxAmmoMM.FormattingEnabled = true;
             this.BoxAmmoMM.ItemHeight = 13;
-            this.BoxAmmoMM.Location = new System.Drawing.Point(152, 128);
+            this.BoxAmmoMM.Location = new System.Drawing.Point(17, 125);
             this.BoxAmmoMM.Name = "BoxAmmoMM";
             this.BoxAmmoMM.Size = new System.Drawing.Size(124, 21);
             this.BoxAmmoMM.TabIndex = 9;
@@ -399,24 +406,24 @@ namespace ShootingRange
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(295, 107);
+            this.label11.Location = new System.Drawing.Point(287, 106);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(146, 13);
+            this.label11.Size = new System.Drawing.Size(120, 13);
             this.label11.TabIndex = 32;
-            this.label11.Text = "Καταναλωθέντα φυσσίγγια";
+            this.label11.Text = "Φυσσίγγια Σωματείου";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // BoxAmmoConsum
+            // AmmoOrg
             // 
-            this.BoxAmmoConsum.Location = new System.Drawing.Point(315, 128);
-            this.BoxAmmoConsum.MaxLength = 3;
-            this.BoxAmmoConsum.Name = "BoxAmmoConsum";
-            this.BoxAmmoConsum.Size = new System.Drawing.Size(90, 20);
-            this.BoxAmmoConsum.TabIndex = 10;
+            this.AmmoOrg.Location = new System.Drawing.Point(290, 126);
+            this.AmmoOrg.MaxLength = 3;
+            this.AmmoOrg.Name = "AmmoOrg";
+            this.AmmoOrg.Size = new System.Drawing.Size(90, 20);
+            this.AmmoOrg.TabIndex = 11;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(734, 126);
+            this.textBox3.Location = new System.Drawing.Point(665, 126);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(123, 20);
             this.textBox3.TabIndex = 13;
@@ -425,7 +432,7 @@ namespace ShootingRange
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(731, 106);
+            this.label12.Location = new System.Drawing.Point(662, 106);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(122, 13);
             this.label12.TabIndex = 38;
@@ -434,7 +441,7 @@ namespace ShootingRange
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(590, 106);
+            this.label13.Location = new System.Drawing.Point(521, 106);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(122, 13);
             this.label13.TabIndex = 37;
@@ -444,9 +451,10 @@ namespace ShootingRange
             // 
             this.BoxActivityType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.BoxActivityType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.BoxActivityType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.BoxActivityType.FormattingEnabled = true;
             this.BoxActivityType.ItemHeight = 13;
-            this.BoxActivityType.Location = new System.Drawing.Point(591, 128);
+            this.BoxActivityType.Location = new System.Drawing.Point(522, 126);
             this.BoxActivityType.Name = "BoxActivityType";
             this.BoxActivityType.Size = new System.Drawing.Size(124, 21);
             this.BoxActivityType.TabIndex = 12;
@@ -454,7 +462,7 @@ namespace ShootingRange
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(453, 106);
+            this.label14.Location = new System.Drawing.Point(157, 105);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(125, 13);
             this.label14.TabIndex = 35;
@@ -464,16 +472,22 @@ namespace ShootingRange
             // 
             this.BoxAmmoStr.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.BoxAmmoStr.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.BoxAmmoStr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.BoxAmmoStr.FormattingEnabled = true;
             this.BoxAmmoStr.ItemHeight = 13;
-            this.BoxAmmoStr.Location = new System.Drawing.Point(455, 126);
+            this.BoxAmmoStr.Items.AddRange(new object[] {
+            "Σωματείου",
+            "Αθλητή",
+            "Μίξη"});
+            this.BoxAmmoStr.Location = new System.Drawing.Point(159, 125);
             this.BoxAmmoStr.Name = "BoxAmmoStr";
-            this.BoxAmmoStr.Size = new System.Drawing.Size(114, 21);
-            this.BoxAmmoStr.TabIndex = 11;
+            this.BoxAmmoStr.Size = new System.Drawing.Size(86, 21);
+            this.BoxAmmoStr.TabIndex = 10;
+            this.BoxAmmoStr.SelectedIndexChanged += new System.EventHandler(this.BoxStr_Changed);
             // 
             // shoot1
             // 
-            this.shoot1.Location = new System.Drawing.Point(149, 182);
+            this.shoot1.Location = new System.Drawing.Point(194, 184);
             this.shoot1.MaxLength = 2;
             this.shoot1.Name = "shoot1";
             this.shoot1.Size = new System.Drawing.Size(43, 20);
@@ -482,7 +496,7 @@ namespace ShootingRange
             // 
             // shoot3
             // 
-            this.shoot3.Location = new System.Drawing.Point(249, 182);
+            this.shoot3.Location = new System.Drawing.Point(294, 184);
             this.shoot3.MaxLength = 2;
             this.shoot3.Name = "shoot3";
             this.shoot3.Size = new System.Drawing.Size(43, 20);
@@ -491,7 +505,7 @@ namespace ShootingRange
             // 
             // shoot2
             // 
-            this.shoot2.Location = new System.Drawing.Point(199, 182);
+            this.shoot2.Location = new System.Drawing.Point(244, 184);
             this.shoot2.MaxLength = 2;
             this.shoot2.Name = "shoot2";
             this.shoot2.Size = new System.Drawing.Size(43, 20);
@@ -500,7 +514,7 @@ namespace ShootingRange
             // 
             // shoot5
             // 
-            this.shoot5.Location = new System.Drawing.Point(349, 182);
+            this.shoot5.Location = new System.Drawing.Point(394, 184);
             this.shoot5.MaxLength = 2;
             this.shoot5.Name = "shoot5";
             this.shoot5.Size = new System.Drawing.Size(43, 20);
@@ -509,7 +523,7 @@ namespace ShootingRange
             // 
             // shoot7
             // 
-            this.shoot7.Location = new System.Drawing.Point(449, 182);
+            this.shoot7.Location = new System.Drawing.Point(494, 184);
             this.shoot7.MaxLength = 2;
             this.shoot7.Name = "shoot7";
             this.shoot7.Size = new System.Drawing.Size(43, 20);
@@ -519,7 +533,7 @@ namespace ShootingRange
             // shoot10Res
             // 
             this.shoot10Res.Enabled = false;
-            this.shoot10Res.Location = new System.Drawing.Point(658, 182);
+            this.shoot10Res.Location = new System.Drawing.Point(703, 184);
             this.shoot10Res.MaxLength = 4;
             this.shoot10Res.Name = "shoot10Res";
             this.shoot10Res.ReadOnly = true;
@@ -528,7 +542,7 @@ namespace ShootingRange
             // 
             // shoot8
             // 
-            this.shoot8.Location = new System.Drawing.Point(499, 182);
+            this.shoot8.Location = new System.Drawing.Point(544, 184);
             this.shoot8.MaxLength = 2;
             this.shoot8.Name = "shoot8";
             this.shoot8.Size = new System.Drawing.Size(43, 20);
@@ -537,7 +551,7 @@ namespace ShootingRange
             // 
             // shoot10
             // 
-            this.shoot10.Location = new System.Drawing.Point(599, 182);
+            this.shoot10.Location = new System.Drawing.Point(644, 184);
             this.shoot10.MaxLength = 2;
             this.shoot10.Name = "shoot10";
             this.shoot10.Size = new System.Drawing.Size(43, 20);
@@ -546,7 +560,7 @@ namespace ShootingRange
             // 
             // shoot6
             // 
-            this.shoot6.Location = new System.Drawing.Point(399, 182);
+            this.shoot6.Location = new System.Drawing.Point(444, 184);
             this.shoot6.MaxLength = 2;
             this.shoot6.Name = "shoot6";
             this.shoot6.Size = new System.Drawing.Size(43, 20);
@@ -555,7 +569,7 @@ namespace ShootingRange
             // 
             // shoot4
             // 
-            this.shoot4.Location = new System.Drawing.Point(299, 182);
+            this.shoot4.Location = new System.Drawing.Point(344, 184);
             this.shoot4.MaxLength = 2;
             this.shoot4.Name = "shoot4";
             this.shoot4.Size = new System.Drawing.Size(43, 20);
@@ -564,7 +578,7 @@ namespace ShootingRange
             // 
             // shoot9
             // 
-            this.shoot9.Location = new System.Drawing.Point(549, 182);
+            this.shoot9.Location = new System.Drawing.Point(594, 184);
             this.shoot9.MaxLength = 2;
             this.shoot9.Name = "shoot9";
             this.shoot9.Size = new System.Drawing.Size(43, 20);
@@ -574,7 +588,7 @@ namespace ShootingRange
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(149, 166);
+            this.label15.Location = new System.Drawing.Point(194, 168);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(19, 13);
             this.label15.TabIndex = 62;
@@ -583,7 +597,7 @@ namespace ShootingRange
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(199, 166);
+            this.label16.Location = new System.Drawing.Point(244, 168);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(19, 13);
             this.label16.TabIndex = 63;
@@ -592,7 +606,7 @@ namespace ShootingRange
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(249, 166);
+            this.label17.Location = new System.Drawing.Point(294, 168);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(19, 13);
             this.label17.TabIndex = 64;
@@ -601,7 +615,7 @@ namespace ShootingRange
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(299, 166);
+            this.label18.Location = new System.Drawing.Point(344, 168);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(19, 13);
             this.label18.TabIndex = 65;
@@ -610,7 +624,7 @@ namespace ShootingRange
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(349, 166);
+            this.label19.Location = new System.Drawing.Point(394, 168);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(19, 13);
             this.label19.TabIndex = 66;
@@ -619,7 +633,7 @@ namespace ShootingRange
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(399, 166);
+            this.label20.Location = new System.Drawing.Point(444, 168);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(19, 13);
             this.label20.TabIndex = 67;
@@ -628,7 +642,7 @@ namespace ShootingRange
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(449, 166);
+            this.label21.Location = new System.Drawing.Point(494, 168);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(19, 13);
             this.label21.TabIndex = 68;
@@ -637,7 +651,7 @@ namespace ShootingRange
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(499, 166);
+            this.label22.Location = new System.Drawing.Point(544, 168);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(19, 13);
             this.label22.TabIndex = 69;
@@ -646,7 +660,7 @@ namespace ShootingRange
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(549, 166);
+            this.label23.Location = new System.Drawing.Point(594, 168);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(19, 13);
             this.label23.TabIndex = 70;
@@ -655,7 +669,7 @@ namespace ShootingRange
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(599, 166);
+            this.label24.Location = new System.Drawing.Point(644, 168);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(25, 13);
             this.label24.TabIndex = 71;
@@ -664,7 +678,7 @@ namespace ShootingRange
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(659, 166);
+            this.label25.Location = new System.Drawing.Point(704, 168);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(45, 13);
             this.label25.TabIndex = 72;
@@ -673,7 +687,7 @@ namespace ShootingRange
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(658, 208);
+            this.label26.Location = new System.Drawing.Point(703, 210);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(45, 13);
             this.label26.TabIndex = 94;
@@ -682,7 +696,7 @@ namespace ShootingRange
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(599, 208);
+            this.label27.Location = new System.Drawing.Point(644, 210);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(25, 13);
             this.label27.TabIndex = 93;
@@ -691,7 +705,7 @@ namespace ShootingRange
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(549, 208);
+            this.label28.Location = new System.Drawing.Point(594, 210);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(25, 13);
             this.label28.TabIndex = 92;
@@ -700,7 +714,7 @@ namespace ShootingRange
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(499, 208);
+            this.label29.Location = new System.Drawing.Point(544, 210);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(25, 13);
             this.label29.TabIndex = 91;
@@ -709,7 +723,7 @@ namespace ShootingRange
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(449, 208);
+            this.label30.Location = new System.Drawing.Point(494, 210);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(25, 13);
             this.label30.TabIndex = 90;
@@ -718,7 +732,7 @@ namespace ShootingRange
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(399, 208);
+            this.label31.Location = new System.Drawing.Point(444, 210);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(25, 13);
             this.label31.TabIndex = 89;
@@ -727,7 +741,7 @@ namespace ShootingRange
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(349, 208);
+            this.label32.Location = new System.Drawing.Point(394, 210);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(25, 13);
             this.label32.TabIndex = 88;
@@ -736,7 +750,7 @@ namespace ShootingRange
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(299, 208);
+            this.label33.Location = new System.Drawing.Point(344, 210);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(25, 13);
             this.label33.TabIndex = 87;
@@ -745,7 +759,7 @@ namespace ShootingRange
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(249, 208);
+            this.label34.Location = new System.Drawing.Point(294, 210);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(25, 13);
             this.label34.TabIndex = 86;
@@ -754,7 +768,7 @@ namespace ShootingRange
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(199, 208);
+            this.label35.Location = new System.Drawing.Point(244, 210);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(25, 13);
             this.label35.TabIndex = 85;
@@ -763,7 +777,7 @@ namespace ShootingRange
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(149, 208);
+            this.label36.Location = new System.Drawing.Point(194, 210);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(25, 13);
             this.label36.TabIndex = 84;
@@ -771,7 +785,7 @@ namespace ShootingRange
             // 
             // shoot19
             // 
-            this.shoot19.Location = new System.Drawing.Point(549, 224);
+            this.shoot19.Location = new System.Drawing.Point(594, 226);
             this.shoot19.MaxLength = 2;
             this.shoot19.Name = "shoot19";
             this.shoot19.Size = new System.Drawing.Size(43, 20);
@@ -780,7 +794,7 @@ namespace ShootingRange
             // 
             // shoot14
             // 
-            this.shoot14.Location = new System.Drawing.Point(299, 224);
+            this.shoot14.Location = new System.Drawing.Point(344, 226);
             this.shoot14.MaxLength = 2;
             this.shoot14.Name = "shoot14";
             this.shoot14.Size = new System.Drawing.Size(43, 20);
@@ -789,7 +803,7 @@ namespace ShootingRange
             // 
             // shoot16
             // 
-            this.shoot16.Location = new System.Drawing.Point(399, 224);
+            this.shoot16.Location = new System.Drawing.Point(444, 226);
             this.shoot16.MaxLength = 2;
             this.shoot16.Name = "shoot16";
             this.shoot16.Size = new System.Drawing.Size(43, 20);
@@ -798,7 +812,7 @@ namespace ShootingRange
             // 
             // shoot20
             // 
-            this.shoot20.Location = new System.Drawing.Point(599, 224);
+            this.shoot20.Location = new System.Drawing.Point(644, 226);
             this.shoot20.MaxLength = 2;
             this.shoot20.Name = "shoot20";
             this.shoot20.Size = new System.Drawing.Size(43, 20);
@@ -807,7 +821,7 @@ namespace ShootingRange
             // 
             // shoot18
             // 
-            this.shoot18.Location = new System.Drawing.Point(499, 224);
+            this.shoot18.Location = new System.Drawing.Point(544, 226);
             this.shoot18.MaxLength = 2;
             this.shoot18.Name = "shoot18";
             this.shoot18.Size = new System.Drawing.Size(43, 20);
@@ -817,7 +831,7 @@ namespace ShootingRange
             // shoot20Res
             // 
             this.shoot20Res.Enabled = false;
-            this.shoot20Res.Location = new System.Drawing.Point(659, 224);
+            this.shoot20Res.Location = new System.Drawing.Point(704, 226);
             this.shoot20Res.MaxLength = 4;
             this.shoot20Res.Name = "shoot20Res";
             this.shoot20Res.Size = new System.Drawing.Size(43, 20);
@@ -825,7 +839,7 @@ namespace ShootingRange
             // 
             // shoot17
             // 
-            this.shoot17.Location = new System.Drawing.Point(449, 224);
+            this.shoot17.Location = new System.Drawing.Point(494, 226);
             this.shoot17.MaxLength = 2;
             this.shoot17.Name = "shoot17";
             this.shoot17.Size = new System.Drawing.Size(43, 20);
@@ -834,7 +848,7 @@ namespace ShootingRange
             // 
             // shoot15
             // 
-            this.shoot15.Location = new System.Drawing.Point(349, 224);
+            this.shoot15.Location = new System.Drawing.Point(394, 226);
             this.shoot15.MaxLength = 2;
             this.shoot15.Name = "shoot15";
             this.shoot15.Size = new System.Drawing.Size(43, 20);
@@ -843,7 +857,7 @@ namespace ShootingRange
             // 
             // shoot12
             // 
-            this.shoot12.Location = new System.Drawing.Point(199, 224);
+            this.shoot12.Location = new System.Drawing.Point(244, 226);
             this.shoot12.MaxLength = 2;
             this.shoot12.Name = "shoot12";
             this.shoot12.Size = new System.Drawing.Size(43, 20);
@@ -852,7 +866,7 @@ namespace ShootingRange
             // 
             // shoot13
             // 
-            this.shoot13.Location = new System.Drawing.Point(249, 224);
+            this.shoot13.Location = new System.Drawing.Point(294, 226);
             this.shoot13.MaxLength = 2;
             this.shoot13.Name = "shoot13";
             this.shoot13.Size = new System.Drawing.Size(43, 20);
@@ -861,7 +875,7 @@ namespace ShootingRange
             // 
             // shoot11
             // 
-            this.shoot11.Location = new System.Drawing.Point(149, 224);
+            this.shoot11.Location = new System.Drawing.Point(194, 226);
             this.shoot11.MaxLength = 2;
             this.shoot11.Name = "shoot11";
             this.shoot11.Size = new System.Drawing.Size(43, 20);
@@ -871,7 +885,7 @@ namespace ShootingRange
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(659, 260);
+            this.label37.Location = new System.Drawing.Point(704, 262);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(45, 13);
             this.label37.TabIndex = 116;
@@ -880,7 +894,7 @@ namespace ShootingRange
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(599, 260);
+            this.label38.Location = new System.Drawing.Point(644, 262);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(25, 13);
             this.label38.TabIndex = 115;
@@ -889,7 +903,7 @@ namespace ShootingRange
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(549, 260);
+            this.label39.Location = new System.Drawing.Point(594, 262);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(25, 13);
             this.label39.TabIndex = 114;
@@ -898,7 +912,7 @@ namespace ShootingRange
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(499, 260);
+            this.label40.Location = new System.Drawing.Point(544, 262);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(25, 13);
             this.label40.TabIndex = 113;
@@ -907,7 +921,7 @@ namespace ShootingRange
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(449, 260);
+            this.label41.Location = new System.Drawing.Point(494, 262);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(25, 13);
             this.label41.TabIndex = 112;
@@ -916,7 +930,7 @@ namespace ShootingRange
             // label42
             // 
             this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(399, 260);
+            this.label42.Location = new System.Drawing.Point(444, 262);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(25, 13);
             this.label42.TabIndex = 111;
@@ -925,7 +939,7 @@ namespace ShootingRange
             // label43
             // 
             this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(349, 260);
+            this.label43.Location = new System.Drawing.Point(394, 262);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(25, 13);
             this.label43.TabIndex = 110;
@@ -934,7 +948,7 @@ namespace ShootingRange
             // label44
             // 
             this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(299, 260);
+            this.label44.Location = new System.Drawing.Point(344, 262);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(25, 13);
             this.label44.TabIndex = 109;
@@ -943,7 +957,7 @@ namespace ShootingRange
             // label45
             // 
             this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(249, 260);
+            this.label45.Location = new System.Drawing.Point(294, 262);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(25, 13);
             this.label45.TabIndex = 108;
@@ -952,7 +966,7 @@ namespace ShootingRange
             // label46
             // 
             this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(199, 260);
+            this.label46.Location = new System.Drawing.Point(244, 262);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(25, 13);
             this.label46.TabIndex = 107;
@@ -961,7 +975,7 @@ namespace ShootingRange
             // label47
             // 
             this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(149, 260);
+            this.label47.Location = new System.Drawing.Point(194, 262);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(25, 13);
             this.label47.TabIndex = 106;
@@ -969,7 +983,7 @@ namespace ShootingRange
             // 
             // shoot29
             // 
-            this.shoot29.Location = new System.Drawing.Point(549, 276);
+            this.shoot29.Location = new System.Drawing.Point(594, 278);
             this.shoot29.MaxLength = 2;
             this.shoot29.Name = "shoot29";
             this.shoot29.Size = new System.Drawing.Size(43, 20);
@@ -978,7 +992,7 @@ namespace ShootingRange
             // 
             // shoot24
             // 
-            this.shoot24.Location = new System.Drawing.Point(299, 276);
+            this.shoot24.Location = new System.Drawing.Point(344, 278);
             this.shoot24.MaxLength = 2;
             this.shoot24.Name = "shoot24";
             this.shoot24.Size = new System.Drawing.Size(43, 20);
@@ -987,7 +1001,7 @@ namespace ShootingRange
             // 
             // shoot26
             // 
-            this.shoot26.Location = new System.Drawing.Point(399, 276);
+            this.shoot26.Location = new System.Drawing.Point(444, 278);
             this.shoot26.MaxLength = 2;
             this.shoot26.Name = "shoot26";
             this.shoot26.Size = new System.Drawing.Size(43, 20);
@@ -996,7 +1010,7 @@ namespace ShootingRange
             // 
             // shoot30
             // 
-            this.shoot30.Location = new System.Drawing.Point(599, 276);
+            this.shoot30.Location = new System.Drawing.Point(644, 278);
             this.shoot30.MaxLength = 2;
             this.shoot30.Name = "shoot30";
             this.shoot30.Size = new System.Drawing.Size(43, 20);
@@ -1005,7 +1019,7 @@ namespace ShootingRange
             // 
             // shoot28
             // 
-            this.shoot28.Location = new System.Drawing.Point(499, 276);
+            this.shoot28.Location = new System.Drawing.Point(544, 278);
             this.shoot28.MaxLength = 2;
             this.shoot28.Name = "shoot28";
             this.shoot28.Size = new System.Drawing.Size(43, 20);
@@ -1015,7 +1029,7 @@ namespace ShootingRange
             // shoot30Res
             // 
             this.shoot30Res.Enabled = false;
-            this.shoot30Res.Location = new System.Drawing.Point(659, 276);
+            this.shoot30Res.Location = new System.Drawing.Point(704, 278);
             this.shoot30Res.MaxLength = 4;
             this.shoot30Res.Name = "shoot30Res";
             this.shoot30Res.Size = new System.Drawing.Size(43, 20);
@@ -1023,7 +1037,7 @@ namespace ShootingRange
             // 
             // shoot27
             // 
-            this.shoot27.Location = new System.Drawing.Point(449, 276);
+            this.shoot27.Location = new System.Drawing.Point(494, 278);
             this.shoot27.MaxLength = 2;
             this.shoot27.Name = "shoot27";
             this.shoot27.Size = new System.Drawing.Size(43, 20);
@@ -1032,7 +1046,7 @@ namespace ShootingRange
             // 
             // shoot25
             // 
-            this.shoot25.Location = new System.Drawing.Point(349, 276);
+            this.shoot25.Location = new System.Drawing.Point(394, 278);
             this.shoot25.MaxLength = 2;
             this.shoot25.Name = "shoot25";
             this.shoot25.Size = new System.Drawing.Size(43, 20);
@@ -1041,7 +1055,7 @@ namespace ShootingRange
             // 
             // shoot22
             // 
-            this.shoot22.Location = new System.Drawing.Point(199, 276);
+            this.shoot22.Location = new System.Drawing.Point(244, 278);
             this.shoot22.MaxLength = 2;
             this.shoot22.Name = "shoot22";
             this.shoot22.Size = new System.Drawing.Size(43, 20);
@@ -1050,7 +1064,7 @@ namespace ShootingRange
             // 
             // shoot23
             // 
-            this.shoot23.Location = new System.Drawing.Point(249, 276);
+            this.shoot23.Location = new System.Drawing.Point(294, 278);
             this.shoot23.MaxLength = 2;
             this.shoot23.Name = "shoot23";
             this.shoot23.Size = new System.Drawing.Size(43, 20);
@@ -1059,7 +1073,7 @@ namespace ShootingRange
             // 
             // shoot21
             // 
-            this.shoot21.Location = new System.Drawing.Point(149, 276);
+            this.shoot21.Location = new System.Drawing.Point(194, 278);
             this.shoot21.MaxLength = 2;
             this.shoot21.Name = "shoot21";
             this.shoot21.Size = new System.Drawing.Size(43, 20);
@@ -1069,7 +1083,7 @@ namespace ShootingRange
             // label48
             // 
             this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(658, 393);
+            this.label48.Location = new System.Drawing.Point(703, 395);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(45, 13);
             this.label48.TabIndex = 182;
@@ -1078,7 +1092,7 @@ namespace ShootingRange
             // label49
             // 
             this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(598, 393);
+            this.label49.Location = new System.Drawing.Point(643, 395);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(25, 13);
             this.label49.TabIndex = 181;
@@ -1087,7 +1101,7 @@ namespace ShootingRange
             // label50
             // 
             this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(548, 393);
+            this.label50.Location = new System.Drawing.Point(593, 395);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(25, 13);
             this.label50.TabIndex = 180;
@@ -1096,7 +1110,7 @@ namespace ShootingRange
             // label51
             // 
             this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(498, 393);
+            this.label51.Location = new System.Drawing.Point(543, 395);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(25, 13);
             this.label51.TabIndex = 179;
@@ -1105,7 +1119,7 @@ namespace ShootingRange
             // label52
             // 
             this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(448, 393);
+            this.label52.Location = new System.Drawing.Point(493, 395);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(25, 13);
             this.label52.TabIndex = 178;
@@ -1114,7 +1128,7 @@ namespace ShootingRange
             // label53
             // 
             this.label53.AutoSize = true;
-            this.label53.Location = new System.Drawing.Point(398, 393);
+            this.label53.Location = new System.Drawing.Point(443, 395);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(25, 13);
             this.label53.TabIndex = 177;
@@ -1123,7 +1137,7 @@ namespace ShootingRange
             // label54
             // 
             this.label54.AutoSize = true;
-            this.label54.Location = new System.Drawing.Point(348, 393);
+            this.label54.Location = new System.Drawing.Point(393, 395);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(25, 13);
             this.label54.TabIndex = 176;
@@ -1132,7 +1146,7 @@ namespace ShootingRange
             // label55
             // 
             this.label55.AutoSize = true;
-            this.label55.Location = new System.Drawing.Point(298, 393);
+            this.label55.Location = new System.Drawing.Point(343, 395);
             this.label55.Name = "label55";
             this.label55.Size = new System.Drawing.Size(25, 13);
             this.label55.TabIndex = 175;
@@ -1141,7 +1155,7 @@ namespace ShootingRange
             // label56
             // 
             this.label56.AutoSize = true;
-            this.label56.Location = new System.Drawing.Point(248, 393);
+            this.label56.Location = new System.Drawing.Point(293, 395);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(25, 13);
             this.label56.TabIndex = 174;
@@ -1150,7 +1164,7 @@ namespace ShootingRange
             // label57
             // 
             this.label57.AutoSize = true;
-            this.label57.Location = new System.Drawing.Point(198, 393);
+            this.label57.Location = new System.Drawing.Point(243, 395);
             this.label57.Name = "label57";
             this.label57.Size = new System.Drawing.Size(25, 13);
             this.label57.TabIndex = 173;
@@ -1159,7 +1173,7 @@ namespace ShootingRange
             // label58
             // 
             this.label58.AutoSize = true;
-            this.label58.Location = new System.Drawing.Point(148, 393);
+            this.label58.Location = new System.Drawing.Point(193, 395);
             this.label58.Name = "label58";
             this.label58.Size = new System.Drawing.Size(25, 13);
             this.label58.TabIndex = 172;
@@ -1167,7 +1181,7 @@ namespace ShootingRange
             // 
             // shoot59
             // 
-            this.shoot59.Location = new System.Drawing.Point(548, 409);
+            this.shoot59.Location = new System.Drawing.Point(593, 411);
             this.shoot59.MaxLength = 2;
             this.shoot59.Name = "shoot59";
             this.shoot59.Size = new System.Drawing.Size(43, 20);
@@ -1176,7 +1190,7 @@ namespace ShootingRange
             // 
             // shoot54
             // 
-            this.shoot54.Location = new System.Drawing.Point(298, 409);
+            this.shoot54.Location = new System.Drawing.Point(343, 411);
             this.shoot54.MaxLength = 2;
             this.shoot54.Name = "shoot54";
             this.shoot54.Size = new System.Drawing.Size(43, 20);
@@ -1185,7 +1199,7 @@ namespace ShootingRange
             // 
             // shoot56
             // 
-            this.shoot56.Location = new System.Drawing.Point(398, 409);
+            this.shoot56.Location = new System.Drawing.Point(443, 411);
             this.shoot56.MaxLength = 2;
             this.shoot56.Name = "shoot56";
             this.shoot56.Size = new System.Drawing.Size(43, 20);
@@ -1194,7 +1208,7 @@ namespace ShootingRange
             // 
             // shoot60
             // 
-            this.shoot60.Location = new System.Drawing.Point(598, 409);
+            this.shoot60.Location = new System.Drawing.Point(643, 411);
             this.shoot60.MaxLength = 2;
             this.shoot60.Name = "shoot60";
             this.shoot60.Size = new System.Drawing.Size(43, 20);
@@ -1203,7 +1217,7 @@ namespace ShootingRange
             // 
             // shoot58
             // 
-            this.shoot58.Location = new System.Drawing.Point(498, 409);
+            this.shoot58.Location = new System.Drawing.Point(543, 411);
             this.shoot58.MaxLength = 2;
             this.shoot58.Name = "shoot58";
             this.shoot58.Size = new System.Drawing.Size(43, 20);
@@ -1213,7 +1227,7 @@ namespace ShootingRange
             // shoot60Res
             // 
             this.shoot60Res.Enabled = false;
-            this.shoot60Res.Location = new System.Drawing.Point(658, 409);
+            this.shoot60Res.Location = new System.Drawing.Point(703, 411);
             this.shoot60Res.MaxLength = 4;
             this.shoot60Res.Name = "shoot60Res";
             this.shoot60Res.Size = new System.Drawing.Size(43, 20);
@@ -1221,7 +1235,7 @@ namespace ShootingRange
             // 
             // shoot57
             // 
-            this.shoot57.Location = new System.Drawing.Point(448, 409);
+            this.shoot57.Location = new System.Drawing.Point(493, 411);
             this.shoot57.MaxLength = 2;
             this.shoot57.Name = "shoot57";
             this.shoot57.Size = new System.Drawing.Size(43, 20);
@@ -1230,7 +1244,7 @@ namespace ShootingRange
             // 
             // shoot55
             // 
-            this.shoot55.Location = new System.Drawing.Point(348, 409);
+            this.shoot55.Location = new System.Drawing.Point(393, 411);
             this.shoot55.MaxLength = 2;
             this.shoot55.Name = "shoot55";
             this.shoot55.Size = new System.Drawing.Size(43, 20);
@@ -1239,7 +1253,7 @@ namespace ShootingRange
             // 
             // shoot52
             // 
-            this.shoot52.Location = new System.Drawing.Point(198, 409);
+            this.shoot52.Location = new System.Drawing.Point(243, 411);
             this.shoot52.MaxLength = 2;
             this.shoot52.Name = "shoot52";
             this.shoot52.Size = new System.Drawing.Size(43, 20);
@@ -1248,7 +1262,7 @@ namespace ShootingRange
             // 
             // shoot53
             // 
-            this.shoot53.Location = new System.Drawing.Point(248, 409);
+            this.shoot53.Location = new System.Drawing.Point(293, 411);
             this.shoot53.MaxLength = 2;
             this.shoot53.Name = "shoot53";
             this.shoot53.Size = new System.Drawing.Size(43, 20);
@@ -1257,7 +1271,7 @@ namespace ShootingRange
             // 
             // shoot51
             // 
-            this.shoot51.Location = new System.Drawing.Point(148, 409);
+            this.shoot51.Location = new System.Drawing.Point(193, 411);
             this.shoot51.MaxLength = 2;
             this.shoot51.Name = "shoot51";
             this.shoot51.Size = new System.Drawing.Size(43, 20);
@@ -1267,7 +1281,7 @@ namespace ShootingRange
             // label59
             // 
             this.label59.AutoSize = true;
-            this.label59.Location = new System.Drawing.Point(659, 350);
+            this.label59.Location = new System.Drawing.Point(704, 352);
             this.label59.Name = "label59";
             this.label59.Size = new System.Drawing.Size(45, 13);
             this.label59.TabIndex = 160;
@@ -1276,7 +1290,7 @@ namespace ShootingRange
             // label60
             // 
             this.label60.AutoSize = true;
-            this.label60.Location = new System.Drawing.Point(599, 350);
+            this.label60.Location = new System.Drawing.Point(644, 352);
             this.label60.Name = "label60";
             this.label60.Size = new System.Drawing.Size(25, 13);
             this.label60.TabIndex = 159;
@@ -1285,7 +1299,7 @@ namespace ShootingRange
             // label61
             // 
             this.label61.AutoSize = true;
-            this.label61.Location = new System.Drawing.Point(549, 350);
+            this.label61.Location = new System.Drawing.Point(594, 352);
             this.label61.Name = "label61";
             this.label61.Size = new System.Drawing.Size(25, 13);
             this.label61.TabIndex = 158;
@@ -1294,7 +1308,7 @@ namespace ShootingRange
             // label62
             // 
             this.label62.AutoSize = true;
-            this.label62.Location = new System.Drawing.Point(499, 350);
+            this.label62.Location = new System.Drawing.Point(544, 352);
             this.label62.Name = "label62";
             this.label62.Size = new System.Drawing.Size(25, 13);
             this.label62.TabIndex = 157;
@@ -1303,7 +1317,7 @@ namespace ShootingRange
             // label63
             // 
             this.label63.AutoSize = true;
-            this.label63.Location = new System.Drawing.Point(449, 350);
+            this.label63.Location = new System.Drawing.Point(494, 352);
             this.label63.Name = "label63";
             this.label63.Size = new System.Drawing.Size(25, 13);
             this.label63.TabIndex = 156;
@@ -1312,7 +1326,7 @@ namespace ShootingRange
             // label64
             // 
             this.label64.AutoSize = true;
-            this.label64.Location = new System.Drawing.Point(399, 350);
+            this.label64.Location = new System.Drawing.Point(444, 352);
             this.label64.Name = "label64";
             this.label64.Size = new System.Drawing.Size(25, 13);
             this.label64.TabIndex = 155;
@@ -1321,7 +1335,7 @@ namespace ShootingRange
             // label65
             // 
             this.label65.AutoSize = true;
-            this.label65.Location = new System.Drawing.Point(349, 350);
+            this.label65.Location = new System.Drawing.Point(394, 352);
             this.label65.Name = "label65";
             this.label65.Size = new System.Drawing.Size(25, 13);
             this.label65.TabIndex = 154;
@@ -1330,7 +1344,7 @@ namespace ShootingRange
             // label66
             // 
             this.label66.AutoSize = true;
-            this.label66.Location = new System.Drawing.Point(299, 350);
+            this.label66.Location = new System.Drawing.Point(344, 352);
             this.label66.Name = "label66";
             this.label66.Size = new System.Drawing.Size(25, 13);
             this.label66.TabIndex = 153;
@@ -1339,7 +1353,7 @@ namespace ShootingRange
             // label67
             // 
             this.label67.AutoSize = true;
-            this.label67.Location = new System.Drawing.Point(249, 350);
+            this.label67.Location = new System.Drawing.Point(294, 352);
             this.label67.Name = "label67";
             this.label67.Size = new System.Drawing.Size(25, 13);
             this.label67.TabIndex = 152;
@@ -1348,7 +1362,7 @@ namespace ShootingRange
             // label68
             // 
             this.label68.AutoSize = true;
-            this.label68.Location = new System.Drawing.Point(199, 350);
+            this.label68.Location = new System.Drawing.Point(244, 352);
             this.label68.Name = "label68";
             this.label68.Size = new System.Drawing.Size(25, 13);
             this.label68.TabIndex = 151;
@@ -1357,7 +1371,7 @@ namespace ShootingRange
             // label69
             // 
             this.label69.AutoSize = true;
-            this.label69.Location = new System.Drawing.Point(149, 350);
+            this.label69.Location = new System.Drawing.Point(194, 352);
             this.label69.Name = "label69";
             this.label69.Size = new System.Drawing.Size(25, 13);
             this.label69.TabIndex = 150;
@@ -1365,7 +1379,7 @@ namespace ShootingRange
             // 
             // shoot49
             // 
-            this.shoot49.Location = new System.Drawing.Point(549, 366);
+            this.shoot49.Location = new System.Drawing.Point(594, 368);
             this.shoot49.MaxLength = 2;
             this.shoot49.Name = "shoot49";
             this.shoot49.Size = new System.Drawing.Size(43, 20);
@@ -1374,7 +1388,7 @@ namespace ShootingRange
             // 
             // shoot44
             // 
-            this.shoot44.Location = new System.Drawing.Point(299, 366);
+            this.shoot44.Location = new System.Drawing.Point(344, 368);
             this.shoot44.MaxLength = 2;
             this.shoot44.Name = "shoot44";
             this.shoot44.Size = new System.Drawing.Size(43, 20);
@@ -1383,7 +1397,7 @@ namespace ShootingRange
             // 
             // shoot46
             // 
-            this.shoot46.Location = new System.Drawing.Point(399, 366);
+            this.shoot46.Location = new System.Drawing.Point(444, 368);
             this.shoot46.MaxLength = 2;
             this.shoot46.Name = "shoot46";
             this.shoot46.Size = new System.Drawing.Size(43, 20);
@@ -1392,7 +1406,7 @@ namespace ShootingRange
             // 
             // shoot50
             // 
-            this.shoot50.Location = new System.Drawing.Point(599, 366);
+            this.shoot50.Location = new System.Drawing.Point(644, 368);
             this.shoot50.MaxLength = 2;
             this.shoot50.Name = "shoot50";
             this.shoot50.Size = new System.Drawing.Size(43, 20);
@@ -1401,7 +1415,7 @@ namespace ShootingRange
             // 
             // shoot48
             // 
-            this.shoot48.Location = new System.Drawing.Point(499, 366);
+            this.shoot48.Location = new System.Drawing.Point(544, 368);
             this.shoot48.MaxLength = 2;
             this.shoot48.Name = "shoot48";
             this.shoot48.Size = new System.Drawing.Size(43, 20);
@@ -1411,7 +1425,7 @@ namespace ShootingRange
             // shoot50Res
             // 
             this.shoot50Res.Enabled = false;
-            this.shoot50Res.Location = new System.Drawing.Point(659, 366);
+            this.shoot50Res.Location = new System.Drawing.Point(704, 368);
             this.shoot50Res.MaxLength = 4;
             this.shoot50Res.Name = "shoot50Res";
             this.shoot50Res.Size = new System.Drawing.Size(43, 20);
@@ -1419,7 +1433,7 @@ namespace ShootingRange
             // 
             // shoot47
             // 
-            this.shoot47.Location = new System.Drawing.Point(449, 366);
+            this.shoot47.Location = new System.Drawing.Point(494, 368);
             this.shoot47.MaxLength = 2;
             this.shoot47.Name = "shoot47";
             this.shoot47.Size = new System.Drawing.Size(43, 20);
@@ -1428,7 +1442,7 @@ namespace ShootingRange
             // 
             // shoot45
             // 
-            this.shoot45.Location = new System.Drawing.Point(349, 366);
+            this.shoot45.Location = new System.Drawing.Point(394, 368);
             this.shoot45.MaxLength = 2;
             this.shoot45.Name = "shoot45";
             this.shoot45.Size = new System.Drawing.Size(43, 20);
@@ -1437,7 +1451,7 @@ namespace ShootingRange
             // 
             // shoot42
             // 
-            this.shoot42.Location = new System.Drawing.Point(199, 366);
+            this.shoot42.Location = new System.Drawing.Point(244, 368);
             this.shoot42.MaxLength = 2;
             this.shoot42.Name = "shoot42";
             this.shoot42.Size = new System.Drawing.Size(43, 20);
@@ -1446,7 +1460,7 @@ namespace ShootingRange
             // 
             // shoot43
             // 
-            this.shoot43.Location = new System.Drawing.Point(249, 366);
+            this.shoot43.Location = new System.Drawing.Point(294, 368);
             this.shoot43.MaxLength = 2;
             this.shoot43.Name = "shoot43";
             this.shoot43.Size = new System.Drawing.Size(43, 20);
@@ -1455,7 +1469,7 @@ namespace ShootingRange
             // 
             // shoot41
             // 
-            this.shoot41.Location = new System.Drawing.Point(149, 366);
+            this.shoot41.Location = new System.Drawing.Point(194, 368);
             this.shoot41.MaxLength = 2;
             this.shoot41.Name = "shoot41";
             this.shoot41.Size = new System.Drawing.Size(43, 20);
@@ -1465,7 +1479,7 @@ namespace ShootingRange
             // label70
             // 
             this.label70.AutoSize = true;
-            this.label70.Location = new System.Drawing.Point(659, 299);
+            this.label70.Location = new System.Drawing.Point(704, 301);
             this.label70.Name = "label70";
             this.label70.Size = new System.Drawing.Size(45, 13);
             this.label70.TabIndex = 138;
@@ -1474,7 +1488,7 @@ namespace ShootingRange
             // label71
             // 
             this.label71.AutoSize = true;
-            this.label71.Location = new System.Drawing.Point(599, 306);
+            this.label71.Location = new System.Drawing.Point(644, 308);
             this.label71.Name = "label71";
             this.label71.Size = new System.Drawing.Size(25, 13);
             this.label71.TabIndex = 137;
@@ -1483,7 +1497,7 @@ namespace ShootingRange
             // label72
             // 
             this.label72.AutoSize = true;
-            this.label72.Location = new System.Drawing.Point(549, 306);
+            this.label72.Location = new System.Drawing.Point(594, 308);
             this.label72.Name = "label72";
             this.label72.Size = new System.Drawing.Size(25, 13);
             this.label72.TabIndex = 136;
@@ -1492,7 +1506,7 @@ namespace ShootingRange
             // label73
             // 
             this.label73.AutoSize = true;
-            this.label73.Location = new System.Drawing.Point(499, 306);
+            this.label73.Location = new System.Drawing.Point(544, 308);
             this.label73.Name = "label73";
             this.label73.Size = new System.Drawing.Size(25, 13);
             this.label73.TabIndex = 135;
@@ -1501,7 +1515,7 @@ namespace ShootingRange
             // label74
             // 
             this.label74.AutoSize = true;
-            this.label74.Location = new System.Drawing.Point(449, 306);
+            this.label74.Location = new System.Drawing.Point(494, 308);
             this.label74.Name = "label74";
             this.label74.Size = new System.Drawing.Size(25, 13);
             this.label74.TabIndex = 134;
@@ -1510,7 +1524,7 @@ namespace ShootingRange
             // label75
             // 
             this.label75.AutoSize = true;
-            this.label75.Location = new System.Drawing.Point(399, 306);
+            this.label75.Location = new System.Drawing.Point(444, 308);
             this.label75.Name = "label75";
             this.label75.Size = new System.Drawing.Size(25, 13);
             this.label75.TabIndex = 133;
@@ -1519,7 +1533,7 @@ namespace ShootingRange
             // label76
             // 
             this.label76.AutoSize = true;
-            this.label76.Location = new System.Drawing.Point(349, 306);
+            this.label76.Location = new System.Drawing.Point(394, 308);
             this.label76.Name = "label76";
             this.label76.Size = new System.Drawing.Size(25, 13);
             this.label76.TabIndex = 132;
@@ -1528,7 +1542,7 @@ namespace ShootingRange
             // label77
             // 
             this.label77.AutoSize = true;
-            this.label77.Location = new System.Drawing.Point(299, 306);
+            this.label77.Location = new System.Drawing.Point(344, 308);
             this.label77.Name = "label77";
             this.label77.Size = new System.Drawing.Size(25, 13);
             this.label77.TabIndex = 131;
@@ -1537,7 +1551,7 @@ namespace ShootingRange
             // label78
             // 
             this.label78.AutoSize = true;
-            this.label78.Location = new System.Drawing.Point(249, 306);
+            this.label78.Location = new System.Drawing.Point(294, 308);
             this.label78.Name = "label78";
             this.label78.Size = new System.Drawing.Size(25, 13);
             this.label78.TabIndex = 130;
@@ -1546,7 +1560,7 @@ namespace ShootingRange
             // label79
             // 
             this.label79.AutoSize = true;
-            this.label79.Location = new System.Drawing.Point(199, 306);
+            this.label79.Location = new System.Drawing.Point(244, 308);
             this.label79.Name = "label79";
             this.label79.Size = new System.Drawing.Size(25, 13);
             this.label79.TabIndex = 129;
@@ -1555,7 +1569,7 @@ namespace ShootingRange
             // label80
             // 
             this.label80.AutoSize = true;
-            this.label80.Location = new System.Drawing.Point(149, 306);
+            this.label80.Location = new System.Drawing.Point(194, 308);
             this.label80.Name = "label80";
             this.label80.Size = new System.Drawing.Size(25, 13);
             this.label80.TabIndex = 128;
@@ -1563,7 +1577,7 @@ namespace ShootingRange
             // 
             // shoot39
             // 
-            this.shoot39.Location = new System.Drawing.Point(549, 322);
+            this.shoot39.Location = new System.Drawing.Point(594, 324);
             this.shoot39.MaxLength = 2;
             this.shoot39.Name = "shoot39";
             this.shoot39.Size = new System.Drawing.Size(43, 20);
@@ -1572,7 +1586,7 @@ namespace ShootingRange
             // 
             // shoot34
             // 
-            this.shoot34.Location = new System.Drawing.Point(299, 322);
+            this.shoot34.Location = new System.Drawing.Point(344, 324);
             this.shoot34.MaxLength = 2;
             this.shoot34.Name = "shoot34";
             this.shoot34.Size = new System.Drawing.Size(43, 20);
@@ -1581,7 +1595,7 @@ namespace ShootingRange
             // 
             // shoot36
             // 
-            this.shoot36.Location = new System.Drawing.Point(399, 322);
+            this.shoot36.Location = new System.Drawing.Point(444, 324);
             this.shoot36.MaxLength = 2;
             this.shoot36.Name = "shoot36";
             this.shoot36.Size = new System.Drawing.Size(43, 20);
@@ -1590,7 +1604,7 @@ namespace ShootingRange
             // 
             // shoot40
             // 
-            this.shoot40.Location = new System.Drawing.Point(599, 322);
+            this.shoot40.Location = new System.Drawing.Point(644, 324);
             this.shoot40.MaxLength = 2;
             this.shoot40.Name = "shoot40";
             this.shoot40.Size = new System.Drawing.Size(43, 20);
@@ -1599,7 +1613,7 @@ namespace ShootingRange
             // 
             // shoot38
             // 
-            this.shoot38.Location = new System.Drawing.Point(499, 322);
+            this.shoot38.Location = new System.Drawing.Point(544, 324);
             this.shoot38.MaxLength = 2;
             this.shoot38.Name = "shoot38";
             this.shoot38.Size = new System.Drawing.Size(43, 20);
@@ -1609,7 +1623,7 @@ namespace ShootingRange
             // shoot40Res
             // 
             this.shoot40Res.Enabled = false;
-            this.shoot40Res.Location = new System.Drawing.Point(659, 321);
+            this.shoot40Res.Location = new System.Drawing.Point(704, 323);
             this.shoot40Res.MaxLength = 4;
             this.shoot40Res.Name = "shoot40Res";
             this.shoot40Res.Size = new System.Drawing.Size(43, 20);
@@ -1617,7 +1631,7 @@ namespace ShootingRange
             // 
             // shoot37
             // 
-            this.shoot37.Location = new System.Drawing.Point(449, 322);
+            this.shoot37.Location = new System.Drawing.Point(494, 324);
             this.shoot37.MaxLength = 2;
             this.shoot37.Name = "shoot37";
             this.shoot37.Size = new System.Drawing.Size(43, 20);
@@ -1626,7 +1640,7 @@ namespace ShootingRange
             // 
             // shoot35
             // 
-            this.shoot35.Location = new System.Drawing.Point(349, 322);
+            this.shoot35.Location = new System.Drawing.Point(394, 324);
             this.shoot35.MaxLength = 2;
             this.shoot35.Name = "shoot35";
             this.shoot35.Size = new System.Drawing.Size(43, 20);
@@ -1635,7 +1649,7 @@ namespace ShootingRange
             // 
             // shoot32
             // 
-            this.shoot32.Location = new System.Drawing.Point(199, 322);
+            this.shoot32.Location = new System.Drawing.Point(244, 324);
             this.shoot32.MaxLength = 2;
             this.shoot32.Name = "shoot32";
             this.shoot32.Size = new System.Drawing.Size(43, 20);
@@ -1644,7 +1658,7 @@ namespace ShootingRange
             // 
             // shoot33
             // 
-            this.shoot33.Location = new System.Drawing.Point(249, 322);
+            this.shoot33.Location = new System.Drawing.Point(294, 324);
             this.shoot33.MaxLength = 2;
             this.shoot33.Name = "shoot33";
             this.shoot33.Size = new System.Drawing.Size(43, 20);
@@ -1653,7 +1667,7 @@ namespace ShootingRange
             // 
             // shoot31
             // 
-            this.shoot31.Location = new System.Drawing.Point(149, 322);
+            this.shoot31.Location = new System.Drawing.Point(194, 324);
             this.shoot31.MaxLength = 2;
             this.shoot31.Name = "shoot31";
             this.shoot31.Size = new System.Drawing.Size(43, 20);
@@ -1662,7 +1676,7 @@ namespace ShootingRange
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(550, 465);
+            this.button1.Location = new System.Drawing.Point(393, 467);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(150, 37);
             this.button1.TabIndex = 10000;
@@ -1672,7 +1686,7 @@ namespace ShootingRange
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(720, 465);
+            this.button2.Location = new System.Drawing.Point(563, 467);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(150, 37);
             this.button2.TabIndex = 10001;
@@ -1680,12 +1694,32 @@ namespace ShootingRange
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.Submit);
             // 
+            // AmmoAth
+            // 
+            this.AmmoAth.Location = new System.Drawing.Point(412, 126);
+            this.AmmoAth.MaxLength = 3;
+            this.AmmoAth.Name = "AmmoAth";
+            this.AmmoAth.Size = new System.Drawing.Size(90, 20);
+            this.AmmoAth.TabIndex = 12;
+            // 
+            // label81
+            // 
+            this.label81.AutoSize = true;
+            this.label81.Location = new System.Drawing.Point(409, 106);
+            this.label81.Name = "label81";
+            this.label81.Size = new System.Drawing.Size(101, 13);
+            this.label81.TabIndex = 10003;
+            this.label81.Text = "Φυσσίγγια Αθλητή";
+            this.label81.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Shooting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(897, 532);
+            this.ClientSize = new System.Drawing.Size(946, 532);
+            this.Controls.Add(this.AmmoAth);
+            this.Controls.Add(this.label81);
             this.Controls.Add(this.BoxName);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -1827,7 +1861,7 @@ namespace ShootingRange
             this.Controls.Add(this.BoxActivityType);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.BoxAmmoStr);
-            this.Controls.Add(this.BoxAmmoConsum);
+            this.Controls.Add(this.AmmoOrg);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.BoxAmmoMM);
@@ -1882,7 +1916,7 @@ namespace ShootingRange
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox BoxAmmoMM;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox BoxAmmoConsum;
+        private System.Windows.Forms.TextBox AmmoOrg;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
@@ -2023,5 +2057,7 @@ namespace ShootingRange
         private System.Windows.Forms.TextBox shoot31;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox AmmoAth;
+        private System.Windows.Forms.Label label81;
     }
 }

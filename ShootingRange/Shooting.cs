@@ -77,6 +77,8 @@ namespace ShootingRange
                 {
                     Console.WriteLine("Error: {0}", e.ToString());
                 }
+                BoxAmmoStr.SelectedIndex = 0;
+                BoxAmmoStr.DropDownStyle = ComboBoxStyle.DropDownList;
             }
         }
         public void Start1()
@@ -778,6 +780,28 @@ namespace ShootingRange
             catch (FormatException)
             {
                 Console.WriteLine($"Unable to parse ");
+            }
+        }
+
+        private void BoxStr_Changed(object sender, EventArgs e)
+        {
+            int x = BoxAmmoStr.SelectedIndex;
+            if (x == 0)
+            {
+                AmmoOrg.Enabled = true;
+                AmmoAth.Enabled = false;
+                AmmoAth.Clear();
+            }
+            else if (x == 1)
+            {
+                AmmoOrg.Enabled = false;
+                AmmoAth.Enabled = true;
+                AmmoOrg.Clear();
+            }
+            else
+            {
+                AmmoOrg.Enabled = true;
+                AmmoAth.Enabled = true;
             }
         }
     }
