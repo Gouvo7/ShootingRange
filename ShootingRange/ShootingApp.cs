@@ -35,7 +35,6 @@ namespace ShootingRange
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.AllowUserToResizeColumns = true;
             dataGridView1.AllowUserToResizeRows = false;
-
             dateBox.Items.Add("01");
             dateBox.Items.Add("02");
             dateBox.Items.Add("03");
@@ -79,14 +78,7 @@ namespace ShootingRange
             monthBox.Items.Add("Οκτώβριος");
             monthBox.Items.Add("Νοέμβριος");
             monthBox.Items.Add("Δεκέμβριος");
-            DateTime now = DateTime.Now;
-            int x = 2024;
-           // for (int year = now.Year; year>= 2023; year--)
-            for (x = 2024; x >= 2023; x--)
-            {
-                Console.WriteLine(x);
-                yearBox.Items.Add(x);
-            }
+
             //Console.OutputEncoding = "chcp 1253");
             //Console.OutputEncoding = System.Text.Encoding.GetEncoding("unicode");
             String greek = "Λάκης";
@@ -123,6 +115,19 @@ namespace ShootingRange
                 {
                     Console.WriteLine("Error: {0}", e.ToString());
                 }
+            }
+        }
+        
+        private void addBox()
+        {
+            DateTime now = DateTime.Now;
+            int xt = 2024;
+            Console.WriteLine('\n' + xt + '\n');
+            // for (int year = now.Year; year>= 2023; year--)
+            for (xt = 2024; xt >= 2023; xt--)
+            {
+                Console.WriteLine('\n' + xt + '\n');
+                yearBox.Items.Add(xt);
             }
         }
 
