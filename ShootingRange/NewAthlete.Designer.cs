@@ -87,7 +87,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(379, 150);
+            this.label4.Location = new System.Drawing.Point(259, 150);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(86, 13);
             this.label4.TabIndex = 28;
@@ -96,7 +96,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(492, 150);
+            this.label6.Location = new System.Drawing.Point(372, 150);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(54, 13);
             this.label6.TabIndex = 29;
@@ -118,14 +118,14 @@
             // 
             // MhtrwoBox
             // 
-            this.MhtrwoBox.Location = new System.Drawing.Point(382, 170);
+            this.MhtrwoBox.Location = new System.Drawing.Point(262, 170);
             this.MhtrwoBox.Name = "MhtrwoBox";
             this.MhtrwoBox.Size = new System.Drawing.Size(100, 20);
             this.MhtrwoBox.TabIndex = 16;
             // 
             // OrganizationBox
             // 
-            this.OrganizationBox.Location = new System.Drawing.Point(495, 170);
+            this.OrganizationBox.Location = new System.Drawing.Point(375, 170);
             this.OrganizationBox.Name = "OrganizationBox";
             this.OrganizationBox.Size = new System.Drawing.Size(100, 20);
             this.OrganizationBox.TabIndex = 17;
@@ -296,14 +296,14 @@
             // 
             // MobileBox
             // 
-            this.MobileBox.Location = new System.Drawing.Point(144, 170);
+            this.MobileBox.Location = new System.Drawing.Point(24, 170);
             this.MobileBox.Name = "MobileBox";
             this.MobileBox.Size = new System.Drawing.Size(100, 20);
             this.MobileBox.TabIndex = 14;
             // 
             // LandlineBox
             // 
-            this.LandlineBox.Location = new System.Drawing.Point(24, 170);
+            this.LandlineBox.Location = new System.Drawing.Point(617, 115);
             this.LandlineBox.Name = "LandlineBox";
             this.LandlineBox.Size = new System.Drawing.Size(100, 20);
             this.LandlineBox.TabIndex = 13;
@@ -311,7 +311,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(21, 150);
+            this.label15.Location = new System.Drawing.Point(614, 95);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(61, 13);
             this.label15.TabIndex = 46;
@@ -320,7 +320,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(141, 150);
+            this.label16.Location = new System.Drawing.Point(21, 150);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(40, 13);
             this.label16.TabIndex = 47;
@@ -328,7 +328,7 @@
             // 
             // EmailBox
             // 
-            this.EmailBox.Location = new System.Drawing.Point(267, 170);
+            this.EmailBox.Location = new System.Drawing.Point(147, 170);
             this.EmailBox.Name = "EmailBox";
             this.EmailBox.Size = new System.Drawing.Size(100, 20);
             this.EmailBox.TabIndex = 15;
@@ -336,7 +336,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(264, 150);
+            this.label17.Location = new System.Drawing.Point(144, 150);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(35, 13);
             this.label17.TabIndex = 57;

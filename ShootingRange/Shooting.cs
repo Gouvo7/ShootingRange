@@ -31,6 +31,9 @@ namespace ShootingRange
             comboBox1.Items.Add("ΜΔΑ");
             comboBox1.Items.Add("SPORTS");
             comboBox1.Items.Add("STANDARD");
+            //BoxAmmoStr.Items.Add("Σωματείο");
+            //BoxAmmoStr.Items.Add("Αθλητή");
+            //BoxAmmoStr.Items.Add("Μικτή");
             shoot10Res.Enabled = false;
             shoot20Res.Enabled = false;
             shoot30Res.Enabled = false;
@@ -610,8 +613,7 @@ namespace ShootingRange
 
             //BoxAmmoConsum.Items.Clear();
             //BoxAmmoConsum.SelectedItem = "";
-            BoxAmmoStr.Items.Clear();
-            BoxAmmoStr.Text = "";
+            
             BoxActivityType.Items.Clear();
             BoxActivityType.Text = "";
 
@@ -667,8 +669,6 @@ namespace ShootingRange
 
             //BoxAmmoConsum.Items.Clear();
             //BoxAmmoConsum.SelectedItem = "";
-            BoxAmmoStr.Items.Clear();
-            BoxAmmoStr.Text = "";
             BoxActivityType.Items.Clear();
             BoxActivityType.Text = "";
             //BoxName.Items.Clear();

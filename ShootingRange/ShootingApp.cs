@@ -19,6 +19,7 @@ namespace ShootingRange
         String ConnString = "Server = localhost; User ID = root; Password = 1234; Database = shoot";
         //String ConnString = "Server =dbshoot.cyzxisevetss.eu-west-3.rds.amazonaws.com; User ID = root; Password=123456789; Database =shoot;";
         string currTextSurName = "";
+
         public ShootingApp()
         {
             InitializeComponent();
@@ -78,11 +79,14 @@ namespace ShootingRange
             monthBox.Items.Add("Οκτώβριος");
             monthBox.Items.Add("Νοέμβριος");
             monthBox.Items.Add("Δεκέμβριος");
-            yearBox.Items.Add("2022");
-            yearBox.Items.Add("2023");
-            yearBox.Items.Add("2024");
-            yearBox.Items.Add("2025");
-            yearBox.Items.Add("2026");
+            DateTime now = DateTime.Now;
+            int x = 2024;
+           // for (int year = now.Year; year>= 2023; year--)
+            for (x = 2024; x >= 2023; x--)
+            {
+                Console.WriteLine(x);
+                yearBox.Items.Add(x);
+            }
             //Console.OutputEncoding = "chcp 1253");
             //Console.OutputEncoding = System.Text.Encoding.GetEncoding("unicode");
             String greek = "Λάκης";
@@ -120,8 +124,6 @@ namespace ShootingRange
                     Console.WriteLine("Error: {0}", e.ToString());
                 }
             }
-
-            
         }
 
         private void BoxSurname_LostFocus(object sender, EventArgs e)
@@ -130,6 +132,7 @@ namespace ShootingRange
             Console.WriteLine("ta exusa");
             MessageBox.Show("Error: Λάθος όνομα χρήστη ή κωδικός.", "Μήνυμα Λάθους", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+
         private void button1_Click(object sender, EventArgs e)
         {
             if (BoxName.Text.Equals(""))
@@ -165,14 +168,17 @@ namespace ShootingRange
                 Console.WriteLine("Error: {0}", e1.ToString());
             }
         }
+
         private void setSurnameText(string temp)
         {
             currTextSurName = temp;
         }
+
         private string getSurnameText()
         {
             return currTextSurName;
         }
+
         private void button2_Click(object sender, EventArgs e)
         {
             BoxName.Text = "";
@@ -204,9 +210,7 @@ namespace ShootingRange
                 //panel2.Visible = false;
                 //panel3.Visible = true;
                 resetDefaults();
-                
             }
-            
         }
 
         private void resetDefaults()
@@ -220,14 +224,45 @@ namespace ShootingRange
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void BoxSurname_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Shooting a = new Shooting(this);
-        }
+            Console.WriteLine(BoxSurname.SelectedItem);
+            BoxName.Items.Clear();
+            BoxName.Text = "";
+            //Console.WriteLine("yes");
+            if (BoxSurname.SelectedItem != null)
+            {
+                try
+                {
+                    MySqlConnection conn = new MySqlConnection(ConnString);
+                    conn.Open();
+                    string query = "SELECT * FROM athl where athl_LName like \'%" + BoxSurname.SelectedItem.ToString() + "%\'";
+                    MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
+                    DataSet ds = new DataSet();
+                    da.Fill(ds, "athl");
+                    DataTable dt = ds.Tables["athl"];
+                    Console.WriteLine(dt);
+                    List<string> list = new List<string>();
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        list.Add((string)row["athl_FName"]);
+                    }
+                    dataGridView1.DataSource = ds.Tables[0];
 
-        private void button3_Click_2(object sender, EventArgs e)
-        {
-            Practice b = new Practice(this);
+                    foreach (String x in list)
+                    {
+                        BoxName.Items.Add(x);
+                    }
+
+                    conn.Close();
+                }
+
+                catch (Exception e1)
+                {
+                    Console.WriteLine("Error: {0}", e1.ToString());
+                }
+            }
+            BoxName.SelectedItem = 0;
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -243,7 +278,7 @@ namespace ShootingRange
             {
                 m = monthBox.SelectedItem.ToString();
                 if (m.Equals("Ιανουάριος"))
-                { 
+                {
                     m = "01";
                 }
                 else if (m.Equals("Φεβρουάριος"))
@@ -291,54 +326,22 @@ namespace ShootingRange
                     m = "12";
                 }
             }
-            if (yearBox.SelectedItem != null) 
-            { 
+            if (yearBox.SelectedItem != null)
+            {
                 y = yearBox.SelectedItem.ToString();
             }
             Console.WriteLine(d + m + y);
 
         }
 
-
-        private void BoxSurname_SelectedIndexChanged(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-            Console.WriteLine(BoxSurname.SelectedItem);
-            BoxName.Items.Clear();
-            BoxName.Text = "";
-            //Console.WriteLine("yes");
-            if (BoxSurname.SelectedItem != null)
-            {
-                try
-                {
-                    MySqlConnection conn = new MySqlConnection(ConnString);
-                    conn.Open();
-                    string query = "SELECT * FROM athl where athl_LName like \'%" + BoxSurname.SelectedItem.ToString() + "%\'";
-                    MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
-                    DataSet ds = new DataSet();
-                    da.Fill(ds, "athl");
-                    DataTable dt = ds.Tables["athl"];
-                    Console.WriteLine(dt);
-                    List<string> list = new List<string>();
-                    foreach (DataRow row in dt.Rows)
-                    {
-                        list.Add((string)row["athl_FName"]);
-                    }
-                    dataGridView1.DataSource = ds.Tables[0];
+            Shooting a = new Shooting(this);
+        }
 
-                    foreach (String x in list)
-                    {
-                        BoxName.Items.Add(x);
-                    }
-
-                    conn.Close();
-                }
-
-                catch (Exception e1)
-                {
-                    Console.WriteLine("Error: {0}", e1.ToString());
-                }
-            }
-            BoxName.SelectedItem = 0;
+        private void button3_Click_2(object sender, EventArgs e)
+        {
+            Practice b = new Practice(this);
         }
 
         private void button5_Click(object sender, EventArgs e)
