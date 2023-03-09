@@ -34,6 +34,10 @@ namespace ShootingRange
             //BoxAmmoStr.Items.Add("Σωματείο");
             //BoxAmmoStr.Items.Add("Αθλητή");
             //BoxAmmoStr.Items.Add("Μικτή");
+            BoxActivityType.Items.Add("Αγώνας");
+            BoxActivityType.Items.Add("Προπόνηση");
+            BoxActivityType.Items.Add("Αγώνας/Προπόνηση");
+            BoxActivityType.SelectedIndex = 0;
             shoot10Res.Enabled = false;
             shoot20Res.Enabled = false;
             shoot30Res.Enabled = false;
@@ -513,7 +517,7 @@ namespace ShootingRange
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void clearValues()
         {
             shoot1.Text = "";
             shoot2.Text = "";
@@ -583,6 +587,10 @@ namespace ShootingRange
             shoot60Res.Text = "";
         }
 
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            clearValues();
+        }
 
         private void Shooting_Leave(object sender, EventArgs e)
         {
@@ -613,10 +621,6 @@ namespace ShootingRange
 
             //BoxAmmoConsum.Items.Clear();
             //BoxAmmoConsum.SelectedItem = "";
-            
-            BoxActivityType.Items.Clear();
-            BoxActivityType.Text = "";
-
             //BoxMhtrwo.SelectedIndex = 0 ;
             Console.WriteLine(BoxSurname.SelectedItem);
             if (BoxSurname.SelectedItem != null)
@@ -669,8 +673,6 @@ namespace ShootingRange
 
             //BoxAmmoConsum.Items.Clear();
             //BoxAmmoConsum.SelectedItem = "";
-            BoxActivityType.Items.Clear();
-            BoxActivityType.Text = "";
             //BoxName.Items.Clear();
             Console.WriteLine(BoxSurname.SelectedItem);
             if (BoxSurname.SelectedItem != null)
@@ -803,6 +805,164 @@ namespace ShootingRange
                 AmmoOrg.Enabled = true;
                 AmmoAth.Enabled = true;
             }
+        }
+
+        private void BoxActivityType_Index_Changed(object sender, EventArgs e)
+        {
+            if (BoxActivityType.SelectedIndex == 0)
+            {
+                EnableEdit();
+            }
+            else if (BoxActivityType.SelectedIndex == 1)
+            {
+                DisableEdit();
+                clearValues();  
+            }
+            else if (BoxActivityType.SelectedIndex == 2)
+            {
+                EnableEdit();
+            }
+
+        }
+
+        private void EnableEdit()
+        {
+            shoot1.Enabled = true;
+            shoot2.Enabled = true;
+            shoot3.Enabled = true;
+            shoot4.Enabled = true;
+            shoot5.Enabled = true;
+            shoot6.Enabled = true;
+            shoot7.Enabled = true;
+            shoot8.Enabled = true;
+            shoot9.Enabled = true;
+            shoot10.Enabled = true;
+            shoot11.Enabled = true;
+            shoot12.Enabled = true;
+            shoot13.Enabled = true;
+            shoot14.Enabled = true;
+            shoot15.Enabled = true;
+            shoot16.Enabled = true;
+            shoot17.Enabled = true;
+            shoot18.Enabled = true;
+            shoot19.Enabled = true;
+            shoot20.Enabled = true;
+            shoot21.Enabled = true;
+            shoot22.Enabled = true;
+            shoot23.Enabled = true;
+            shoot24.Enabled = true;
+            shoot25.Enabled = true;
+            shoot26.Enabled = true;
+            shoot27.Enabled = true;
+            shoot28.Enabled = true;
+            shoot29.Enabled = true;
+            shoot30.Enabled = true;
+            shoot31.Enabled = true;
+            shoot32.Enabled = true;
+            shoot33.Enabled = true;
+            shoot34.Enabled = true;
+            shoot35.Enabled = true;
+            shoot36.Enabled = true;
+            shoot37.Enabled = true;
+            shoot38.Enabled = true;
+            shoot39.Enabled = true;
+            shoot40.Enabled = true;
+            shoot41.Enabled = true;
+            shoot42.Enabled = true;
+            shoot43.Enabled = true;
+            shoot44.Enabled = true;
+            shoot45.Enabled = true;
+            shoot46.Enabled = true;
+            shoot47.Enabled = true;
+            shoot48.Enabled = true;
+            shoot49.Enabled = true;
+            shoot50.Enabled = true;
+            shoot51.Enabled = true;
+            shoot52.Enabled = true;
+            shoot53.Enabled = true;
+            shoot54.Enabled = true;
+            shoot55.Enabled = true;
+            shoot56.Enabled = true;
+            shoot57.Enabled = true;
+            shoot58.Enabled = true;
+            shoot59.Enabled = true;
+            shoot60.Enabled = true;
+            shoot10Res.Enabled = true;
+            shoot20Res.Enabled = true;
+            shoot30Res.Enabled = true;
+            shoot40Res.Enabled = true;
+            shoot50Res.Enabled = true;
+            shoot60Res.Enabled = true;
+        }
+
+        private void DisableEdit()
+        {
+            shoot1.Enabled = false;
+            shoot2.Enabled = false;
+            shoot3.Enabled = false;
+            shoot4.Enabled = false;
+            shoot5.Enabled = false;
+            shoot6.Enabled = false;
+            shoot7.Enabled = false;
+            shoot8.Enabled = false;
+            shoot9.Enabled = false;
+            shoot10.Enabled = false;
+            shoot11.Enabled = false;
+            shoot12.Enabled = false;
+            shoot13.Enabled = false;
+            shoot14.Enabled = false;
+            shoot15.Enabled = false;
+            shoot16.Enabled = false;
+            shoot17.Enabled = false;
+            shoot18.Enabled = false;
+            shoot19.Enabled = false;
+            shoot20.Enabled = false;
+            shoot21.Enabled = false;
+            shoot22.Enabled = false;
+            shoot23.Enabled = false;
+            shoot24.Enabled = false;
+            shoot25.Enabled = false;
+            shoot26.Enabled = false;
+            shoot27.Enabled = false;
+            shoot28.Enabled = false;
+            shoot29.Enabled = false;
+            shoot30.Enabled = false;
+            shoot31.Enabled = false;
+            shoot32.Enabled = false;
+            shoot33.Enabled = false;
+            shoot34.Enabled = false;
+            shoot35.Enabled = false;
+            shoot36.Enabled = false;
+            shoot37.Enabled = false;
+            shoot38.Enabled = false;
+            shoot39.Enabled = false;
+            shoot40.Enabled = false;
+            shoot41.Enabled = false;
+            shoot42.Enabled = false;
+            shoot43.Enabled = false;
+            shoot44.Enabled = false;
+            shoot45.Enabled = false;
+            shoot46.Enabled = false;
+            shoot47.Enabled = false;
+            shoot48.Enabled = false;
+            shoot49.Enabled = false;
+            shoot50.Enabled = false;
+            shoot51.Enabled = false;
+            shoot52.Enabled = false;
+            shoot53.Enabled = false;
+            shoot54.Enabled = false;
+            shoot55.Enabled = false;
+            shoot56.Enabled = false;
+            shoot57.Enabled = false;
+            shoot58.Enabled = false;
+            shoot59.Enabled = false;
+            shoot60.Enabled = false;
+            shoot10Res.Enabled = false;
+            shoot20Res.Enabled = false;
+            shoot30Res.Enabled = false;
+            shoot40Res.Enabled = false;
+            shoot50Res.Enabled = false;
+            shoot60Res.Enabled = false;
         }
     }
         

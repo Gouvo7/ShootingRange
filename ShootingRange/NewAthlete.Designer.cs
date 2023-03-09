@@ -46,11 +46,9 @@
             this.label8 = new System.Windows.Forms.Label();
             this.BirthdayBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.Region1Box = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.RegionBox = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.PostalBox = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.AddrNumberBox = new System.Windows.Forms.TextBox();
             this.AddressBox = new System.Windows.Forms.TextBox();
@@ -64,6 +62,8 @@
             this.label17 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.gunBox = new System.Windows.Forms.CheckBox();
+            this.labelAr = new System.Windows.Forms.Label();
+            this.labelAd = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label3
@@ -78,7 +78,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 36);
+            this.label2.Location = new System.Drawing.Point(20, 36);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 13);
             this.label2.TabIndex = 22;
@@ -87,7 +87,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(259, 150);
+            this.label4.Location = new System.Drawing.Point(140, 150);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(86, 13);
             this.label4.TabIndex = 28;
@@ -96,7 +96,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(372, 150);
+            this.label6.Location = new System.Drawing.Point(260, 150);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(54, 13);
             this.label6.TabIndex = 29;
@@ -104,28 +104,30 @@
             // 
             // SurnameBox
             // 
-            this.SurnameBox.Location = new System.Drawing.Point(24, 56);
+            this.SurnameBox.Location = new System.Drawing.Point(20, 56);
             this.SurnameBox.Name = "SurnameBox";
             this.SurnameBox.Size = new System.Drawing.Size(100, 20);
             this.SurnameBox.TabIndex = 1;
             // 
             // NameBox
             // 
-            this.NameBox.Location = new System.Drawing.Point(143, 56);
+            this.NameBox.Location = new System.Drawing.Point(140, 56);
             this.NameBox.Name = "NameBox";
             this.NameBox.Size = new System.Drawing.Size(100, 20);
             this.NameBox.TabIndex = 2;
             // 
             // MhtrwoBox
             // 
-            this.MhtrwoBox.Location = new System.Drawing.Point(262, 170);
+            this.MhtrwoBox.Location = new System.Drawing.Point(140, 170);
+            this.MhtrwoBox.MaxLength = 16;
             this.MhtrwoBox.Name = "MhtrwoBox";
             this.MhtrwoBox.Size = new System.Drawing.Size(100, 20);
             this.MhtrwoBox.TabIndex = 16;
             // 
             // OrganizationBox
             // 
-            this.OrganizationBox.Location = new System.Drawing.Point(375, 170);
+            this.OrganizationBox.Location = new System.Drawing.Point(260, 170);
+            this.OrganizationBox.MaxLength = 30;
             this.OrganizationBox.Name = "OrganizationBox";
             this.OrganizationBox.Size = new System.Drawing.Size(100, 20);
             this.OrganizationBox.TabIndex = 17;
@@ -133,7 +135,7 @@
             // 
             // MothernameBox
             // 
-            this.MothernameBox.Location = new System.Drawing.Point(386, 56);
+            this.MothernameBox.Location = new System.Drawing.Point(380, 56);
             this.MothernameBox.Name = "MothernameBox";
             this.MothernameBox.Size = new System.Drawing.Size(100, 20);
             this.MothernameBox.TabIndex = 4;
@@ -141,7 +143,7 @@
             // 
             // FathernameBox
             // 
-            this.FathernameBox.Location = new System.Drawing.Point(266, 56);
+            this.FathernameBox.Location = new System.Drawing.Point(260, 56);
             this.FathernameBox.Name = "FathernameBox";
             this.FathernameBox.Size = new System.Drawing.Size(100, 20);
             this.FathernameBox.TabIndex = 3;
@@ -150,7 +152,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(263, 36);
+            this.label1.Location = new System.Drawing.Point(260, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 13);
             this.label1.TabIndex = 34;
@@ -159,7 +161,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(383, 36);
+            this.label5.Location = new System.Drawing.Point(380, 36);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(82, 13);
             this.label5.TabIndex = 35;
@@ -167,7 +169,8 @@
             // 
             // ADTBox
             // 
-            this.ADTBox.Location = new System.Drawing.Point(495, 56);
+            this.ADTBox.Location = new System.Drawing.Point(500, 56);
+            this.ADTBox.MaxLength = 8;
             this.ADTBox.Name = "ADTBox";
             this.ADTBox.Size = new System.Drawing.Size(100, 20);
             this.ADTBox.TabIndex = 5;
@@ -175,7 +178,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(492, 36);
+            this.label7.Location = new System.Drawing.Point(500, 36);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(33, 13);
             this.label7.TabIndex = 37;
@@ -183,7 +186,8 @@
             // 
             // AMKABox
             // 
-            this.AMKABox.Location = new System.Drawing.Point(617, 56);
+            this.AMKABox.Location = new System.Drawing.Point(620, 56);
+            this.AMKABox.MaxLength = 12;
             this.AMKABox.Name = "AMKABox";
             this.AMKABox.Size = new System.Drawing.Size(100, 20);
             this.AMKABox.TabIndex = 6;
@@ -191,7 +195,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(614, 36);
+            this.label8.Location = new System.Drawing.Point(620, 36);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(44, 13);
             this.label8.TabIndex = 39;
@@ -199,7 +203,8 @@
             // 
             // BirthdayBox
             // 
-            this.BirthdayBox.Location = new System.Drawing.Point(24, 115);
+            this.BirthdayBox.Location = new System.Drawing.Point(20, 115);
+            this.BirthdayBox.MaxLength = 10;
             this.BirthdayBox.Name = "BirthdayBox";
             this.BirthdayBox.Size = new System.Drawing.Size(100, 20);
             this.BirthdayBox.TabIndex = 7;
@@ -207,56 +212,41 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(21, 95);
+            this.label9.Location = new System.Drawing.Point(20, 95);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(93, 13);
             this.label9.TabIndex = 41;
             this.label9.Text = "Ημ/νια Γέννησης";
             // 
-            // Region1Box
-            // 
-            this.Region1Box.Location = new System.Drawing.Point(504, 115);
-            this.Region1Box.Name = "Region1Box";
-            this.Region1Box.Size = new System.Drawing.Size(100, 20);
-            this.Region1Box.TabIndex = 12;
-            this.Region1Box.Text = "Αττική";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(501, 95);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(89, 13);
-            this.label10.TabIndex = 43;
-            this.label10.Text = "Τόπος Κατοικίας";
-            // 
             // RegionBox
             // 
-            this.RegionBox.Location = new System.Drawing.Point(396, 115);
+            this.RegionBox.Location = new System.Drawing.Point(380, 115);
             this.RegionBox.Name = "RegionBox";
             this.RegionBox.Size = new System.Drawing.Size(100, 20);
             this.RegionBox.TabIndex = 11;
+            this.RegionBox.Text = "Αττική";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(393, 95);
+            this.label11.Location = new System.Drawing.Point(380, 95);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(47, 13);
             this.label11.TabIndex = 55;
             this.label11.Text = "Περιοχή";
             // 
-            // textBox6
+            // PostalBox
             // 
-            this.textBox6.Location = new System.Drawing.Point(328, 115);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(49, 20);
-            this.textBox6.TabIndex = 10;
+            this.PostalBox.Location = new System.Drawing.Point(315, 115);
+            this.PostalBox.MaxLength = 5;
+            this.PostalBox.Name = "PostalBox";
+            this.PostalBox.Size = new System.Drawing.Size(49, 20);
+            this.PostalBox.TabIndex = 10;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(330, 95);
+            this.label12.Location = new System.Drawing.Point(315, 95);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(25, 13);
             this.label12.TabIndex = 53;
@@ -264,14 +254,15 @@
             // 
             // AddrNumberBox
             // 
-            this.AddrNumberBox.Location = new System.Drawing.Point(264, 115);
+            this.AddrNumberBox.Location = new System.Drawing.Point(260, 115);
+            this.AddrNumberBox.MaxLength = 4;
             this.AddrNumberBox.Name = "AddrNumberBox";
             this.AddrNumberBox.Size = new System.Drawing.Size(33, 20);
             this.AddrNumberBox.TabIndex = 9;
             // 
             // AddressBox
             // 
-            this.AddressBox.Location = new System.Drawing.Point(144, 115);
+            this.AddressBox.Location = new System.Drawing.Point(140, 115);
             this.AddressBox.Name = "AddressBox";
             this.AddressBox.Size = new System.Drawing.Size(100, 20);
             this.AddressBox.TabIndex = 8;
@@ -279,7 +270,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(141, 95);
+            this.label13.Location = new System.Drawing.Point(140, 95);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(32, 13);
             this.label13.TabIndex = 50;
@@ -288,7 +279,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(261, 95);
+            this.label14.Location = new System.Drawing.Point(260, 95);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(47, 13);
             this.label14.TabIndex = 51;
@@ -296,14 +287,16 @@
             // 
             // MobileBox
             // 
-            this.MobileBox.Location = new System.Drawing.Point(24, 170);
+            this.MobileBox.Location = new System.Drawing.Point(620, 115);
+            this.MobileBox.MaxLength = 10;
             this.MobileBox.Name = "MobileBox";
             this.MobileBox.Size = new System.Drawing.Size(100, 20);
             this.MobileBox.TabIndex = 14;
             // 
             // LandlineBox
             // 
-            this.LandlineBox.Location = new System.Drawing.Point(617, 115);
+            this.LandlineBox.Location = new System.Drawing.Point(500, 115);
+            this.LandlineBox.MaxLength = 10;
             this.LandlineBox.Name = "LandlineBox";
             this.LandlineBox.Size = new System.Drawing.Size(100, 20);
             this.LandlineBox.TabIndex = 13;
@@ -311,7 +304,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(614, 95);
+            this.label15.Location = new System.Drawing.Point(500, 95);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(61, 13);
             this.label15.TabIndex = 46;
@@ -320,7 +313,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(21, 150);
+            this.label16.Location = new System.Drawing.Point(620, 95);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(40, 13);
             this.label16.TabIndex = 47;
@@ -328,7 +321,8 @@
             // 
             // EmailBox
             // 
-            this.EmailBox.Location = new System.Drawing.Point(147, 170);
+            this.EmailBox.Location = new System.Drawing.Point(20, 170);
+            this.EmailBox.MaxLength = 50;
             this.EmailBox.Name = "EmailBox";
             this.EmailBox.Size = new System.Drawing.Size(100, 20);
             this.EmailBox.TabIndex = 15;
@@ -336,7 +330,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(144, 150);
+            this.label17.Location = new System.Drawing.Point(20, 150);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(35, 13);
             this.label17.TabIndex = 57;
@@ -344,7 +338,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(280, 217);
+            this.button1.Location = new System.Drawing.Point(280, 220);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(195, 23);
             this.button1.TabIndex = 19;
@@ -355,7 +349,7 @@
             // gunBox
             // 
             this.gunBox.AutoSize = true;
-            this.gunBox.Location = new System.Drawing.Point(610, 173);
+            this.gunBox.Location = new System.Drawing.Point(610, 220);
             this.gunBox.Name = "gunBox";
             this.gunBox.Size = new System.Drawing.Size(126, 17);
             this.gunBox.TabIndex = 18;
@@ -363,18 +357,38 @@
             this.gunBox.UseVisualStyleBackColor = true;
             this.gunBox.CheckedChanged += new System.EventHandler(this.valueChanged);
             // 
+            // labelAr
+            // 
+            this.labelAr.AutoSize = true;
+            this.labelAr.Location = new System.Drawing.Point(21, 222);
+            this.labelAr.Name = "labelAr";
+            this.labelAr.Size = new System.Drawing.Size(82, 13);
+            this.labelAr.TabIndex = 58;
+            this.labelAr.Text = "Αριθμός Όπλου";
+            // 
+            // labelAd
+            // 
+            this.labelAd.AutoSize = true;
+            this.labelAd.Location = new System.Drawing.Point(144, 222);
+            this.labelAd.Name = "labelAd";
+            this.labelAd.Size = new System.Drawing.Size(85, 13);
+            this.labelAd.TabIndex = 59;
+            this.labelAd.Text = "Αριθμός Άδειας";
+            // 
             // NewAthlete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(748, 265);
+            this.ClientSize = new System.Drawing.Size(786, 265);
+            this.Controls.Add(this.labelAd);
+            this.Controls.Add(this.labelAr);
             this.Controls.Add(this.gunBox);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.EmailBox);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.RegionBox);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.PostalBox);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.AddrNumberBox);
             this.Controls.Add(this.AddressBox);
@@ -384,8 +398,6 @@
             this.Controls.Add(this.LandlineBox);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.Region1Box);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.BirthdayBox);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.AMKABox);
@@ -432,11 +444,9 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox BirthdayBox;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox Region1Box;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox RegionBox;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox PostalBox;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox AddrNumberBox;
         private System.Windows.Forms.TextBox AddressBox;
@@ -450,5 +460,7 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.CheckBox gunBox;
+        private System.Windows.Forms.Label labelAr;
+        private System.Windows.Forms.Label labelAd;
     }
 }

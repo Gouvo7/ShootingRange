@@ -458,6 +458,7 @@ namespace ShootingRange
             this.BoxActivityType.Name = "BoxActivityType";
             this.BoxActivityType.Size = new System.Drawing.Size(124, 21);
             this.BoxActivityType.TabIndex = 12;
+            this.BoxActivityType.SelectedIndexChanged += new System.EventHandler(this.BoxActivityType_Index_Changed);
             // 
             // label14
             // 

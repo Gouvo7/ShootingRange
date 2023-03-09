@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,8 +13,9 @@ namespace ShootingRange
 {
     public partial class NewAthlete : Form
     {
-        public static TextBox t1;
-        public static TextBox t2;
+        private static TextBox t1;
+        private static TextBox t2;
+
         public static ShootingApp instance;
         public NewAthlete(ShootingApp shoot)
         {
@@ -22,14 +24,22 @@ namespace ShootingRange
             this.Show();
             InitializeComponent();
             this.CenterToScreen();
+
             t1 = new TextBox();
             t2 = new TextBox();
-            t1.AutoSize = true;
-            t2.AutoSize = true;
+            //t1.AutoSize = true;
+            //t2.AutoSize = true;
+            
+            Utility util = new Utility();
+            
+            labelAd.Location = new Point(24, 205);
             t1.Location = new Point(24,225);
+            labelAr.Location = new Point(144, 205);
             t2.Location = new Point(144,225);
             this.Controls.Add(t1);
             this.Controls.Add(t2);
+            labelAd.Hide();
+            labelAr.Hide();
             t1.Hide();
             t2.Hide();
 
@@ -52,7 +62,30 @@ namespace ShootingRange
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            bool hasGun = false;
+            string surname = SurnameBox.Text;
+            string name = NameBox.Text;
+            string fname = FathernameBox.Text;
+            string mname = MothernameBox.Text;
+            string adt = ADTBox.Text;
+            string amka = AMKABox.Text;
+            string bday = BirthdayBox.Text;
+            string address = AddressBox.Text;
+            string address_num = AddrNumberBox.Text;
+            string tk = PostalBox.Text;
+            string region = RegionBox.Text;
+            string stathero = LandlineBox.Text;
+            string kinhto = MobileBox.Text;
+            string email = EmailBox.Text;
+            string mhtrwo = MhtrwoBox.Text;
+            string sullogos = OrganizationBox.Text;
+            
+            if (gunBox.Checked)
+            {
+                string ar_oplou = t1.Text;
+                string ad_oplou = t2.Text;
+                hasGun = true;
+            }
         }
 
         private void valueChanged(object sender, EventArgs e)
@@ -62,6 +95,8 @@ namespace ShootingRange
                 var height = this.Height;
                 this.Height = this.Height + 60;
                 button1.Location = new Point(280, 267);
+                labelAd.Show();
+                labelAr.Show();
                 t1.Show();
                 t2.Show();
             }
@@ -69,6 +104,8 @@ namespace ShootingRange
             {
                 this.Height = Height - 60;
                 button1.Location = new Point(280, 217);
+                labelAd.Hide();
+                labelAr.Hide();
                 t1.Hide();
                 t2.Hide();
             }

@@ -89,6 +89,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Utility.cs" />
     <Compile Include="NewAthlete.cs">
       <SubType>Form</SubType>
     </Compile>
