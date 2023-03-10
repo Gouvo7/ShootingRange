@@ -30,7 +30,6 @@ namespace ShootingRange
             //t1.AutoSize = true;
             //t2.AutoSize = true;
             
-            Utility util = new Utility();
             
             labelAd.Location = new Point(24, 205);
             t1.Location = new Point(24,225);
@@ -79,12 +78,19 @@ namespace ShootingRange
             string email = EmailBox.Text;
             string mhtrwo = MhtrwoBox.Text;
             string sullogos = OrganizationBox.Text;
-            
+            Utility util = new Utility();
             if (gunBox.Checked)
             {
                 string ar_oplou = t1.Text;
                 string ad_oplou = t2.Text;
                 hasGun = true;
+                Console.WriteLine("O mikros exei oplo");
+                util.checker(surname, name, fname, mname, adt, amka, bday, address, address_num, tk, region, stathero, kinhto, email, mhtrwo, sullogos);
+            }
+            else
+            {
+                Console.WriteLine("Oxi oplo");
+                util.checker(surname, name, fname, mname, adt, amka, bday, address, address_num, tk, region, stathero, kinhto, email, mhtrwo, sullogos);
             }
         }
 
