@@ -44,7 +44,6 @@ namespace ShootingRange
             this.BoxSullogos = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.BoxArAdeia = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.BoxProvider = new System.Windows.Forms.ComboBox();
@@ -194,6 +193,7 @@ namespace ShootingRange
             this.button2 = new System.Windows.Forms.Button();
             this.AmmoAth = new System.Windows.Forms.TextBox();
             this.label81 = new System.Windows.Forms.Label();
+            this.BoxArAdeia = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -344,13 +344,6 @@ namespace ShootingRange
             this.label7.Size = new System.Drawing.Size(69, 13);
             this.label7.TabIndex = 20;
             this.label7.Text = "Τύπος όπλου";
-            // 
-            // BoxArAdeia
-            // 
-            this.BoxArAdeia.Location = new System.Drawing.Point(732, 73);
-            this.BoxArAdeia.Name = "BoxArAdeia";
-            this.BoxArAdeia.Size = new System.Drawing.Size(69, 20);
-            this.BoxArAdeia.TabIndex = 7;
             // 
             // label8
             // 
@@ -1713,12 +1706,24 @@ namespace ShootingRange
             this.label81.Text = "Φυσσίγγια Αθλητή";
             this.label81.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // BoxArAdeia
+            // 
+            this.BoxArAdeia.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.BoxArAdeia.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.BoxArAdeia.FormattingEnabled = true;
+            this.BoxArAdeia.ItemHeight = 13;
+            this.BoxArAdeia.Location = new System.Drawing.Point(729, 72);
+            this.BoxArAdeia.Name = "BoxArAdeia";
+            this.BoxArAdeia.Size = new System.Drawing.Size(79, 21);
+            this.BoxArAdeia.TabIndex = 7;
+            // 
             // Shooting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(946, 532);
+            this.Controls.Add(this.BoxArAdeia);
             this.Controls.Add(this.AmmoAth);
             this.Controls.Add(this.label81);
             this.Controls.Add(this.BoxName);
@@ -1869,7 +1874,6 @@ namespace ShootingRange
             this.Controls.Add(this.label9);
             this.Controls.Add(this.BoxProvider);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.BoxArAdeia);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.BoxArOplou);
             this.Controls.Add(this.BoxTupos);
@@ -1910,7 +1914,6 @@ namespace ShootingRange
         private System.Windows.Forms.ComboBox BoxSullogos;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox BoxArAdeia;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox BoxProvider;
@@ -2060,5 +2063,6 @@ namespace ShootingRange
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox AmmoAth;
         private System.Windows.Forms.Label label81;
+        private System.Windows.Forms.ComboBox BoxArAdeia;
     }
 }

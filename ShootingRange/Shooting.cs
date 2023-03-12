@@ -31,6 +31,7 @@ namespace ShootingRange
             comboBox1.Items.Add("ΜΔΑ");
             comboBox1.Items.Add("SPORTS");
             comboBox1.Items.Add("STANDARD");
+            comboBox1.SelectedIndex = 0;
             //BoxAmmoStr.Items.Add("Σωματείο");
             //BoxAmmoStr.Items.Add("Αθλητή");
             //BoxAmmoStr.Items.Add("Μικτή");
@@ -62,7 +63,8 @@ namespace ShootingRange
                     }
                     foreach (String x in list)
                     {
-                        BoxSurname.Items.Add(x);
+                         BoxSurname.Items.Add(x);
+
                     }
 
                     query = "SELECT ammo_type from apothema;";
@@ -91,7 +93,6 @@ namespace ShootingRange
                     foreach (String x in list2)
                     {
                         BoxTupos.Items.Add(x);
-                        Console.WriteLine(x);
                     }
                     conn.Close();
                 }
@@ -176,8 +177,8 @@ namespace ShootingRange
             //BoxTupos.Text = "";
             BoxArOplou.Items.Clear();
             BoxArOplou.Text = "";
-            //BoxArAdeia.Items.Clear();
-            //BoxArAdeia.SelectedItem = "";
+            BoxArAdeia.Items.Clear();
+            BoxArAdeia.SelectedItem = "";
             BoxProvider.Items.Clear();
             BoxProvider.Text = "";
 
@@ -228,8 +229,8 @@ namespace ShootingRange
             //BoxTupos.Text = "";
             BoxArOplou.Items.Clear();
             BoxArOplou.Text = "";
-            //BoxArAdeia.Items.Clear();
-            //BoxArAdeia.SelectedItem = "";
+            BoxArAdeia.Items.Clear();
+            BoxArAdeia.SelectedItem = "";
             BoxProvider.Items.Clear();
             BoxProvider.Text = "";
 
@@ -248,13 +249,14 @@ namespace ShootingRange
                     DataSet ds = new DataSet();
                     da.Fill(ds, "athl");
                     DataTable dt = ds.Tables["athl"];
-                    Console.WriteLine(dt);
                     List<string> list = new List<string>();
                     List<string> list1 = new List<string>();
+                    string ar_adeia= "";
                     foreach (DataRow row in dt.Rows)
                     {
                         list.Add((string)row["athl_Mhtrwo"]);
                         list1.Add((string)row["athl_Org"]);
+                        ar_adeia = (string)row["athl_ArAdeias"];
                     }
 
                     foreach (String x in list)
@@ -265,6 +267,9 @@ namespace ShootingRange
                     {
                         BoxSullogos.Items.Add(y);
                     }
+                    Console.WriteLine(ar_adeia);
+                    BoxArAdeia.Items.Add(ar_adeia);
+                    BoxArAdeia.SelectedIndex = 0;
 
                     conn.Close();
                 }

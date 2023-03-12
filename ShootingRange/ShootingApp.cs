@@ -106,7 +106,7 @@ namespace ShootingRange
 
                     foreach (String x in list)
                     {
-                        BoxSurname.Items.Add(x);
+                            BoxSurname.Items.Add(x);                     
                     }
 
                     conn.Close();
