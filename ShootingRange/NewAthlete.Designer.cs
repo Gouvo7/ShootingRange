@@ -208,6 +208,7 @@
             this.BirthdayBox.Name = "BirthdayBox";
             this.BirthdayBox.Size = new System.Drawing.Size(100, 20);
             this.BirthdayBox.TabIndex = 7;
+            this.BirthdayBox.Text = "01/01/1970";
             // 
             // label9
             // 
@@ -242,6 +243,7 @@
             this.PostalBox.Name = "PostalBox";
             this.PostalBox.Size = new System.Drawing.Size(49, 20);
             this.PostalBox.TabIndex = 10;
+            this.PostalBox.Text = "12345";
             // 
             // label12
             // 
@@ -326,6 +328,7 @@
             this.EmailBox.Name = "EmailBox";
             this.EmailBox.Size = new System.Drawing.Size(100, 20);
             this.EmailBox.TabIndex = 15;
+            this.EmailBox.Text = "temp@domain.gr";
             // 
             // label17
             // 
