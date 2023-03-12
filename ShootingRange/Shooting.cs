@@ -79,8 +79,8 @@ namespace ShootingRange
                     foreach (String x in list1)
                     {
                         BoxAmmoMM.Items.Add(x);
-                        Console.WriteLine(x);
                     }
+                    BoxAmmoMM.SelectedIndex = 0;
                     query = "select distinct weapon_TypeName from weapon;";
                     MySqlDataAdapter dc = new MySqlDataAdapter(query, conn);
                     dc.Fill(ds, "weapon");
@@ -252,6 +252,7 @@ namespace ShootingRange
                     List<string> list = new List<string>();
                     List<string> list1 = new List<string>();
                     string ar_adeia= "";
+                    string athl_ID = (string)dt.Rows[0]["athl_ID"];
                     foreach (DataRow row in dt.Rows)
                     {
                         list.Add((string)row["athl_Mhtrwo"]);
@@ -271,6 +272,19 @@ namespace ShootingRange
                     BoxArAdeia.Items.Add(ar_adeia);
                     BoxArAdeia.SelectedIndex = 0;
 
+                    query = "select * from weapon where (athl_ID = 0  or athl_ID =" + athl_ID + " );";
+                    MySqlDataAdapter db = new MySqlDataAdapter(query, conn);
+                    db.Fill(ds, "weapon");
+                    DataTable dt1 = ds.Tables["weapon"];
+                    List<string> list2 = new List<string>();
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        list2.Add((string)row["weapon_Arithmos"]);
+                    }
+                    foreach (String x in list2)
+                    {
+                        BoxArOplou.Items.Add(x);
+                    }
                     conn.Close();
                 }
 
@@ -278,7 +292,7 @@ namespace ShootingRange
                 {
                     Console.WriteLine("Error: {0}", e1.ToString());
                 }
-                BoxMhtrwo.SelectedIndex = 0;
+                //BoxMhtrwo.SelectedIndex = 0;
                 BoxSullogos.SelectedIndex = 0;
                 BoxTupos.SelectedIndex = 0;
             }
