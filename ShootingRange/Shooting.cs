@@ -32,19 +32,33 @@ namespace ShootingRange
             comboBox1.Items.Add("SPORTS");
             comboBox1.Items.Add("STANDARD");
             comboBox1.SelectedIndex = 0;
-            //BoxAmmoStr.Items.Add("Σωματείο");
-            //BoxAmmoStr.Items.Add("Αθλητή");
-            //BoxAmmoStr.Items.Add("Μικτή");
+            BoxAmmoStr.Items.Add("Σωματείο");
+            BoxAmmoStr.Items.Add("Αθλητή");
+            BoxAmmoStr.Items.Add("Μικτή");
             BoxActivityType.Items.Add("Αγώνας");
             BoxActivityType.Items.Add("Προπόνηση");
             BoxActivityType.Items.Add("Αγώνας/Προπόνηση");
             BoxActivityType.SelectedIndex = 0;
+            BoxHour.Items.Add("08:00-09:00");
+            BoxHour.Items.Add("09:00-10:00");
+            BoxHour.Items.Add("10:00-11:00");
+            BoxHour.Items.Add("11:00-12:00");
+            BoxHour.Items.Add("12:00-13:00");
+            BoxHour.Items.Add("13:00-14:00");
+            BoxHour.Items.Add("14:00-15:00");
+            BoxHour.Items.Add("15:00-16:00");
+            BoxHour.Items.Add("16:00-17:00");
+            BoxHour.Items.Add("17:00-18:00");
+            BoxHour.Items.Add("18:00-19:00");
+            BoxHour.Items.Add("19:00-20:00");
+            BoxHour.SelectedIndex = 0;
             shoot10Res.Enabled = false;
             shoot20Res.Enabled = false;
             shoot30Res.Enabled = false;
             shoot40Res.Enabled = false;
             shoot50Res.Enabled = false;
             shoot60Res.Enabled = false;
+            BoxProvider.Enabled = false;
             if (ConnString != null)
             {
                 try
@@ -61,9 +75,10 @@ namespace ShootingRange
                     {
                         list.Add((string)row["athl_LName"]);
                     }
+                    list = list.Distinct().ToList();
                     foreach (String x in list)
                     {
-                         BoxSurname.Items.Add(x);
+                        BoxSurname.Items.Add(x);
 
                     }
 
@@ -100,43 +115,28 @@ namespace ShootingRange
                 {
                     Console.WriteLine("Error: {0}", e.ToString());
                 }
-                BoxAmmoStr.SelectedIndex = 0;
+                if (BoxAmmoStr.Items.Count > 0)
+                    BoxAmmoStr.SelectedIndex = 0;
                 BoxAmmoStr.DropDownStyle = ComboBoxStyle.DropDownList;
             }
         }
-        public void Start1()
-        {
 
-        }
         int A = 1;
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
 
         }
-        public void addButton_Click(object sender, EventArgs e)
-        {
 
-            AddNewTextBox();
-        }
         public System.Windows.Forms.TextBox AddNewTextBox()
         {
             System.Windows.Forms.TextBox txt = new System.Windows.Forms.TextBox();
             Controls.Add(txt);
-      
+
             txt.Top = A * 28;
             txt.Left = 15;
             txt.Text = "Textbox" + this.A.ToString();
             A = A + 1;
             return txt;
-        }
-        public void label4_Click()
-        {
-
         }
 
         private void Shooting_Load(object sender, EventArgs e)
@@ -144,12 +144,6 @@ namespace ShootingRange
 
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-       
         private void button1_Click_1(object sender, EventArgs e)
         {
             clearValues();
@@ -179,7 +173,7 @@ namespace ShootingRange
             BoxArOplou.Text = "";
             BoxArAdeia.Items.Clear();
             BoxArAdeia.SelectedItem = "";
-            BoxProvider.Items.Clear();
+            //BoxProvider.Items.Clear();
             BoxProvider.Text = "";
 
             //BoxAmmoConsum.Items.Clear();
@@ -231,7 +225,7 @@ namespace ShootingRange
             BoxArOplou.Text = "";
             BoxArAdeia.Items.Clear();
             BoxArAdeia.SelectedItem = "";
-            BoxProvider.Items.Clear();
+            //BoxProvider.Items.Clear();
             BoxProvider.Text = "";
 
             //BoxAmmoConsum.Items.Clear();
@@ -251,8 +245,8 @@ namespace ShootingRange
                     DataTable dt = ds.Tables["athl"];
                     List<string> list = new List<string>();
                     List<string> list1 = new List<string>();
-                    string ar_adeia= "";
-                    string athl_ID = (string)dt.Rows[0]["athl_ID"];
+                    string ar_adeia = "";
+                    int athl_ID = (int)dt.Rows[0]["athl_ID"];
                     foreach (DataRow row in dt.Rows)
                     {
                         list.Add((string)row["athl_Mhtrwo"]);
@@ -268,16 +262,22 @@ namespace ShootingRange
                     {
                         BoxSullogos.Items.Add(y);
                     }
-                    Console.WriteLine(ar_adeia);
-                    BoxArAdeia.Items.Add(ar_adeia);
-                    BoxArAdeia.SelectedIndex = 0;
-
+                    if (ar_adeia != null)
+                        BoxArAdeia.Items.Add(ar_adeia);
+                    if (BoxArAdeia.Items.Count > 0)
+                        BoxArAdeia.SelectedIndex = 0;
+                    if (BoxMhtrwo.Items.Count > 0)
+                        BoxMhtrwo.SelectedIndex = 0;
+                    if (BoxSullogos.Items.Count > 0)
+                        BoxSullogos.SelectedIndex = 0;
+                    if (BoxTupos.Items.Count > 0)
+                        BoxTupos.SelectedIndex = 0;
                     query = "select * from weapon where (athl_ID = 0  or athl_ID =" + athl_ID + " );";
                     MySqlDataAdapter db = new MySqlDataAdapter(query, conn);
                     db.Fill(ds, "weapon");
                     DataTable dt1 = ds.Tables["weapon"];
                     List<string> list2 = new List<string>();
-                    foreach (DataRow row in dt.Rows)
+                    foreach (DataRow row in dt1.Rows)
                     {
                         list2.Add((string)row["weapon_Arithmos"]);
                     }
@@ -285,6 +285,8 @@ namespace ShootingRange
                     {
                         BoxArOplou.Items.Add(x);
                     }
+                    if (BoxArOplou.Items.Count > 0)
+                        BoxArOplou.SelectedIndex = 0;
                     conn.Close();
                 }
 
@@ -292,12 +294,44 @@ namespace ShootingRange
                 {
                     Console.WriteLine("Error: {0}", e1.ToString());
                 }
-                //BoxMhtrwo.SelectedIndex = 0;
-                BoxSullogos.SelectedIndex = 0;
-                BoxTupos.SelectedIndex = 0;
             }
         }
-        
+
+        private void BoxArOplouChanged(object sender, EventArgs e)
+        {
+            if (BoxArOplou.Items.Count > 0)
+            {
+                try
+                {
+                    MySqlConnection conn = new MySqlConnection(ConnString);
+                    conn.Open();
+                    Console.WriteLine(BoxArOplou.SelectedItem.ToString());
+                    string query = "select * from weapon where weapon_Arithmos = \'" + BoxArOplou.SelectedItem.ToString() + "\';";
+                    MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
+                    DataSet ds = new DataSet();
+                    da.Fill(ds, "weapon");
+                    DataTable dt = ds.Tables["weapon"];
+                    List<string> list = new List<string>();
+                    List<string> list1 = new List<string>();
+                    string ar_adeia = "";
+                    int athl_ID = (int)dt.Rows[0]["athl_ID"];
+                    if (athl_ID == 0)
+                    {
+                        BoxProvider.Text = "Σωματείο";
+                    }
+                    else
+                    {
+                        BoxProvider.Text = "Αθλητής";
+                    }
+                    conn.Close();
+                }
+                catch (Exception e1)
+                {
+                    Console.WriteLine("Error: {0}", e1.ToString());
+                }
+            }
+        }
+
         private void BoxStr_Changed(object sender, EventArgs e)
         {
             int x = BoxAmmoStr.SelectedIndex;
@@ -329,7 +363,7 @@ namespace ShootingRange
             else if (BoxActivityType.SelectedIndex == 1)
             {
                 DisableEdit();
-                clearValues();  
+                clearValues();
             }
             else if (BoxActivityType.SelectedIndex == 2)
             {
@@ -340,6 +374,7 @@ namespace ShootingRange
 
         private void Submit(object sender, EventArgs e)
         {
+            bool valid = true;
             try
             {
                 int x1 = Int32.Parse(shoot1.Text);
@@ -406,7 +441,15 @@ namespace ShootingRange
             }
             catch (FormatException)
             {
-                Console.WriteLine($"Unable to parse ");
+                valid = false;
+                Console.WriteLine("Unable to parse ");
+            }
+            if (BoxActivityType.SelectedIndex == 0 || BoxActivityType.SelectedIndex == 2)
+            {
+                if (valid)
+                {
+                    Console.WriteLine("gogo MENS");
+                }
             }
         }
 
@@ -550,76 +593,84 @@ namespace ShootingRange
             shoot60Res.Enabled = false;
         }
 
-
         private void rngShots_Click(object sender, EventArgs e)
         {
-            Random rnd = new Random();
-            shoot1.Text = rnd.Next(1, 10).ToString();
-            shoot2.Text = rnd.Next(1, 10).ToString();
-            shoot3.Text = rnd.Next(1, 10).ToString();
-            shoot4.Text = rnd.Next(1, 10).ToString();
-            shoot5.Text = rnd.Next(1, 10).ToString();
-            shoot6.Text = rnd.Next(1, 10).ToString();
-            shoot7.Text = rnd.Next(1, 10).ToString();
-            shoot8.Text = rnd.Next(1, 10).ToString();
-            shoot9.Text = rnd.Next(1, 10).ToString();
-            shoot10.Text = rnd.Next(1, 10).ToString();
-            shoot11.Text = rnd.Next(1, 10).ToString();
-            shoot12.Text = rnd.Next(1, 10).ToString();
-            shoot13.Text = rnd.Next(1, 10).ToString();
-            shoot14.Text = rnd.Next(1, 10).ToString();
-            shoot15.Text = rnd.Next(1, 10).ToString();
-            shoot16.Text = rnd.Next(1, 10).ToString();
-            shoot17.Text = rnd.Next(1, 10).ToString();
-            shoot18.Text = rnd.Next(1, 10).ToString();
-            shoot19.Text = rnd.Next(1, 10).ToString();
-            shoot20.Text = rnd.Next(1, 10).ToString();
-            shoot21.Text = rnd.Next(1, 10).ToString();
-            shoot22.Text = rnd.Next(1, 10).ToString();
-            shoot23.Text = rnd.Next(1, 10).ToString();
-            shoot24.Text = rnd.Next(1, 10).ToString();
-            shoot25.Text = rnd.Next(1, 10).ToString();
-            shoot26.Text = rnd.Next(1, 10).ToString();
-            shoot27.Text = rnd.Next(1, 10).ToString();
-            shoot28.Text = rnd.Next(1, 10).ToString();
-            shoot29.Text = rnd.Next(1, 10).ToString();
-            shoot30.Text = rnd.Next(1, 10).ToString();
-            shoot31.Text = rnd.Next(1, 10).ToString();
-            shoot32.Text = rnd.Next(1, 10).ToString();
-            shoot33.Text = rnd.Next(1, 10).ToString();
-            shoot34.Text = rnd.Next(1, 10).ToString();
-            shoot35.Text = rnd.Next(1, 10).ToString();
-            shoot36.Text = rnd.Next(1, 10).ToString();
-            shoot37.Text = rnd.Next(1, 10).ToString();
-            shoot38.Text = rnd.Next(1, 10).ToString();
-            shoot39.Text = rnd.Next(1, 10).ToString();
-            shoot40.Text = rnd.Next(1, 10).ToString();
-            shoot41.Text = rnd.Next(1, 10).ToString();
-            shoot42.Text = rnd.Next(1, 10).ToString();
-            shoot43.Text = rnd.Next(1, 10).ToString();
-            shoot44.Text = rnd.Next(1, 10).ToString();
-            shoot45.Text = rnd.Next(1, 10).ToString();
-            shoot46.Text = rnd.Next(1, 10).ToString();
-            shoot47.Text = rnd.Next(1, 10).ToString();
-            shoot48.Text = rnd.Next(1, 10).ToString();
-            shoot49.Text = rnd.Next(1, 10).ToString();
-            shoot50.Text = rnd.Next(1, 10).ToString();
-            shoot51.Text = rnd.Next(1, 10).ToString();
-            shoot52.Text = rnd.Next(1, 10).ToString();
-            shoot53.Text = rnd.Next(1, 10).ToString();
-            shoot54.Text = rnd.Next(1, 10).ToString();
-            shoot55.Text = rnd.Next(1, 10).ToString();
-            shoot56.Text = rnd.Next(1, 10).ToString();
-            shoot57.Text = rnd.Next(1, 10).ToString();
-            shoot58.Text = rnd.Next(1, 10).ToString();
-            shoot59.Text = rnd.Next(1, 10).ToString();
-            shoot60.Text = rnd.Next(1, 10).ToString();
-            txt1_Leave(sender, e);
-            txt2_Leave(sender, e);
-            txt3_Leave(sender, e);
-            txt4_Leave(sender, e);
-            txt5_Leave(sender, e);
-            txt6_Leave(sender, e);
+            if (BoxActivityType.SelectedIndex == 0 || BoxActivityType.SelectedIndex == 2)
+            {
+                Random rnd = new Random();
+                shoot1.Text = rnd.Next(1, 10).ToString();
+                shoot2.Text = rnd.Next(1, 10).ToString();
+                shoot3.Text = rnd.Next(1, 10).ToString();
+                shoot4.Text = rnd.Next(1, 10).ToString();
+                shoot5.Text = rnd.Next(1, 10).ToString();
+                shoot6.Text = rnd.Next(1, 10).ToString();
+                shoot7.Text = rnd.Next(1, 10).ToString();
+                shoot8.Text = rnd.Next(1, 10).ToString();
+                shoot9.Text = rnd.Next(1, 10).ToString();
+                shoot10.Text = rnd.Next(1, 10).ToString();
+                shoot11.Text = rnd.Next(1, 10).ToString();
+                shoot12.Text = rnd.Next(1, 10).ToString();
+                shoot13.Text = rnd.Next(1, 10).ToString();
+                shoot14.Text = rnd.Next(1, 10).ToString();
+                shoot15.Text = rnd.Next(1, 10).ToString();
+                shoot16.Text = rnd.Next(1, 10).ToString();
+                shoot17.Text = rnd.Next(1, 10).ToString();
+                shoot18.Text = rnd.Next(1, 10).ToString();
+                shoot19.Text = rnd.Next(1, 10).ToString();
+                shoot20.Text = rnd.Next(1, 10).ToString();
+                shoot21.Text = rnd.Next(1, 10).ToString();
+                shoot22.Text = rnd.Next(1, 10).ToString();
+                shoot23.Text = rnd.Next(1, 10).ToString();
+                shoot24.Text = rnd.Next(1, 10).ToString();
+                shoot25.Text = rnd.Next(1, 10).ToString();
+                shoot26.Text = rnd.Next(1, 10).ToString();
+                shoot27.Text = rnd.Next(1, 10).ToString();
+                shoot28.Text = rnd.Next(1, 10).ToString();
+                shoot29.Text = rnd.Next(1, 10).ToString();
+                shoot30.Text = rnd.Next(1, 10).ToString();
+                shoot31.Text = rnd.Next(1, 10).ToString();
+                shoot32.Text = rnd.Next(1, 10).ToString();
+                shoot33.Text = rnd.Next(1, 10).ToString();
+                shoot34.Text = rnd.Next(1, 10).ToString();
+                shoot35.Text = rnd.Next(1, 10).ToString();
+                shoot36.Text = rnd.Next(1, 10).ToString();
+                shoot37.Text = rnd.Next(1, 10).ToString();
+                shoot38.Text = rnd.Next(1, 10).ToString();
+                shoot39.Text = rnd.Next(1, 10).ToString();
+                shoot40.Text = rnd.Next(1, 10).ToString();
+                shoot41.Text = rnd.Next(1, 10).ToString();
+                shoot42.Text = rnd.Next(1, 10).ToString();
+                shoot43.Text = rnd.Next(1, 10).ToString();
+                shoot44.Text = rnd.Next(1, 10).ToString();
+                shoot45.Text = rnd.Next(1, 10).ToString();
+                shoot46.Text = rnd.Next(1, 10).ToString();
+                shoot47.Text = rnd.Next(1, 10).ToString();
+                shoot48.Text = rnd.Next(1, 10).ToString();
+                shoot49.Text = rnd.Next(1, 10).ToString();
+                shoot50.Text = rnd.Next(1, 10).ToString();
+                shoot51.Text = rnd.Next(1, 10).ToString();
+                shoot52.Text = rnd.Next(1, 10).ToString();
+                shoot53.Text = rnd.Next(1, 10).ToString();
+                shoot54.Text = rnd.Next(1, 10).ToString();
+                shoot55.Text = rnd.Next(1, 10).ToString();
+                shoot56.Text = rnd.Next(1, 10).ToString();
+                shoot57.Text = rnd.Next(1, 10).ToString();
+                shoot58.Text = rnd.Next(1, 10).ToString();
+                shoot59.Text = rnd.Next(1, 10).ToString();
+                shoot60.Text = rnd.Next(1, 10).ToString();
+                txt1_Leave(sender, e);
+                txt2_Leave(sender, e);
+                txt3_Leave(sender, e);
+                txt4_Leave(sender, e);
+                txt5_Leave(sender, e);
+                txt6_Leave(sender, e);
+                AmmoOrg.Text = "60";
+            }
+            else
+            {
+                MessageBox.Show("Δεν μπορούν να δημιουργηθούν τυχαία αποτελέσματα για την προπόνηση καθώς το σκορ δεν προσμετράται στις προπονήσεις. Παρακαλώ, επιλέξτε μια διαφορετική ενέργεια."
+                    , "Σφάλμα", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void txt1_Leave(object sender, EventArgs e)
@@ -1080,8 +1131,8 @@ namespace ShootingRange
             shoot40Res.Text = "";
             shoot50Res.Text = "";
             shoot60Res.Text = "";
+            AmmoOrg.Text = "";
+            AmmoAth.Text = "";
         }
-
     }
-
 }
