@@ -341,7 +341,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(280, 220);
+            this.button1.Location = new System.Drawing.Point(280, 230);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(195, 23);
             this.button1.TabIndex = 19;
@@ -352,7 +352,7 @@
             // gunBox
             // 
             this.gunBox.AutoSize = true;
-            this.gunBox.Location = new System.Drawing.Point(610, 220);
+            this.gunBox.Location = new System.Drawing.Point(610, 230);
             this.gunBox.Name = "gunBox";
             this.gunBox.Size = new System.Drawing.Size(126, 17);
             this.gunBox.TabIndex = 18;
@@ -363,7 +363,7 @@
             // labelAr
             // 
             this.labelAr.AutoSize = true;
-            this.labelAr.Location = new System.Drawing.Point(21, 222);
+            this.labelAr.Location = new System.Drawing.Point(380, 150);
             this.labelAr.Name = "labelAr";
             this.labelAr.Size = new System.Drawing.Size(82, 13);
             this.labelAr.TabIndex = 58;
@@ -372,7 +372,7 @@
             // labelAd
             // 
             this.labelAd.AutoSize = true;
-            this.labelAd.Location = new System.Drawing.Point(144, 222);
+            this.labelAd.Location = new System.Drawing.Point(500, 150);
             this.labelAd.Name = "labelAd";
             this.labelAd.Size = new System.Drawing.Size(85, 13);
             this.labelAd.TabIndex = 59;
@@ -382,7 +382,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(786, 265);
+            this.ClientSize = new System.Drawing.Size(786, 283);
             this.Controls.Add(this.labelAd);
             this.Controls.Add(this.labelAr);
             this.Controls.Add(this.gunBox);

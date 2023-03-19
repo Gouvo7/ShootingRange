@@ -31,10 +31,10 @@ namespace ShootingRange
             //t2.AutoSize = true;
             
             
-            labelAd.Location = new Point(24, 205);
-            t1.Location = new Point(24,225);
-            labelAr.Location = new Point(144, 205);
-            t2.Location = new Point(144,225);
+            //labelAd.Location = new Point(24, 205);
+            t1.Location = new Point(380,170);
+            //labelAr.Location = new Point(144, 205);
+            t2.Location = new Point(500,170);
             this.Controls.Add(t1);
             this.Controls.Add(t2);
             labelAd.Hide();
@@ -78,19 +78,31 @@ namespace ShootingRange
             string email = EmailBox.Text;
             string mhtrwo = MhtrwoBox.Text;
             string sullogos = OrganizationBox.Text;
-            Utility util = new Utility();
+            string ar_oplou = "";
+            string ad_oplou = "";
 
+            Utility util = new Utility();
+            int tmp;
             if (gunBox.Checked)
             {
-                string ar_oplou = t1.Text;
-                string ad_oplou = t2.Text;
+                ar_oplou = t1.Text;
+                ad_oplou = t2.Text;
                 hasGun = true;
-                util.checker(surname, name, fname, mname, adt, amka, bday, address, address_num, tk, region, stathero, kinhto, email, mhtrwo, sullogos);
-                
+                tmp = util.checker(surname, name, fname, mname, adt, amka, bday, address, address_num, tk, region, stathero, kinhto, email, mhtrwo, sullogos, ar_oplou, ad_oplou);
             }
             else
             {
-                util.checker(surname, name, fname, mname, adt, amka, bday, address, address_num, tk, region, stathero, kinhto, email, mhtrwo, sullogos);
+                tmp = util.checker(surname, name, fname, mname, adt, amka, bday, address, address_num, tk, region, stathero, kinhto, email, mhtrwo, sullogos);
+            }
+            if (tmp == 0)
+            {
+                MessageBox.Show("Η καταχώρηση του καινούργιου αθλητή ήταν επιτυχής.", "Επιτυχής Καταχώρηση Αθλητή", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                // MySQL insert
+                //exit form
+            }
+            else
+            {
+                //Console.WriteLine("Wrong values!");
             }
         }
 
@@ -98,9 +110,9 @@ namespace ShootingRange
         {
             if (gunBox.Checked)
             {
-                var height = this.Height;
-                this.Height = this.Height + 60;
-                button1.Location = new Point(280, 267);
+                //var height = this.Height;
+                //this.Height = this.Height + 60;
+                //button1.Location = new Point(280, 267);
                 labelAd.Show();
                 labelAr.Show();
                 t1.Show();
@@ -108,8 +120,8 @@ namespace ShootingRange
             }
             else
             {
-                this.Height = Height - 60;
-                button1.Location = new Point(280, 217);
+                //this.Height = Height - 60;
+                //button1.Location = new Point(280, 217);
                 labelAd.Hide();
                 labelAr.Hide();
                 t1.Hide();

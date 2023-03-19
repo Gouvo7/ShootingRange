@@ -78,10 +78,13 @@ namespace ShootingRange
             monthBox.Items.Add("Οκτώβριος");
             monthBox.Items.Add("Νοέμβριος");
             monthBox.Items.Add("Δεκέμβριος");
-
+            dateBox.SelectedIndex = 0;
+            monthBox.SelectedIndex = 0;
+            //yearBox.SelectedIndex = 0;
             //Console.OutputEncoding = "chcp 1253");
             //Console.OutputEncoding = System.Text.Encoding.GetEncoding("unicode");
             String greek = "Λάκης";
+            //this.BackColor = Color.FromArgb(220, 220, 220);
             byte[] tmp1 = Encoding.Unicode.GetBytes(greek);
             //byte c = 'á';
             Console.WriteLine(Encoding.GetEncoding("unicode").GetString(tmp1));
@@ -103,12 +106,11 @@ namespace ShootingRange
                         list.Add((string)row["athl_LName"]);
                     }
                     dataGridView1.DataSource = ds.Tables[0];
-
+                    list = list.Distinct().ToList();
                     foreach (String x in list)
                     {
-                            BoxSurname.Items.Add(x);                     
+                        BoxSurname.Items.Add(x);                     
                     }
-
                     conn.Close();
                 }
                 catch (Exception e)
@@ -129,13 +131,6 @@ namespace ShootingRange
                 Console.WriteLine('\n' + xt + '\n');
                 yearBox.Items.Add(xt);
             }
-        }
-
-        private void BoxSurname_LostFocus(object sender, EventArgs e)
-        {
-            //BoxSurname.SelectedIndex = BoxSurname;
-            Console.WriteLine("ta exusa");
-            MessageBox.Show("Error: Λάθος όνομα χρήστη ή κωδικός.", "Μήνυμα Λάθους", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -172,16 +167,6 @@ namespace ShootingRange
             {
                 Console.WriteLine("Error: {0}", e1.ToString());
             }
-        }
-
-        private void setSurnameText(string temp)
-        {
-            currTextSurName = temp;
-        }
-
-        private string getSurnameText()
-        {
-            return currTextSurName;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -267,7 +252,8 @@ namespace ShootingRange
                     Console.WriteLine("Error: {0}", e1.ToString());
                 }
             }
-            BoxName.SelectedItem = 0;
+            if (BoxName.Items.Count>0)
+                BoxName.SelectedItem = 0;
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -351,7 +337,12 @@ namespace ShootingRange
 
         private void button5_Click(object sender, EventArgs e)
         {
-            NewAthlete b = new NewAthlete(this);
+            NewAthlete c = new NewAthlete(this);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            NewWeapon d = new NewWeapon(this);
         }
     }
 }
