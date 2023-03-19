@@ -1083,5 +1083,4 @@ namespace ShootingRange
         }
 
     }
-
 }
