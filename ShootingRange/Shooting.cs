@@ -375,80 +375,99 @@ namespace ShootingRange
         private void Submit(object sender, EventArgs e)
         {
             bool valid = true;
-            try
-            {
-                int x1 = Int32.Parse(shoot1.Text);
-                int x2 = Int32.Parse(shoot2.Text);
-                int x3 = Int32.Parse(shoot3.Text);
-                int x4 = Int32.Parse(shoot4.Text);
-                int x5 = Int32.Parse(shoot5.Text);
-                int x6 = Int32.Parse(shoot6.Text);
-                int x7 = Int32.Parse(shoot7.Text);
-                int x8 = Int32.Parse(shoot8.Text);
-                int x9 = Int32.Parse(shoot9.Text);
-                int x10 = Int32.Parse(shoot10.Text);
-                int x11 = Int32.Parse(shoot11.Text);
-                int x12 = Int32.Parse(shoot12.Text);
-                int x13 = Int32.Parse(shoot13.Text);
-                int x14 = Int32.Parse(shoot14.Text);
-                int x15 = Int32.Parse(shoot15.Text);
-                int x16 = Int32.Parse(shoot16.Text);
-                int x17 = Int32.Parse(shoot17.Text);
-                int x18 = Int32.Parse(shoot18.Text);
-                int x19 = Int32.Parse(shoot19.Text);
-                int x20 = Int32.Parse(shoot20.Text);
-                int x21 = Int32.Parse(shoot21.Text);
-                int x22 = Int32.Parse(shoot22.Text);
-                int x23 = Int32.Parse(shoot23.Text);
-                int x24 = Int32.Parse(shoot24.Text);
-                int x25 = Int32.Parse(shoot25.Text);
-                int x26 = Int32.Parse(shoot26.Text);
-                int x27 = Int32.Parse(shoot27.Text);
-                int x28 = Int32.Parse(shoot28.Text);
-                int x29 = Int32.Parse(shoot29.Text);
-                int x30 = Int32.Parse(shoot30.Text);
-                int x31 = Int32.Parse(shoot31.Text);
-                int x32 = Int32.Parse(shoot32.Text);
-                int x33 = Int32.Parse(shoot33.Text);
-                int x34 = Int32.Parse(shoot34.Text);
-                int x35 = Int32.Parse(shoot35.Text);
-                int x36 = Int32.Parse(shoot36.Text);
-                int x37 = Int32.Parse(shoot37.Text);
-                int x38 = Int32.Parse(shoot38.Text);
-                int x39 = Int32.Parse(shoot39.Text);
-                int x40 = Int32.Parse(shoot40.Text);
-                int x41 = Int32.Parse(shoot41.Text);
-                int x42 = Int32.Parse(shoot42.Text);
-                int x43 = Int32.Parse(shoot43.Text);
-                int x44 = Int32.Parse(shoot44.Text);
-                int x45 = Int32.Parse(shoot45.Text);
-                int x46 = Int32.Parse(shoot46.Text);
-                int x47 = Int32.Parse(shoot47.Text);
-                int x48 = Int32.Parse(shoot48.Text);
-                int x49 = Int32.Parse(shoot49.Text);
-                int x50 = Int32.Parse(shoot50.Text);
-                int x51 = Int32.Parse(shoot51.Text);
-                int x52 = Int32.Parse(shoot52.Text);
-                int x53 = Int32.Parse(shoot53.Text);
-                int x54 = Int32.Parse(shoot54.Text);
-                int x55 = Int32.Parse(shoot55.Text);
-                int x56 = Int32.Parse(shoot56.Text);
-                int x57 = Int32.Parse(shoot57.Text);
-                int x58 = Int32.Parse(shoot58.Text);
-                int x59 = Int32.Parse(shoot59.Text);
-                int x60 = Int32.Parse(shoot60.Text);
-
-            }
-            catch (FormatException)
-            {
-                valid = false;
-                Console.WriteLine("Unable to parse ");
-            }
+            int type = 0;
+            int shells = 0;
             if (BoxActivityType.SelectedIndex == 0 || BoxActivityType.SelectedIndex == 2)
             {
-                if (valid)
+                try
                 {
-                    Console.WriteLine("gogo MENS");
+                    int x1 = Int32.Parse(shoot1.Text);
+                    int x2 = Int32.Parse(shoot2.Text);
+                    int x3 = Int32.Parse(shoot3.Text);
+                    int x4 = Int32.Parse(shoot4.Text);
+                    int x5 = Int32.Parse(shoot5.Text);
+                    int x6 = Int32.Parse(shoot6.Text);
+                    int x7 = Int32.Parse(shoot7.Text);
+                    int x8 = Int32.Parse(shoot8.Text);
+                    int x9 = Int32.Parse(shoot9.Text);
+                    int x10 = Int32.Parse(shoot10.Text);
+                    int x11 = Int32.Parse(shoot11.Text);
+                    int x12 = Int32.Parse(shoot12.Text);
+                    int x13 = Int32.Parse(shoot13.Text);
+                    int x14 = Int32.Parse(shoot14.Text);
+                    int x15 = Int32.Parse(shoot15.Text);
+                    int x16 = Int32.Parse(shoot16.Text);
+                    int x17 = Int32.Parse(shoot17.Text);
+                    int x18 = Int32.Parse(shoot18.Text);
+                    int x19 = Int32.Parse(shoot19.Text);
+                    int x20 = Int32.Parse(shoot20.Text);
+                    int x21 = Int32.Parse(shoot21.Text);
+                    int x22 = Int32.Parse(shoot22.Text);
+                    int x23 = Int32.Parse(shoot23.Text);
+                    int x24 = Int32.Parse(shoot24.Text);
+                    int x25 = Int32.Parse(shoot25.Text);
+                    int x26 = Int32.Parse(shoot26.Text);
+                    int x27 = Int32.Parse(shoot27.Text);
+                    int x28 = Int32.Parse(shoot28.Text);
+                    int x29 = Int32.Parse(shoot29.Text);
+                    int x30 = Int32.Parse(shoot30.Text);
+                    int x31 = Int32.Parse(shoot31.Text);
+                    int x32 = Int32.Parse(shoot32.Text);
+                    int x33 = Int32.Parse(shoot33.Text);
+                    int x34 = Int32.Parse(shoot34.Text);
+                    int x35 = Int32.Parse(shoot35.Text);
+                    int x36 = Int32.Parse(shoot36.Text);
+                    int x37 = Int32.Parse(shoot37.Text);
+                    int x38 = Int32.Parse(shoot38.Text);
+                    int x39 = Int32.Parse(shoot39.Text);
+                    int x40 = Int32.Parse(shoot40.Text);
+                    int x41 = Int32.Parse(shoot41.Text);
+                    int x42 = Int32.Parse(shoot42.Text);
+                    int x43 = Int32.Parse(shoot43.Text);
+                    int x44 = Int32.Parse(shoot44.Text);
+                    int x45 = Int32.Parse(shoot45.Text);
+                    int x46 = Int32.Parse(shoot46.Text);
+                    int x47 = Int32.Parse(shoot47.Text);
+                    int x48 = Int32.Parse(shoot48.Text);
+                    int x49 = Int32.Parse(shoot49.Text);
+                    int x50 = Int32.Parse(shoot50.Text);
+                    int x51 = Int32.Parse(shoot51.Text);
+                    int x52 = Int32.Parse(shoot52.Text);
+                    int x53 = Int32.Parse(shoot53.Text);
+                    int x54 = Int32.Parse(shoot54.Text);
+                    int x55 = Int32.Parse(shoot55.Text);
+                    int x56 = Int32.Parse(shoot56.Text);
+                    int x57 = Int32.Parse(shoot57.Text);
+                    int x58 = Int32.Parse(shoot58.Text);
+                    int x59 = Int32.Parse(shoot59.Text);
+                    int x60 = Int32.Parse(shoot60.Text);
+                }
+                catch (FormatException)
+                {
+                    valid = false;
+                    MessageBox.Show("Το σκορ από την κάθε βολή πρέπει να είναι ακέραιος αριθμός!", "Σφάλμα", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                if (BoxAmmoStr.SelectedIndex == 0)
+                {
+                    try
+                    {
+                        shells = Int32.Parse(AmmoOrg.Text);
+                    }
+                    catch (FormatException)
+                    {
+                        MessageBox.Show("Οι καταναλωθέντες σφαίρες του σωματείου πρέπει να είναι ακέραιος αριθμός!", "Σφάλμα", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    try
+                    {
+                        shells = Int32.Parse(AmmoAth.Text);
+                    }
+                    catch (FormatException)
+                    {
+                        MessageBox.Show("Οι καταναλωθέντες σφαίρες του αθλητή πρέπει να είναι ακέραιος αριθμός!", "Σφάλμα", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
         }
@@ -722,20 +741,9 @@ namespace ShootingRange
             }
             catch (FormatException)
             {
-                //Console.WriteLine("Το σκορ πρέπει να είναι ακέραια τιμή!");
-                MessageBox.Show("Error: Το σκορ πρέπει να είναι ακέραια τιμή!", "Μήνυμα Λάθους", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                shoot1.Text = "";
-                shoot2.Text = "";
-                shoot3.Text = "";
-                shoot4.Text = "";
-                shoot5.Text = "";
-                shoot6.Text = "";
-                shoot7.Text = "";
-                shoot8.Text = "";
-                shoot9.Text = "";
-                shoot10.Text = "";
-                shoot10Res.Text = "";
+                Console.WriteLine("Το σκορ πρέπει να είναι ακέραια τιμή!");
             }
+
 
 
         }
@@ -1134,6 +1142,7 @@ namespace ShootingRange
             AmmoOrg.Text = "";
             AmmoAth.Text = "";
         }
+
     }
 
 }
