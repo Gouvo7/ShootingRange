@@ -456,9 +456,10 @@ namespace ShootingRange
                     catch (FormatException)
                     {
                         MessageBox.Show("Οι καταναλωθέντες σφαίρες του σωματείου πρέπει να είναι ακέραιος αριθμός!", "Σφάλμα", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        valid = false;
                     }
                 }
-                else
+                else if (BoxAmmoStr.SelectedIndex == 1)
                 {
                     try
                     {
@@ -467,6 +468,70 @@ namespace ShootingRange
                     catch (FormatException)
                     {
                         MessageBox.Show("Οι καταναλωθέντες σφαίρες του αθλητή πρέπει να είναι ακέραιος αριθμός!", "Σφάλμα", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        valid = false;
+                    }
+                }
+                else
+                {
+                    try
+                    {
+                        int shells_org = Int32.Parse(AmmoOrg.Text);
+                        int shells_ath = Int32.Parse(AmmoAth.Text);
+                        shells = shells_org + shells_ath;
+                    }
+                    catch (FormatException)
+                    {
+                        MessageBox.Show("Για την δήλωση μίξης σφαιρών, απαιτείται η συμπλήρωση και των 2 πεδίων!", "Σφάλμα", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        valid = false;
+                    }
+                }
+                if (valid)
+                {
+                    if (shells < 60)
+                    {
+                        MessageBox.Show("Για τα είδη δραστηριότητας 'Αγώνας' ή 'Αγώνας/Προπόνηση', πρέπει ο αριθμός των καταναλωθέντων σφαιρών να είναι μεγαλύτερος από 60.", "Σφάλμα", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            else
+            {
+                if (BoxAmmoStr.SelectedIndex == 0)
+                {
+                    try
+                    {
+                        shells = Int32.Parse(AmmoOrg.Text);
+                    }
+                    catch (FormatException)
+                    {
+                        MessageBox.Show("Οι καταναλωθέντες σφαίρες του σωματείου πρέπει να είναι ακέραιος αριθμός!", "Σφάλμα", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        valid = false;
+                    }
+                }
+                else if (BoxAmmoStr.SelectedIndex == 1)
+                {
+                    try
+                    {
+                        shells = Int32.Parse(AmmoAth.Text);
+                    }
+                    catch (FormatException)
+                    {
+                        MessageBox.Show("Οι καταναλωθέντες σφαίρες του αθλητή πρέπει να είναι ακέραιος αριθμός!", "Σφάλμα", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        valid = false;
+                    }
+                }
+                else
+                {
+
+                    try
+                    {
+                        int shells_org = Int32.Parse(AmmoOrg.Text);
+                        int shells_ath = Int32.Parse(AmmoAth.Text);
+                        shells = shells_org + shells_ath;
+                    }
+                    catch (FormatException)
+                    {
+                        MessageBox.Show("Για την δήλωση μίξης σφαιρών, απαιτείται η συμπλήρωση και των 2 πεδίων!", "Σφάλμα", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        valid = false;
                     }
                 }
             }
@@ -739,12 +804,10 @@ namespace ShootingRange
                 }
                 shoot10Res.Text = res.ToString();
             }
-            catch (FormatException)
+            catch (FormatException z)
             {
-                Console.WriteLine("Το σκορ πρέπει να είναι ακέραια τιμή!");
+                shoot10Res.Text = "Λάθος";
             }
-
-
 
         }
 
@@ -797,19 +860,7 @@ namespace ShootingRange
             }
             catch (FormatException)
             {
-                //Console.WriteLine("Το σκορ πρέπει να είναι ακέραια τιμή!");
-                MessageBox.Show("Error: Το σκορ πρέπει να είναι ακέραια τιμή!", "Μήνυμα Λάθους", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                shoot11.Text = "";
-                shoot12.Text = "";
-                shoot13.Text = "";
-                shoot14.Text = "";
-                shoot15.Text = "";
-                shoot16.Text = "";
-                shoot17.Text = "";
-                shoot18.Text = "";
-                shoot19.Text = "";
-                shoot20.Text = "";
-                shoot20Res.Text = "";
+               shoot20Res.Text = "Λάθος";
             }
         }
 
@@ -862,19 +913,7 @@ namespace ShootingRange
             }
             catch (FormatException)
             {
-                //Console.WriteLine("Το σκορ πρέπει να είναι ακέραια τιμή!");
-                MessageBox.Show("Error: Το σκορ πρέπει να είναι ακέραια τιμή!", "Μήνυμα Λάθους", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                shoot21.Text = "";
-                shoot22.Text = "";
-                shoot23.Text = "";
-                shoot24.Text = "";
-                shoot25.Text = "";
-                shoot26.Text = "";
-                shoot27.Text = "";
-                shoot28.Text = "";
-                shoot29.Text = "";
-                shoot30.Text = "";
-                shoot30Res.Text = "";
+                shoot30Res.Text = "Λάθος";
             }
         }
         private void txt4_Leave(object sender, EventArgs e)
@@ -926,19 +965,7 @@ namespace ShootingRange
             }
             catch (FormatException)
             {
-                //Console.WriteLine("Το σκορ πρέπει να είναι ακέραια τιμή!");
-                MessageBox.Show("Error: Το σκορ πρέπει να είναι ακέραια τιμή!", "Μήνυμα Λάθους", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                shoot31.Text = "";
-                shoot32.Text = "";
-                shoot33.Text = "";
-                shoot34.Text = "";
-                shoot35.Text = "";
-                shoot36.Text = "";
-                shoot37.Text = "";
-                shoot38.Text = "";
-                shoot39.Text = "";
-                shoot40.Text = "";
-                shoot40Res.Text = "";
+                shoot40Res.Text = "Λάθος";
             }
         }
         private void txt5_Leave(object sender, EventArgs e)
@@ -990,19 +1017,7 @@ namespace ShootingRange
             }
             catch (FormatException)
             {
-                //Console.WriteLine("Το σκορ πρέπει να είναι ακέραια τιμή!");
-                MessageBox.Show("Error: Το σκορ πρέπει να είναι ακέραια τιμή!", "Μήνυμα Λάθους", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                shoot41.Text = "";
-                shoot42.Text = "";
-                shoot43.Text = "";
-                shoot44.Text = "";
-                shoot45.Text = "";
-                shoot46.Text = "";
-                shoot47.Text = "";
-                shoot48.Text = "";
-                shoot49.Text = "";
-                shoot50.Text = "";
-                shoot50Res.Text = "";
+                shoot50Res.Text = "Λάθος";
             }
         }
 
@@ -1055,19 +1070,7 @@ namespace ShootingRange
             }
             catch (FormatException)
             {
-                //Console.WriteLine("Το σκορ πρέπει να είναι ακέραια τιμή!");
-                MessageBox.Show("Error: Το σκορ πρέπει να είναι ακέραια τιμή!", "Μήνυμα Λάθους", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                shoot51.Text = "";
-                shoot52.Text = "";
-                shoot53.Text = "";
-                shoot54.Text = "";
-                shoot55.Text = "";
-                shoot56.Text = "";
-                shoot57.Text = "";
-                shoot58.Text = "";
-                shoot59.Text = "";
-                shoot60.Text = "";
-                shoot60Res.Text = "";
+                shoot60Res.Text = "Λάθος";
             }
         }
 
