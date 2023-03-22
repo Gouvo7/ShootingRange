@@ -226,6 +226,7 @@ namespace ShootingRange
             this.BoxName.Size = new System.Drawing.Size(124, 21);
             this.BoxName.TabIndex = 2;
             this.BoxName.SelectedIndexChanged += new System.EventHandler(this.BoxName_SelectedIndexChanged);
+            this.BoxName.Leave += new System.EventHandler(this.BoxName_SelectedIndexChanged);
             // 
             // BoxSurname
             // 
@@ -1734,7 +1735,7 @@ namespace ShootingRange
             // BoxDate
             // 
             this.BoxDate.Location = new System.Drawing.Point(821, 126);
-            this.BoxDate.MaxLength = 3;
+            this.BoxDate.MaxLength = 10;
             this.BoxDate.Name = "BoxDate";
             this.BoxDate.Size = new System.Drawing.Size(109, 20);
             this.BoxDate.TabIndex = 10006;

@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySqlConnector;
+using System.Text.RegularExpressions;
+
 
 
 namespace ShootingRange
@@ -163,22 +165,7 @@ namespace ShootingRange
         {
             BoxName.Items.Clear();
             BoxName.Text = "";
-            BoxMhtrwo.Items.Clear();
-            BoxMhtrwo.Text = "";
-            BoxSullogos.Items.Clear();
-            BoxSullogos.Text = "";
-            //BoxTupos.Items.Clear();
-            //BoxTupos.Text = "";
-            BoxArOplou.Items.Clear();
-            BoxArOplou.Text = "";
-            BoxArAdeia.Items.Clear();
-            BoxArAdeia.SelectedItem = "";
-            //BoxProvider.Items.Clear();
-            BoxProvider.Text = "";
-
-            //BoxAmmoConsum.Items.Clear();
-            //BoxAmmoConsum.SelectedItem = "";
-            //BoxMhtrwo.SelectedIndex = 0 ;
+            Clear_Fields();
             Console.WriteLine(BoxSurname.SelectedItem);
             if (BoxSurname.SelectedItem != null)
             {
@@ -186,12 +173,11 @@ namespace ShootingRange
                 {
                     MySqlConnection conn = new MySqlConnection(ConnString);
                     conn.Open();
-                    string query = "SELECT * FROM athl where athl_LName like \'%" + BoxSurname.SelectedItem.ToString() + "%\'";
+                    string query = "SELECT * FROM athl where athl_LName like \'%" + BoxSurname.Text + "%\'";
                     MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
                     DataSet ds = new DataSet();
                     da.Fill(ds, "athl");
                     DataTable dt = ds.Tables["athl"];
-                    Console.WriteLine(dt);
                     List<string> list = new List<string>();
                     foreach (DataRow row in dt.Rows)
                     {
@@ -212,33 +198,30 @@ namespace ShootingRange
                 }
             }
         }
-
-        private void BoxName_SelectedIndexChanged(object sender, EventArgs e)
+        private void Clear_Fields()
         {
             BoxMhtrwo.Items.Clear();
             BoxMhtrwo.Text = "";
             BoxSullogos.Items.Clear();
             BoxSullogos.Text = "";
-            //BoxTupos.Items.Clear();
-            //BoxTupos.Text = "";
             BoxArOplou.Items.Clear();
             BoxArOplou.Text = "";
             BoxArAdeia.Items.Clear();
-            BoxArAdeia.SelectedItem = "";
-            //BoxProvider.Items.Clear();
+            BoxArAdeia.Text = "";
             BoxProvider.Text = "";
+        }
 
-            //BoxAmmoConsum.Items.Clear();
-            //BoxAmmoConsum.SelectedItem = "";
-            //BoxName.Items.Clear();
-            Console.WriteLine(BoxSurname.SelectedItem);
+        private void BoxName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Clear_Fields();
             if (BoxSurname.SelectedItem != null)
             {
                 try
                 {
+
                     MySqlConnection conn = new MySqlConnection(ConnString);
                     conn.Open();
-                    string query = "SELECT * FROM athl where athl_LName like \'%" + BoxSurname.SelectedItem.ToString() + "%\' and athl_FName like \'%" + BoxName.SelectedItem.ToString() + "%\';";
+                    string query = "SELECT * FROM athl where athl_LName = \'" + BoxSurname.Text + "\' and athl_FName = \'" + BoxName.Text + "\';";
                     MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
                     DataSet ds = new DataSet();
                     da.Fill(ds, "athl");
@@ -247,6 +230,10 @@ namespace ShootingRange
                     List<string> list1 = new List<string>();
                     string ar_adeia = "";
                     int athl_ID = (int)dt.Rows[0]["athl_ID"];
+                    if (dt.Rows.Count == 0)
+                    {
+                        Clear_Fields();
+                    }
                     foreach (DataRow row in dt.Rows)
                     {
                         list.Add((string)row["athl_Mhtrwo"]);
@@ -305,7 +292,6 @@ namespace ShootingRange
                 {
                     MySqlConnection conn = new MySqlConnection(ConnString);
                     conn.Open();
-                    Console.WriteLine(BoxArOplou.SelectedItem.ToString());
                     string query = "select * from weapon where weapon_Arithmos = \'" + BoxArOplou.SelectedItem.ToString() + "\';";
                     MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
                     DataSet ds = new DataSet();
@@ -379,6 +365,10 @@ namespace ShootingRange
             int shells = 0;
             if (BoxActivityType.SelectedIndex == 0 || BoxActivityType.SelectedIndex == 2)
             {
+                if (BoxActivityType.SelectedIndex == 0)
+                    type = 1;
+                else
+                    type = 2;
                 try
                 {
                     int x1 = Int32.Parse(shoot1.Text);
@@ -447,7 +437,8 @@ namespace ShootingRange
                     valid = false;
                     MessageBox.Show("Το σκορ από την κάθε βολή πρέπει να είναι ακέραιος αριθμός!", "Σφάλμα", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                if (BoxAmmoStr.SelectedIndex == 0)
+                
+                 if (BoxAmmoStr.SelectedIndex == 0)
                 {
                     try
                     {
@@ -490,11 +481,74 @@ namespace ShootingRange
                     if (shells < 60)
                     {
                         MessageBox.Show("Για τα είδη δραστηριότητας 'Αγώνας' ή 'Αγώνας/Προπόνηση', πρέπει ο αριθμός των καταναλωθέντων σφαιρών να είναι μεγαλύτερος από 60.", "Σφάλμα", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        valid = false;
+                    }
+                    else
+                    { 
+                        Regex reg_date = new Regex(@"(^0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/(\d{4}$)");
+                        if (!reg_date.IsMatch(BoxDate.Text))
+                        {
+                            MessageBox.Show("Η ημερομηνία δεν είναι σε σωστή μορφή!", "Σφάλμα", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else
+                        {
+                            if (valuesFilled())
+                            {
+                                try
+                                {
+                                    MySqlConnection conn = new MySqlConnection(ConnString);
+                                    conn.Open();
+                                    string query = "SELECT athl_ID FROM SHOOT.ATHL WHERE athl_LName = \'" + BoxSurname.Text + "\' AND athl_FName = \'" + BoxName.Text + "\';";
+                                    string date = BoxDate.Text;
+
+                                    MySqlDataAdapter d = new MySqlDataAdapter(query, conn);
+                                    DataSet ds1 = new DataSet();
+                                    d.Fill(ds1, "athl");
+                                    DataTable dt1 = ds1.Tables["athl"];
+                                    string test = (string)dt1.Rows[0]["athl_ID"].ToString();
+
+
+                                    DateTime n;
+                                    n = DateTime.Parse(BoxDate.Text);
+                                    Console.WriteLine(n.ToString("yyyy-MM-dd"));
+                                    
+                                    query = "INSERT INTO SHOTS_A ( athl_ID, Activity_Type, shots_Date, shots_1, shots_2, shots_3, shots_4, shots_5, shots_6, shots_7, shots_8, shots_9, shots_10, shots_10R," +
+                                        " shots_11, shots_12, shots_13, shots_14, shots_15, shots_16, shots_17, shots_18, shots_19, shots_20, shots_20R, " +
+                                        "shots_21, shots_22, shots_23, shots_24, shots_25, shots_26, shots_27, shots_28, shots_29, shots_30, shots_30R," +
+                                        " shots_31, shots_32, shots_33, shots_34, shots_35, shots_36, shots_37, shots_38, shots_39, shots_40, shots_40R," +
+                                        " shots_41, shots_42, shots_43, shots_44, shots_45, shots_46, shots_47, shots_48, shots_49, shots_50, shots_50R," +
+                                        " shots_51, shots_52, shots_53, shots_54, shots_55, shots_56, shots_57, shots_58, shots_59, shots_60, shots_60R) " +
+                                        "VALUES (@athl_ID, @type, @date, @s1,@s2,@s3,@s4,@s5,@s6,@s7,@s8,@s9,@s10,@s10R,@s11,@s12,@s13,@s14,@s15,@s16,@s17,@s18,@s19,@s20,@s20R,@s21,@s22,@s23,@s24,@s25,@s26,@s27,@s28,@s29,@s30,@s30R" +
+                                        ",@s31,@s32,@s33,@s34,@s35,@s36,@s37,@s38,@s39,@s40,@s40R,@s41,@s42,@s43,@s44,@s45,@s46,@s47,@s48,@s49,@s50R,@s51,@s52,@s53,@s54,@s55,@s56,@s57,@s58,@s59,@s60,@s60R)";
+                                    MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
+                                    DataSet ds = new DataSet();
+                                    da.Fill(ds, "athl");
+                                    DataTable dt = ds.Tables["athl"];
+                                    List<string> list = new List<string>();
+                                    foreach (DataRow row in dt.Rows)
+                                    {
+                                        list.Add((string)row["athl_LName"]);
+                                    }
+                                    //dataGridView1.DataSource = ds.Tables[0];
+                                    list = list.Distinct().ToList();
+                                    foreach (String x in list)
+                                    {
+                                        BoxSurname.Items.Add(x);
+                                    }
+                                    conn.Close();
+                                }
+                                catch (Exception db)
+                                {
+                                    MessageBox.Show("Πρόβλημα σύνδεσης με την βάση δεδομένων", "Σφάλμα", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                            }
+                        }
                     }
                 }
             }
             else
             {
+                type = 3;
                 if (BoxAmmoStr.SelectedIndex == 0)
                 {
                     try
@@ -521,7 +575,6 @@ namespace ShootingRange
                 }
                 else
                 {
-
                     try
                     {
                         int shells_org = Int32.Parse(AmmoOrg.Text);
@@ -804,13 +857,11 @@ namespace ShootingRange
                 }
                 shoot10Res.Text = res.ToString();
             }
-            catch (FormatException z)
+            catch (FormatException)
             {
                 shoot10Res.Text = "Λάθος";
             }
-
         }
-
         private void txt2_Leave(object sender, EventArgs e)
         {
             int res = 0;
@@ -863,7 +914,6 @@ namespace ShootingRange
                shoot20Res.Text = "Λάθος";
             }
         }
-
         private void txt3_Leave(object sender, EventArgs e)
         {
             int res = 0;
@@ -1146,6 +1196,18 @@ namespace ShootingRange
             AmmoAth.Text = "";
         }
 
+        private bool valuesFilled()
+        {
+            if (BoxMhtrwo.Text !=null && BoxMhtrwo.Text != "" && BoxSullogos.Text != null && BoxSullogos.Text != "" && BoxTupos.Text != null && BoxTupos.Text != "" && BoxArOplou.Text != null && BoxArOplou.Text != ""
+                && BoxArAdeia.Text != null && BoxArAdeia.Text != "" && BoxProvider.Text != null && BoxProvider.Text != "" && BoxTupos.Text != null && BoxTupos.Text != "" && BoxArOplou.Text != null && BoxArOplou.Text != "" )
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 
 }
