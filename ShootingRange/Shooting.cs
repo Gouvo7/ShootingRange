@@ -363,82 +363,76 @@ namespace ShootingRange
             bool valid = true;
             int type = 0;
             int shells = 0;
+            int x1;
+            int x2;
+            int x3;
+            int x4;
+            int x5;
+            int x6;
+            int x7;
+            int x8;
+            int x9;
+            int x10;
+            int x11;
+            int x12;
+            int x13;
+            int x14;
+            int x15;
+            int x16;
+            int x17;
+            int x18;
+            int x19;
+            int x20;
+            int x21;
+            int x22;
+            int x23;
+            int x24;
+            int x25;
+            int x26;
+            int x27;
+            int x28;
+            int x29;
+            int x30;
+            int x31;
+            int x32;
+            int x33;
+            int x34;
+            int x35;
+            int x36;
+            int x37;
+            int x38;
+            int x39;
+            int x40;
+            int x41;
+            int x42;
+            int x43;
+            int x44;
+            int x45;
+            int x46;
+            int x47;
+            int x48;
+            int x49;
+            int x50;
+            int x51;
+            int x52;
+            int x53;
+            int x54;
+            int x55;
+            int x56;
+            int x57;
+            int x58;
+            int x59;
+            int x60;
             if (BoxActivityType.SelectedIndex == 0 || BoxActivityType.SelectedIndex == 2)
             {
-                if (BoxActivityType.SelectedIndex == 0)
-                    type = 1;
-                else
-                    type = 2;
-                try
-                {
-                    int x1 = Int32.Parse(shoot1.Text);
-                    int x2 = Int32.Parse(shoot2.Text);
-                    int x3 = Int32.Parse(shoot3.Text);
-                    int x4 = Int32.Parse(shoot4.Text);
-                    int x5 = Int32.Parse(shoot5.Text);
-                    int x6 = Int32.Parse(shoot6.Text);
-                    int x7 = Int32.Parse(shoot7.Text);
-                    int x8 = Int32.Parse(shoot8.Text);
-                    int x9 = Int32.Parse(shoot9.Text);
-                    int x10 = Int32.Parse(shoot10.Text);
-                    int x11 = Int32.Parse(shoot11.Text);
-                    int x12 = Int32.Parse(shoot12.Text);
-                    int x13 = Int32.Parse(shoot13.Text);
-                    int x14 = Int32.Parse(shoot14.Text);
-                    int x15 = Int32.Parse(shoot15.Text);
-                    int x16 = Int32.Parse(shoot16.Text);
-                    int x17 = Int32.Parse(shoot17.Text);
-                    int x18 = Int32.Parse(shoot18.Text);
-                    int x19 = Int32.Parse(shoot19.Text);
-                    int x20 = Int32.Parse(shoot20.Text);
-                    int x21 = Int32.Parse(shoot21.Text);
-                    int x22 = Int32.Parse(shoot22.Text);
-                    int x23 = Int32.Parse(shoot23.Text);
-                    int x24 = Int32.Parse(shoot24.Text);
-                    int x25 = Int32.Parse(shoot25.Text);
-                    int x26 = Int32.Parse(shoot26.Text);
-                    int x27 = Int32.Parse(shoot27.Text);
-                    int x28 = Int32.Parse(shoot28.Text);
-                    int x29 = Int32.Parse(shoot29.Text);
-                    int x30 = Int32.Parse(shoot30.Text);
-                    int x31 = Int32.Parse(shoot31.Text);
-                    int x32 = Int32.Parse(shoot32.Text);
-                    int x33 = Int32.Parse(shoot33.Text);
-                    int x34 = Int32.Parse(shoot34.Text);
-                    int x35 = Int32.Parse(shoot35.Text);
-                    int x36 = Int32.Parse(shoot36.Text);
-                    int x37 = Int32.Parse(shoot37.Text);
-                    int x38 = Int32.Parse(shoot38.Text);
-                    int x39 = Int32.Parse(shoot39.Text);
-                    int x40 = Int32.Parse(shoot40.Text);
-                    int x41 = Int32.Parse(shoot41.Text);
-                    int x42 = Int32.Parse(shoot42.Text);
-                    int x43 = Int32.Parse(shoot43.Text);
-                    int x44 = Int32.Parse(shoot44.Text);
-                    int x45 = Int32.Parse(shoot45.Text);
-                    int x46 = Int32.Parse(shoot46.Text);
-                    int x47 = Int32.Parse(shoot47.Text);
-                    int x48 = Int32.Parse(shoot48.Text);
-                    int x49 = Int32.Parse(shoot49.Text);
-                    int x50 = Int32.Parse(shoot50.Text);
-                    int x51 = Int32.Parse(shoot51.Text);
-                    int x52 = Int32.Parse(shoot52.Text);
-                    int x53 = Int32.Parse(shoot53.Text);
-                    int x54 = Int32.Parse(shoot54.Text);
-                    int x55 = Int32.Parse(shoot55.Text);
-                    int x56 = Int32.Parse(shoot56.Text);
-                    int x57 = Int32.Parse(shoot57.Text);
-                    int x58 = Int32.Parse(shoot58.Text);
-                    int x59 = Int32.Parse(shoot59.Text);
-                    int x60 = Int32.Parse(shoot60.Text);
-                }
-                catch (FormatException)
-                {
-                    valid = false;
-                    MessageBox.Show("Το σκορ από την κάθε βολή πρέπει να είναι ακέραιος αριθμός!", "Σφάλμα", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
                 
-                 if (BoxAmmoStr.SelectedIndex == 0)
+                if (BoxActivityType.SelectedIndex == 0) { 
+                    type = 1;
+                }
+                else { 
+                    type = 2;
+                }
+                if (BoxAmmoStr.SelectedIndex == 0)
                 {
                     try
                     {
@@ -494,8 +488,69 @@ namespace ShootingRange
                         {
                             if (valuesFilled())
                             {
+                                bool completed = false;
                                 try
                                 {
+                                    x1 = Int32.Parse(shoot1.Text);
+                                    x2 = Int32.Parse(shoot2.Text);
+                                    x3 = Int32.Parse(shoot3.Text);
+                                    x4 = Int32.Parse(shoot4.Text);
+                                    x5 = Int32.Parse(shoot5.Text);
+                                    x6 = Int32.Parse(shoot6.Text);
+                                    x7 = Int32.Parse(shoot7.Text);
+                                    x8 = Int32.Parse(shoot8.Text);
+                                    x9 = Int32.Parse(shoot9.Text);
+                                    x10 = Int32.Parse(shoot10.Text);
+                                    x11 = Int32.Parse(shoot11.Text);
+                                    x12 = Int32.Parse(shoot12.Text);
+                                    x13 = Int32.Parse(shoot13.Text);
+                                    x14 = Int32.Parse(shoot14.Text);
+                                    x15 = Int32.Parse(shoot15.Text);
+                                    x16 = Int32.Parse(shoot16.Text);
+                                    x17 = Int32.Parse(shoot17.Text);
+                                    x18 = Int32.Parse(shoot18.Text);
+                                    x19 = Int32.Parse(shoot19.Text);
+                                    x20 = Int32.Parse(shoot20.Text);
+                                    x21 = Int32.Parse(shoot21.Text);
+                                    x22 = Int32.Parse(shoot22.Text);
+                                    x23 = Int32.Parse(shoot23.Text);
+                                    x24 = Int32.Parse(shoot24.Text);
+                                    x25 = Int32.Parse(shoot25.Text);
+                                    x26 = Int32.Parse(shoot26.Text);
+                                    x27 = Int32.Parse(shoot27.Text);
+                                    x28 = Int32.Parse(shoot28.Text);
+                                    x29 = Int32.Parse(shoot29.Text);
+                                    x30 = Int32.Parse(shoot30.Text);
+                                    x31 = Int32.Parse(shoot31.Text);
+                                    x32 = Int32.Parse(shoot32.Text);
+                                    x33 = Int32.Parse(shoot33.Text);
+                                    x34 = Int32.Parse(shoot34.Text);
+                                    x35 = Int32.Parse(shoot35.Text);
+                                    x36 = Int32.Parse(shoot36.Text);
+                                    x37 = Int32.Parse(shoot37.Text);
+                                    x38 = Int32.Parse(shoot38.Text);
+                                    x39 = Int32.Parse(shoot39.Text);
+                                    x40 = Int32.Parse(shoot40.Text);
+                                    x41 = Int32.Parse(shoot41.Text);
+                                    x42 = Int32.Parse(shoot42.Text);
+                                    x43 = Int32.Parse(shoot43.Text);
+                                    x44 = Int32.Parse(shoot44.Text);
+                                    x45 = Int32.Parse(shoot45.Text);
+                                    x46 = Int32.Parse(shoot46.Text);
+                                    x47 = Int32.Parse(shoot47.Text);
+                                    x48 = Int32.Parse(shoot48.Text);
+                                    x49 = Int32.Parse(shoot49.Text);
+                                    x50 = Int32.Parse(shoot50.Text);
+                                    x51 = Int32.Parse(shoot51.Text);
+                                    x52 = Int32.Parse(shoot52.Text);
+                                    x53 = Int32.Parse(shoot53.Text);
+                                    x54 = Int32.Parse(shoot54.Text);
+                                    x55 = Int32.Parse(shoot55.Text);
+                                    x56 = Int32.Parse(shoot56.Text);
+                                    x57 = Int32.Parse(shoot57.Text);
+                                    x58 = Int32.Parse(shoot58.Text);
+                                    x59 = Int32.Parse(shoot59.Text);
+                                    x60 = Int32.Parse(shoot60.Text);
                                     MySqlConnection conn = new MySqlConnection(ConnString);
                                     conn.Open();
                                     string query = "SELECT athl_ID FROM SHOOT.ATHL WHERE athl_LName = \'" + BoxSurname.Text + "\' AND athl_FName = \'" + BoxName.Text + "\';";
@@ -505,41 +560,115 @@ namespace ShootingRange
                                     DataSet ds1 = new DataSet();
                                     d.Fill(ds1, "athl");
                                     DataTable dt1 = ds1.Tables["athl"];
-                                    string test = (string)dt1.Rows[0]["athl_ID"].ToString();
-
+                                    string athlete_ID = (string)dt1.Rows[0]["athl_ID"].ToString();
+                                    conn.Close();
 
                                     DateTime n;
                                     n = DateTime.Parse(BoxDate.Text);
                                     Console.WriteLine(n.ToString("yyyy-MM-dd"));
-                                    
+
                                     query = "INSERT INTO SHOTS_A ( athl_ID, Activity_Type, shots_Date, shots_1, shots_2, shots_3, shots_4, shots_5, shots_6, shots_7, shots_8, shots_9, shots_10, shots_10R," +
                                         " shots_11, shots_12, shots_13, shots_14, shots_15, shots_16, shots_17, shots_18, shots_19, shots_20, shots_20R, " +
                                         "shots_21, shots_22, shots_23, shots_24, shots_25, shots_26, shots_27, shots_28, shots_29, shots_30, shots_30R," +
                                         " shots_31, shots_32, shots_33, shots_34, shots_35, shots_36, shots_37, shots_38, shots_39, shots_40, shots_40R," +
                                         " shots_41, shots_42, shots_43, shots_44, shots_45, shots_46, shots_47, shots_48, shots_49, shots_50, shots_50R," +
                                         " shots_51, shots_52, shots_53, shots_54, shots_55, shots_56, shots_57, shots_58, shots_59, shots_60, shots_60R) " +
-                                        "VALUES (@athl_ID, @type, @date, @s1,@s2,@s3,@s4,@s5,@s6,@s7,@s8,@s9,@s10,@s10R,@s11,@s12,@s13,@s14,@s15,@s16,@s17,@s18,@s19,@s20,@s20R,@s21,@s22,@s23,@s24,@s25,@s26,@s27,@s28,@s29,@s30,@s30R" +
-                                        ",@s31,@s32,@s33,@s34,@s35,@s36,@s37,@s38,@s39,@s40,@s40R,@s41,@s42,@s43,@s44,@s45,@s46,@s47,@s48,@s49,@s50R,@s51,@s52,@s53,@s54,@s55,@s56,@s57,@s58,@s59,@s60,@s60R)";
-                                    MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
-                                    DataSet ds = new DataSet();
-                                    da.Fill(ds, "athl");
-                                    DataTable dt = ds.Tables["athl"];
-                                    List<string> list = new List<string>();
-                                    foreach (DataRow row in dt.Rows)
-                                    {
-                                        list.Add((string)row["athl_LName"]);
-                                    }
-                                    //dataGridView1.DataSource = ds.Tables[0];
-                                    list = list.Distinct().ToList();
-                                    foreach (String x in list)
-                                    {
-                                        BoxSurname.Items.Add(x);
-                                    }
+                                        "VALUES (@athl_ID, @type, @date, @s1,@s2,@s3,@s4,@s5,@s6,@s7,@s8,@s9,@s10,@s10R," +
+                                        "@s11,@s12,@s13,@s14,@s15,@s16,@s17,@s18,@s19,@s20,@s20R" +
+                                        ",@s21,@s22,@s23,@s24,@s25,@s26,@s27,@s28,@s29,@s30,@s30R" +
+                                        ",@s31,@s32,@s33,@s34,@s35,@s36,@s37,@s38,@s39,@s40,@s40R" +
+                                        ",@s41,@s42,@s43,@s44,@s45,@s46,@s47,@s48,@s49,@s50,@s50R" +
+                                        ",@s51,@s52,@s53,@s54,@s55,@s56,@s57,@s58,@s59,@s60,@s60R)";
+                                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                                    cmd.Parameters.Add("@athl_ID", DbType.Int32).Value = Int32.Parse(athlete_ID);
+                                    cmd.Parameters.Add("@type", DbType.Int32).Value = type;
+                                    cmd.Parameters.Add("@date", DbType.Date).Value = n.ToString("yyyy-MM-dd");
+                                    cmd.Parameters.Add("@s1", DbType.Int32).Value = x1;
+                                    cmd.Parameters.Add("@s2", DbType.Int32).Value = x2;
+                                    cmd.Parameters.Add("@s3", DbType.Int32).Value = x3;
+                                    cmd.Parameters.Add("@s4", DbType.Int32).Value = x4;
+                                    cmd.Parameters.Add("@s5", DbType.Int32).Value = x5;
+                                    cmd.Parameters.Add("@s6", DbType.Int32).Value = x6;
+                                    cmd.Parameters.Add("@s7", DbType.Int32).Value = x7;
+                                    cmd.Parameters.Add("@s8", DbType.Int32).Value = x8;
+                                    cmd.Parameters.Add("@s9", DbType.Int32).Value = x9;
+                                    cmd.Parameters.Add("@s10", DbType.Int32).Value = x10;
+                                    cmd.Parameters.Add("@s11", DbType.Int32).Value = x11;
+                                    cmd.Parameters.Add("@s12", DbType.Int32).Value = x12;
+                                    cmd.Parameters.Add("@s13", DbType.Int32).Value = x13;
+                                    cmd.Parameters.Add("@s14", DbType.Int32).Value = x14;
+                                    cmd.Parameters.Add("@s15", DbType.Int32).Value = x15;
+                                    cmd.Parameters.Add("@s16", DbType.Int32).Value = x16;
+                                    cmd.Parameters.Add("@s17", DbType.Int32).Value = x17;
+                                    cmd.Parameters.Add("@s18", DbType.Int32).Value = x18;
+                                    cmd.Parameters.Add("@s19", DbType.Int32).Value = x19;
+                                    cmd.Parameters.Add("@s20", DbType.Int32).Value = x20;
+                                    cmd.Parameters.Add("@s21", DbType.Int32).Value = x21;
+                                    cmd.Parameters.Add("@s22", DbType.Int32).Value = x22;
+                                    cmd.Parameters.Add("@s23", DbType.Int32).Value = x23;
+                                    cmd.Parameters.Add("@s24", DbType.Int32).Value = x24;
+                                    cmd.Parameters.Add("@s25", DbType.Int32).Value = x25;
+                                    cmd.Parameters.Add("@s26", DbType.Int32).Value = x26;
+                                    cmd.Parameters.Add("@s27", DbType.Int32).Value = x27;
+                                    cmd.Parameters.Add("@s28", DbType.Int32).Value = x28;
+                                    cmd.Parameters.Add("@s29", DbType.Int32).Value = x29;
+                                    cmd.Parameters.Add("@s30", DbType.Int32).Value = x30;
+                                    cmd.Parameters.Add("@s31", DbType.Int32).Value = x31;
+                                    cmd.Parameters.Add("@s32", DbType.Int32).Value = x32;
+                                    cmd.Parameters.Add("@s33", DbType.Int32).Value = x33;
+                                    cmd.Parameters.Add("@s34", DbType.Int32).Value = x34;
+                                    cmd.Parameters.Add("@s35", DbType.Int32).Value = x35;
+                                    cmd.Parameters.Add("@s36", DbType.Int32).Value = x36;
+                                    cmd.Parameters.Add("@s37", DbType.Int32).Value = x37;
+                                    cmd.Parameters.Add("@s38", DbType.Int32).Value = x38;
+                                    cmd.Parameters.Add("@s39", DbType.Int32).Value = x39;
+                                    cmd.Parameters.Add("@s40", DbType.Int32).Value = x40;
+                                    cmd.Parameters.Add("@s41", DbType.Int32).Value = x41;
+                                    cmd.Parameters.Add("@s42", DbType.Int32).Value = x42;
+                                    cmd.Parameters.Add("@s43", DbType.Int32).Value = x43;
+                                    cmd.Parameters.Add("@s44", DbType.Int32).Value = x44;
+                                    cmd.Parameters.Add("@s45", DbType.Int32).Value = x45;
+                                    cmd.Parameters.Add("@s46", DbType.Int32).Value = x46;
+                                    cmd.Parameters.Add("@s47", DbType.Int32).Value = x47;
+                                    cmd.Parameters.Add("@s48", DbType.Int32).Value = x48;
+                                    cmd.Parameters.Add("@s49", DbType.Int32).Value = x49;
+                                    cmd.Parameters.Add("@s50", DbType.Int32).Value = x50;
+                                    cmd.Parameters.Add("@s51", DbType.Int32).Value = x51;
+                                    cmd.Parameters.Add("@s52", DbType.Int32).Value = x52;
+                                    cmd.Parameters.Add("@s53", DbType.Int32).Value = x53;
+                                    cmd.Parameters.Add("@s54", DbType.Int32).Value = x54;
+                                    cmd.Parameters.Add("@s55", DbType.Int32).Value = x55;
+                                    cmd.Parameters.Add("@s56", DbType.Int32).Value = x56;
+                                    cmd.Parameters.Add("@s57", DbType.Int32).Value = x57;
+                                    cmd.Parameters.Add("@s58", DbType.Int32).Value = x58;
+                                    cmd.Parameters.Add("@s59", DbType.Int32).Value = x59;
+                                    cmd.Parameters.Add("@s60", DbType.Int32).Value = x60;
+                                    cmd.Parameters.Add("@s10R", DbType.Int32).Value = x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8 + x9 + x10;
+                                    cmd.Parameters.Add("@s20R", DbType.Int32).Value = x11 + x12 + x13 + x14 + x15 + x16 + x17 + x18 + x19 + x20;
+                                    cmd.Parameters.Add("@s30R", DbType.Int32).Value = x21 + x22 + x23 + x24 + x25 + x26 + x27 + x28 + x29 + x30;
+                                    cmd.Parameters.Add("@s40R", DbType.Int32).Value = x31 + x32 + x33 + x34 + x35 + x36 + x37 + x38 + x39 + x40;
+                                    cmd.Parameters.Add("@s50R", DbType.Int32).Value = x41 + x42 + x43 + x44 + x45 + x46 + x47 + x48 + x49 + x50;
+                                    cmd.Parameters.Add("@s60R", DbType.Int32).Value = x51 + x52 + x53 + x54 + x55 + x56 + x57 + x58 + x59 + x60;
+                                    conn.Open();
+                                    cmd.ExecuteNonQuery();
                                     conn.Close();
+                                    completed = true;
                                 }
-                                catch (Exception db)
+                                catch (FormatException exp1)
                                 {
+                                    valid = false;
+                                    MessageBox.Show("Το σκορ από την κάθε βολή πρέπει να είναι ακέραιος αριθμός!", "Σφάλμα", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                                }
+                                catch (MySqlException db)
+                                {
+                                    Console.WriteLine(db);
                                     MessageBox.Show("Πρόβλημα σύνδεσης με την βάση δεδομένων", "Σφάλμα", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                                if (completed)
+                                { 
+                                    MessageBox.Show("Πραγματοποιήθηκε επιτυχώς η καταγραφή των αποτελεσμάτων", "Επιτυχής καταχώρηση", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    base.Close();
                                 }
                             }
                         }

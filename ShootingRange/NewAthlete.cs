@@ -8,6 +8,8 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySqlConnector;
+
 
 namespace ShootingRange
 {
@@ -15,7 +17,7 @@ namespace ShootingRange
     {
         private static TextBox t1;
         private static TextBox t2;
-
+        private string ConnString = "Server = localhost; User ID = root; Password = 1234; Database = shoot";
         public static ShootingApp instance;
         public NewAthlete(ShootingApp shoot)
         {
@@ -96,9 +98,42 @@ namespace ShootingRange
             }
             if (tmp == 0)
             {
-                MessageBox.Show("Η καταχώρηση του καινούργιου αθλητή ήταν επιτυχής.", "Επιτυχής Καταχώρηση Αθλητή", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                // MySQL insert
-                //exit form
+                try
+                {
+                    DateTime z;
+                    z = DateTime.Parse(BirthdayBox.Text);
+                    string adr = address + " " + address_num + ", " + tk + " " + region;
+                    string query = "INSERT INTO ATHL (athl_FName, athl_LName, athl_FatherName, athl_MotherName, athl_ADT, athl_AMKA, athl_Mhtrwo, athl_Org, athl_Bday, athl_Email, athl_Phone,athl_Landline, athl_address) " +
+                        "VALUES (@fname,@lname,@fathername,@mothername,@adt,@amka,@mhtrwo,@sullogos,@bday,@email,@mobile,@landline,@address)";
+                    MySqlConnection conn = new MySqlConnection(ConnString);
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.Add("@fname", DbType.String).Value = name;
+                    cmd.Parameters.Add("@lname", DbType.String).Value = surname;
+                    cmd.Parameters.Add("@fathername", DbType.String).Value = fname;
+                    cmd.Parameters.Add("@mothername", DbType.String).Value = mname;
+                    cmd.Parameters.Add("@adt", DbType.String).Value = adt;
+                    cmd.Parameters.Add("@amka", DbType.String).Value = amka;
+                    cmd.Parameters.Add("@mhtrwo", DbType.String).Value = mhtrwo;
+                    cmd.Parameters.Add("@sullogos", DbType.String).Value = sullogos;
+                    cmd.Parameters.Add("@bday", DbType.Date).Value = z.ToString("yyyy-MM-dd");
+                    cmd.Parameters.Add("@email", DbType.String).Value = email;
+                    cmd.Parameters.Add("@mobile", DbType.String).Value = kinhto;
+                    cmd.Parameters.Add("@landline", DbType.String).Value = stathero;
+                    cmd.Parameters.Add("@address", DbType.String).Value = adr;
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    MessageBox.Show("Η καταχώρηση του καινούργιου αθλητή ήταν επιτυχής.", "Επιτυχής Καταχώρηση Αθλητή", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    this.Close();
+                }
+                catch (MySqlException db)
+                {
+                    MessageBox.Show("Πρόβλημα σύνδεσης με την βάση δεδομένων", "Σφάλμα", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch
+                {
+                    MessageBox.Show("Πρόβλημα με το μορφότυπο των δεδομένων", "Σφάλμα", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {

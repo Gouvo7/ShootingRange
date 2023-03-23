@@ -10,7 +10,7 @@ namespace ShootingRange
 {
     internal class Utility : Form
     {
-        Regex reg_bday = new Regex(@"\d{2}(\/|-)\d{2}(\/|-)\d{4}");
+        Regex reg_bday = new Regex(@"(^0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/(\d{4}$)");
         Regex tk_regex = new Regex(@"\d{3}\s?\d{2}|\d{2}\s?\d{3}");
         public int checker(string surname, string name, string fname, string mname,
             string adt, string amka, string bday, string address, string address_num,
@@ -37,7 +37,7 @@ namespace ShootingRange
             {
                 //Console.WriteLine("Η ημερομηνία γέννησης δεν είναι σωστή!");
                 MessageBox.Show("Λάθος μορφοποίηση ημερομηνίας γέννησης. Η ημερομηνία θα πρέπει να είναι της μορφής: " +
-                    "01/01/2000 ή 01-01-2000", "Μήνυμα Λάθους", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    "01/01/2000 ή 01-01-2000 (ηη/μμ/εεεε).", "Μήνυμα Λάθους", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 values_ok = false;
             }
             if (!tk_regex.IsMatch(tk))
